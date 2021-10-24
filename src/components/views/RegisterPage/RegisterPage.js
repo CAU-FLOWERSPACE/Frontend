@@ -63,7 +63,7 @@ export default function RegisterPage(props) {
             {
                 if(response.payload.success) 
                 { //로그인 성공하면
-                props.history.push("/login")
+                    props.history.push("/login")
                 }
                 else{
                     alert("failed to join")

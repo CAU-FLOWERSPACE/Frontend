@@ -16,20 +16,20 @@ import RegisterPage from './components/views/RegisterPage/RegisterPage';
 
 function App() {
 
-  const [testStr, setTestStr ] = useState('before test');
-
-
-  function callback(str)
-  {
-    setTestStr(str);
-  }
+  const [testStr, setTestStr ] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(
     ()=>{
       axios.get('http://localhost:8080/api/test')
-      .then((Reponse)=>{callback(Response.data)})
+      // .then(reponse => { console.log(reponse)})
+      .then((Reponse)=>{setTestStr(Reponse.data)
+        console.log(Reponse.data)
+        setIsLoading(false);
+      })
       .catch((Error)=>{console.log(Error)})
-    },[]
+      console.log(testStr)
+    },[testStr]
   );
 
   return (
@@ -65,7 +65,7 @@ function App() {
     <div className = "App">
       <header className="App-header">
         api/test == {'>'}
-        {testStr}
+        {!isLoading && <span>{testStr}</span>  }
         <br></br>
 
       </header>
