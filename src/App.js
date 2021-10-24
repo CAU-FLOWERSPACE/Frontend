@@ -1,4 +1,7 @@
 import logo from './logo.svg';
+import axios from 'axios';
+import {useState, useEffect} from 'react';
+
 import './App.css';
 import {
   Switch,
@@ -12,6 +15,23 @@ import LoginPage from './components/views/LoginPage/LoginPage';
 import RegisterPage from './components/views/RegisterPage/RegisterPage';
 
 function App() {
+
+  const [testStr, setTestStr ] = useState('before test');
+
+
+  function callback(str)
+  {
+    setTestStr(str);
+  }
+
+  useEffect(
+    ()=>{
+      axios.get('http://localhost:8080/api/test')
+      .then((Reponse)=>{callback(Response.data)})
+      .catch((Error)=>{console.log(Error)})
+    },[]
+  );
+
   return (
     // <div className="App">
     //   <header className="App-header">
@@ -30,18 +50,28 @@ function App() {
     //   </header>
     // </div>
 
-    <Router>
-      <div>
-        <Switch>
+    // <Router>
+    //   <div>
+    //     <Switch>
 
-          <Route exact path = "/" component = {LandingPage}/>
-          <Route exact path = "/login" component = {LoginPage}/>
-          <Route exact path = "/register" component = {RegisterPage}/>
+    //       <Route exact path = "/" component = {LandingPage}/>
+    //       <Route exact path = "/login" component = {LoginPage}/>
+    //       <Route exact path = "/register" component = {RegisterPage}/>
             
-        </Switch>
-      </div>
-    </Router>
+    //     </Switch>
+    //   </div>
+    // </Router>
 
+    <div className = "App">
+      <header className="App-header">
+        api/test == {'>'}
+        {testStr}
+        <br></br>
+
+      </header>
+
+    </div>
+    
   );
 }
 
