@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { loginUser } from '../../../_actions/user_action';
 import styled from 'styled-components';
 import {ConfirmButton, Input, AlignedLink} from './';
+import { withRouter } from 'react-router-dom';
 
 const Container = styled.div`
     background : #F7F4E3;
@@ -41,7 +42,7 @@ function LoginPage(props) {
             password: Password
         }
 
-        props.history.push('/') //시작페이지로 이동 
+        //props.history.push('/') //시작페이지로 이동 
 
         dispatch(loginUser(body)) //디스패치를 이용해 액션을 취한다 (user_action.js에 있는 loginUser)
             .then(response => {
@@ -78,4 +79,4 @@ function LoginPage(props) {
     )
 }
 
-export default LoginPage
+export default withRouter(LoginPage) //감싸줘야함

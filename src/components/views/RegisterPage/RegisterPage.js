@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { registerUser } from '../../../_actions/user_action';
 import {Input, ConfirmButton} from './';
 import styled from 'styled-components';
+import { withRouter } from 'react-router-dom';
 
 const Container = styled.div`
     background : #F7F4E3;
@@ -19,7 +20,7 @@ const Container = styled.div`
 `
 
 
-export default function RegisterPage(props) {
+function RegisterPage(props) {
 
     const dispatch = useDispatch();
 
@@ -58,12 +59,13 @@ export default function RegisterPage(props) {
             password: Password        
         }
 
-        dispatch(registerUser(body)) //디스패치를 이용해 액션을 취한다 (user_action.js에 있는 loginUser)
+        dispatch(registerUser(body)) //디스패치를 이용해 액션을 취한다 
             .then(response => 
             {
-                if(response.payload.success) 
-                { //로그인 성공하면
-                    props.history.push("/login")
+                if(response.payload.id) 
+                { 
+                    console.log(response.payload.id) //id 출력해보기
+                    props.history.push("/") //시작페이지로
                 }
                 else{
                     alert("failed to join")
@@ -73,7 +75,7 @@ export default function RegisterPage(props) {
         // Axios.post('/api/users/login', body)
         //     .then(response => {
 
-        // })
+        // }) //이걸 액션함수에서 대신 해줌
     }
 
 
@@ -99,3 +101,5 @@ export default function RegisterPage(props) {
 
     )
 }
+
+export default withRouter(RegisterPage)

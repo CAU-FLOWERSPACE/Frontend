@@ -13,24 +13,26 @@ import {
 import LandingPage from './components/views/LandingPage/LandingPage';
 import LoginPage from './components/views/LoginPage/LoginPage';
 import RegisterPage from './components/views/RegisterPage/RegisterPage';
+import Auth from './hoc/auth'; //Auth는 이름을 지은것!
 
 function App() {
 
   const [testStr, setTestStr ] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(
-    ()=>{
-      axios.get('http://localhost:8080/api/test')
-      // .then(reponse => { console.log(reponse)})
-      .then((Reponse)=>{setTestStr(Reponse.data)
-        console.log(Reponse.data)
-        setIsLoading(false);
-      })
-      .catch((Error)=>{console.log(Error)})
-      console.log(testStr)
-    },[testStr]
-  );
+ //여기 
+  // useEffect(
+  //   ()=>{
+  //     axios.get('http://localhost:8080/api/test')
+  //     // .then(reponse => { console.log(reponse)})
+  //     .then((Reponse)=>{setTestStr(Reponse.data)
+  //       console.log(Reponse.data)
+  //       setIsLoading(false);
+  //     })
+  //     .catch((Error)=>{console.log(Error)})
+  //     console.log(testStr)
+  //   },[testStr]
+  // );
 
   return (
     // <div className="App">
@@ -50,27 +52,29 @@ function App() {
     //   </header>
     // </div>
 
-    // <Router>
-    //   <div>
-    //     <Switch>
 
-    //       <Route exact path = "/" component = {LandingPage}/>
-    //       <Route exact path = "/login" component = {LoginPage}/>
-    //       <Route exact path = "/register" component = {RegisterPage}/>
+    <Router>
+      <div>
+        <Switch>
+{/* auth로 감싸줘야한다! 몇가지 옵션 더 붙여서(출입가능여부 옵션 주기) */}
+          <Route exact path = "/" component = {Auth(LandingPage, null )}/>
+          <Route exact path = "/login" component = {Auth(LoginPage, false)}/>
+          <Route exact path = "/register" component = {Auth(RegisterPage, false)}/>
             
-    //     </Switch>
-    //   </div>
-    // </Router>
+        </Switch>
+      </div> 
+    </Router>
+    
+//여기만 주석 풀기
+    // <div className = "App">
+    //   <header className="App-header">
+    //     api/test == {'>'}
+    //     {!isLoading && <span>{testStr}</span>  }
+    //     <br></br>
 
-    <div className = "App">
-      <header className="App-header">
-        api/test == {'>'}
-        {!isLoading && <span>{testStr}</span>  }
-        <br></br>
+    //   </header>
 
-      </header>
-
-    </div>
+    // </div>
     
   );
 }
