@@ -3,14 +3,14 @@ import {
 } from '../_actions/types';
 
 export default function foo(state = {}, action) { //하나하나 적어야함
-    switch (action.type) { //리듀서의 타입들마다 다른 조치를 취해줘야해서 
+    switch (action.type) { 
 
         case LOGIN_USER:
             return { ...state, loginSuccess: action.payload } //스프레드 연산자는 받은 값을 똑같이 가져오는거!!, loginSuccess는 서버쪽..
             break;
 
         case REGISTER_USER :
-            return { ...state, register : action.payload } //스프레드 연산자는 받은 값을 똑같이 가져오는거!!
+            return { ...state, register : action.payload } //스프레드 연산자는 받은 값을 똑같이 가져오는거!! , 서버에게 받은 데이터 뭉텅이는 register변수에 저장 다 되어잇음
             break;
 
         case AUTH_USER :

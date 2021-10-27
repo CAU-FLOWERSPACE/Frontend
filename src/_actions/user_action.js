@@ -5,34 +5,39 @@ import {
 
 export function loginUser(dataToSubmit) { //액션함수 정의
 
-    const request = axios.post('/api/users/login', dataToSubmit) //서버에 리퀘스트 날림
+    const request = axios.post('http://localhost:8080/login', dataToSubmit) //서버에 리퀘스트 날림
         .then(response => response.data)
 
     return {  //리퀘스트를 리듀서에 넘겨줌, 
         type: LOGIN_USER,
         payload: request
     }
-}
+ }
 
 export function registerUser(dataToSubmit) {
 
-    const request = axios.post('/api/users/register', dataToSubmit) //서버에 리퀘스트 날림
-        .then(response => response.data)
+    const request = axios.post('http://localhost:8080/join', dataToSubmit) //서버에 리퀘스트 날림
+         .then(response => response.data)
 
     return {  //리퀘스트를 리듀서에 넘겨줌
         type: REGISTER_USER,
-        payload: request
+        payload: request //payload는 서버에게 받은 데이터 뭉텅이
     }
 }
 
 export function auth() {
 
-    const request = axios.get('/api/users/auth') //서버에 리퀘스트 날림
-        .then(response => response.data)
+    // const request = axios.get('/api/users/auth') //서버에 리퀘스트 날림
+    //     .then(response => response.data)
     
-    return {  //리퀘스트를 리듀서에 넘겨줌
-        type: AUTH_USER,
-        payload: request
-    }
+    // return {  //리퀘스트를 리듀서에 넘겨줌
+    //     type: AUTH_USER,
+    //     payload: request
+    // }
+}
+
+export function toggle()
+{
+
 }
 

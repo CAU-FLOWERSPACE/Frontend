@@ -42,11 +42,13 @@ function LoginPage(props) {
             password: Password
         }
 
-        //props.history.push('/') //시작페이지로 이동 
+        
 
         dispatch(loginUser(body)) //디스패치를 이용해 액션을 취한다 (user_action.js에 있는 loginUser)
             .then(response => {
                 if(response.payload.loginSuccess) { //로그인 성공하면
+                    console.log(response)
+                    console.log("success")
                     props.history.push('/') //페이지 이동(시작페이지로 이동한다)
                 } else {
                    alert('Error')
@@ -67,7 +69,7 @@ function LoginPage(props) {
                 <Input type="email" value={Email} onChange={onEmailHandler} top = "260px" placeholder = "email" />
                 <Input type="password" value={Password} onChange={onPasswordHandler} top = "315px" placeholder = "password" />
 
-                <AlignedLink to = "/">회원가입</AlignedLink>
+                <AlignedLink to = "/join">회원가입</AlignedLink>
                 <ConfirmButton type = "submit" top = "370px"> 
                     확인
                 </ConfirmButton> 

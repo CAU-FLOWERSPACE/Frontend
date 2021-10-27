@@ -5,14 +5,14 @@ import { withRouter } from 'react-router-dom';
 function LandingPage(props) {
 
     useEffect(() => {
-        axios.get('/api/hello')
+        axios.get('http://localhost:8080/api/test')
             .then(response => console.log(response.data))
     }, [])
 
     const onClickHandler = (event) =>
     {   
         //event.preventDefault();
-        props.history.push('/login')
+        props.history.push('/recommend')
         // axios.get(`api/users/logout`) 
         // .then(reponse => {
         //     //if(reponse.success) 페이지 이동
@@ -27,7 +27,7 @@ function LandingPage(props) {
 
     const onMoveToRegisterHandler = (event) =>
     {
-        props.history.push('/register')
+        props.history.push('/join')
     }
 
     return (

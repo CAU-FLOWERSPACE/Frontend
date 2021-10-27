@@ -13,7 +13,10 @@ import {
 import LandingPage from './components/views/LandingPage/LandingPage';
 import LoginPage from './components/views/LoginPage/LoginPage';
 import RegisterPage from './components/views/RegisterPage/RegisterPage';
-import Auth from './hoc/auth'; //Auth는 이름을 지은것!
+import RecommendMainPage from './components/views/RecommendMainPage/RecommendMainPage';
+import Option1Page from './components/views/ColorTherapyPages/Option1Page';
+
+//import Auth from './hoc/auth'; //Auth는 이름을 지은것!
 
 function App() {
 
@@ -57,10 +60,14 @@ function App() {
       <div>
         <Switch>
 {/* auth로 감싸줘야한다! 몇가지 옵션 더 붙여서(출입가능여부 옵션 주기) */}
-          <Route exact path = "/" component = {Auth(LandingPage, null )}/>
+          {/* <Route exact path = "/" component = {Auth(LandingPage, null )}/>
           <Route exact path = "/login" component = {Auth(LoginPage, false)}/>
-          <Route exact path = "/register" component = {Auth(RegisterPage, false)}/>
-            
+          <Route exact path = "/register" component = {Auth(RegisterPage, false)}/> */}
+          <Route exact path = "/" component = {LandingPage}/>
+          <Route exact path = "/login" component = {LoginPage}/>
+          <Route exact path = "/join" component = {RegisterPage}/>
+          <Route exact path = "/recommend" component = {RecommendMainPage}/>
+          <Route exact path = "/option1page" component = {Option1Page}/>
         </Switch>
       </div> 
     </Router>

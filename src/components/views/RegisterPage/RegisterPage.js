@@ -53,10 +53,10 @@ function RegisterPage(props) {
             return alert('비밀번호와 비밀번호 확인은 같아야 합니다.')
         }
 
-        let body = {
+        let body = { //원랜 따옴표 x, 있어도 없어도 통한다
             email: Email,
-            name : Name,
-            password: Password        
+            password: Password,
+            name : Name
         }
 
         dispatch(registerUser(body)) //디스패치를 이용해 액션을 취한다 
@@ -65,7 +65,7 @@ function RegisterPage(props) {
                 if(response.payload.id) 
                 { 
                     console.log(response.payload.id) //id 출력해보기
-                    props.history.push("/") //시작페이지로
+                    props.history.push("/recommend") //추천페이지
                 }
                 else{
                     alert("failed to join")
