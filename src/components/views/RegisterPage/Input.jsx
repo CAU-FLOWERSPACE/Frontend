@@ -18,14 +18,14 @@ const Inputs = styled.input`
 
     font-family: 'Nanum Myeongjo', serif; 
     color : #B4846C;
-    font-size : 20px;
+    font-size : 13pt;
 
     &:focus{
         border : 2px solid #B4846C;
     }
 
     ::placeholder{
-        font-size : 13px;
+        font-size : 14px;
     }
     
 `

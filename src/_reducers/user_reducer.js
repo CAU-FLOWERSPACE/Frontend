@@ -15,7 +15,7 @@ export default function foo(state = {}, action) { //하나하나 적어야함
 
         case AUTH_USER :
             return { ...state, userData : action.payload } //userData 아니어도됨! 유저의 모든 정보가 이어서 그런것
-    
+
         default:
             return state;
     }

@@ -12,6 +12,8 @@ const ListBlock = styled.div`
 
 export default function QuestionList() {
 
+
+
     const options = [
         {
             id : 1,
@@ -64,7 +66,7 @@ export default function QuestionList() {
 
         {
             id : 6,
-            comment : '스트레스가 쌓이고, 불안하고 답답한 기분이 든다.',
+            comment : '스트레스와 불안감, 답답한 기분도 든다.',
             color : [
                 "green",
                 "blue",
@@ -84,7 +86,7 @@ export default function QuestionList() {
     ];
 
 
-    const optionList = options.map((option) => (<Question key = {option.id} text = {option.comment}></Question>));
+    const optionList = options.map((option) => (<Question key = {option.id} text = {option.comment} id ={option.id}></Question>));
 
     return (
         <ListBlock>

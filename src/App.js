@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import axios from 'axios';
 import {useState, useEffect} from 'react';
+import styled from 'styled-components';
 
 import './App.css';
 import {
@@ -15,49 +16,30 @@ import LoginPage from './components/views/LoginPage/LoginPage';
 import RegisterPage from './components/views/RegisterPage/RegisterPage';
 import RecommendMainPage from './components/views/RecommendMainPage/RecommendMainPage';
 import Option1Page from './components/views/ColorTherapyPages/Option1Page';
+import Option2Page from './components/views/ColorTherapyPages/Option2Page';
+import BottomNav from './components/views/BottomNav';
 
 //import Auth from './hoc/auth'; //Auth는 이름을 지은것!
 
+const Container = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-color : #F7F4E3;
+`
+
 function App() {
 
-  const [testStr, setTestStr ] = useState('');
-  const [isLoading, setIsLoading] = useState(true);
 
- //여기 
-  // useEffect(
-  //   ()=>{
-  //     axios.get('http://localhost:8080/api/test')
-  //     // .then(reponse => { console.log(reponse)})
-  //     .then((Reponse)=>{setTestStr(Reponse.data)
-  //       console.log(Reponse.data)
-  //       setIsLoading(false);
-  //     })
-  //     .catch((Error)=>{console.log(Error)})
-  //     console.log(testStr)
-  //   },[testStr]
-  // );
 
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-
-
+ 
     <Router>
-      <div>
+      <Container>
+        <BottomNav/> 
         <Switch>
 {/* auth로 감싸줘야한다! 몇가지 옵션 더 붙여서(출입가능여부 옵션 주기) */}
           {/* <Route exact path = "/" component = {Auth(LandingPage, null )}/>
@@ -68,20 +50,10 @@ function App() {
           <Route exact path = "/join" component = {RegisterPage}/>
           <Route exact path = "/recommend" component = {RecommendMainPage}/>
           <Route exact path = "/option1page" component = {Option1Page}/>
+          <Route exact path = "/option2page" component = {Option2Page}/>
         </Switch>
-      </div> 
+      </Container> 
     </Router>
-    
-//여기만 주석 풀기
-    // <div className = "App">
-    //   <header className="App-header">
-    //     api/test == {'>'}
-    //     {!isLoading && <span>{testStr}</span>  }
-    //     <br></br>
-
-    //   </header>
-
-    // </div>
     
   );
 }

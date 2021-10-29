@@ -5,21 +5,6 @@ import {Input, ConfirmButton} from './';
 import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
 
-const Container = styled.div`
-    background : #F7F4E3;
-
-    position : absolute;
-    border: none;
-    outline : none;
-
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-`
-
-
 function RegisterPage(props) {
 
     const dispatch = useDispatch();
@@ -56,7 +41,7 @@ function RegisterPage(props) {
         let body = { //원랜 따옴표 x, 있어도 없어도 통한다
             email: Email,
             password: Password,
-            name : Name
+            name: Name
         }
 
         dispatch(registerUser(body)) //디스패치를 이용해 액션을 취한다 
@@ -65,6 +50,7 @@ function RegisterPage(props) {
                 if(response.payload.id) 
                 { 
                     console.log(response.payload.id) //id 출력해보기
+                    alert("회원가입이 완료되었습니다")
                     props.history.push("/recommend") //추천페이지
                 }
                 else{
@@ -80,23 +66,23 @@ function RegisterPage(props) {
 
 
     return (
-        <Container>
+        <div>
 
             <form style={{ display: 'flex', flexDirection: 'column' }}
                 onSubmit={onSubmitHandler}
             >
                 
-                <Input type="email" value={Email} onChange={onEmailHandler} top = "205px" placeholder = "이메일"/> 
-                <Input type="text" value={Name} onChange={onNameHandler} top = "260px" placeholder = "이름" />
-                <Input type="password" value={Password} onChange={onPasswordHandler} top = "315px" placeholder = "비밀번호"/>
-                <Input type="password" value={ConfirmPassword} onChange={onConfirmPasswordHandler} top = "370px" placeholder ="비밀번호 확인"/>
+                <Input type="email" value={Email} onChange={onEmailHandler} top = "225px" placeholder = "이메일"/> 
+                <Input type="text" value={Name} onChange={onNameHandler} top = "280px" placeholder = "이름" />
+                <Input type="password" value={Password} onChange={onPasswordHandler} top = "335px" placeholder = "비밀번호"/>
+                <Input type="password" value={ConfirmPassword} onChange={onConfirmPasswordHandler} top = "390px" placeholder ="비밀번호 확인"/>
 
-                <ConfirmButton type="submit" top = "455px">
+                <ConfirmButton type="submit" top = "475px">
                     가입하기
                 </ConfirmButton>
 
             </form>
-        </Container>
+        </div>
       
 
     )

@@ -5,9 +5,12 @@ import {
 
 export function loginUser(dataToSubmit) { //액션함수 정의
 
-    const request = axios.post('http://localhost:8080/login', dataToSubmit) //서버에 리퀘스트 날림
-        .then(response => response.data)
+    //console.log(dataToSubmit);
 
+    const request = axios.post('http://localhost:8080/login', dataToSubmit, {withCredentials : true}) //서버에 리퀘스트 날림
+        .then(()=>{console.log("post 완료")})
+
+   // console.log(request);
     return {  //리퀘스트를 리듀서에 넘겨줌, 
         type: LOGIN_USER,
         payload: request
@@ -16,7 +19,7 @@ export function loginUser(dataToSubmit) { //액션함수 정의
 
 export function registerUser(dataToSubmit) {
 
-    const request = axios.post('http://localhost:8080/join', dataToSubmit) //서버에 리퀘스트 날림
+    const request = axios.post('http://localhost:8080/api/join', dataToSubmit) //서버에 리퀘스트 날림
          .then(response => response.data)
 
     return {  //리퀘스트를 리듀서에 넘겨줌

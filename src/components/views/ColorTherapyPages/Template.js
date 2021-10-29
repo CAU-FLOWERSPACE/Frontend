@@ -4,10 +4,10 @@ import styled from 'styled-components';
 const Block = styled.div`
 
     width: 324px;
-    height: 477px;
+    height: 600px;
 
     position : relative;
-    background: rgba(226, 194, 185, 0.4);
+    background: rgba(230, 221, 198, 0.4);
 
     margin : 0 auto; 
 

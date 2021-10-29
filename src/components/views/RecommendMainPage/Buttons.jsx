@@ -2,11 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Button = styled.button`
-position: absolute;
+// position: absolute;
 width: 140px;
 height: 38px;
-left: 175px;
-top: ${props=>props.top};
+// left: 175px;
+// top: ${props=>props.top};
 
 background: #D9CFB6;
 border: 1px solid #D9CFB6;
@@ -25,10 +25,10 @@ color : #897F65;
 `
 
 
-export default function Buttons({children, top, ...rest}) {
+export default function Buttons({children, onClick, ...rest}) {
     return (
         <div>
-            <Button top = {top} {...rest}>
+            <Button onClick={onClick}{...rest}>
                 {children}
             </Button>
         </div>
