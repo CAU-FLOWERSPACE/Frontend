@@ -3,20 +3,6 @@ import styled from 'styled-components'
 import { useLocation } from 'react-router-dom';
 import {Template, Title, QuestionList2} from './';
 
-const Container = styled.div`
-    background : #F7F4E3;
-
-    position : absolute;
-    border: none;
-    outline : none;
-
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-`
-
 export default function Option2Page() {
 
     const location = useLocation();
@@ -95,9 +81,9 @@ export default function Option2Page() {
 
     return (
     <>
-        <Container/>
+        {/* <Container/> */}
             <Template>
-                <Title> 몸 상태가 이렇지는 않나요? </Title>
+                <Title> 몸 상태가 이렇지는 않은가요? </Title>
                 <QuestionList2 id = {optionId}/>
             </Template>
 

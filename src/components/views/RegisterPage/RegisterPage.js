@@ -51,7 +51,7 @@ function RegisterPage(props) {
                 { 
                     console.log(response.payload.id) //id 출력해보기
                     alert("회원가입이 완료되었습니다")
-                    props.history.push("/recommend") //추천페이지
+                    props.history.push("/") //추천페이지
                 }
                 else{
                     alert("failed to join")

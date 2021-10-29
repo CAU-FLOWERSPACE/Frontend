@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Buttons, CommendText, Icons} from './';
+import { withRouter } from 'react-router';
 import '../../../LandingPage.css';
 
-export default function RecommendMainPage(props) {
+function RecommendMainPage(props) {
 
     const onMoveToColorHandler = (event) =>
     {
@@ -20,18 +21,19 @@ export default function RecommendMainPage(props) {
 
     return (
         <div>
-            <div className = "container">
+            <div className = "container" onClick={onMoveToColorHandler}>
+                {/* <Buttons top= "200px">컬러테라피</Buttons> */}
                 <div className = "logo">
                     <Icons isFlower = {true}/>
                 </div>
                 <div className = "text">
-                    <CommendText>몸과 마음이 지친 당신을 보살펴줄</CommendText>
+                    <CommendText>심신이 지친 당신을 위로해줄</CommendText>
                     <br/>
                     <CommendText>꽃들을 찾아보세요</CommendText>
                 </div>
-                {/* <div> */}
-                    <Buttons onSubmit = {onMoveToColorHandler} className = "button" >컬러 테라피</Buttons>
-                {/* </div> */}
+                <div className = "button">
+                    <Buttons onClick = {onMoveToColorHandler} >컬러 테라피</Buttons>
+                </div>
             </div>
 
             <div className = "container">
@@ -43,8 +45,8 @@ export default function RecommendMainPage(props) {
                     <br/>
                     <CommendText>식물들을 찾아보세요</CommendText>
                 </div>
-                <div>
-                    <Buttons className = "button">공간 테라피</Buttons>
+                <div className = "button">
+                    <Buttons>공간 테라피</Buttons>
                 </div>
 
             </div>
@@ -57,3 +59,4 @@ export default function RecommendMainPage(props) {
         </div>
     )
 }
+export default withRouter(RecommendMainPage)

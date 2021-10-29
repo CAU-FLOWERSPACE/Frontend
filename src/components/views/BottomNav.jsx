@@ -10,7 +10,7 @@ import styled from 'styled-components';
 
 export default function BottomNav() {
 
-    const [activeNav, setActiveNav] = useState(3);
+    const [activeNav, setActiveNav] = useState(1);
 
     console.log("bottomnav rendering ")
 
@@ -19,27 +19,27 @@ export default function BottomNav() {
             <nav className = "wrapper">
                 <div>
                     <Link to = '/recommend' className = "nav-link" onClick={() => setActiveNav(1)}>
-                        <IoIosColorPalette className = { activeNav === 1 ? "nav-item active" : "nav-item"} size = "20px"/>
+                        <BsFlower2 className = { activeNav === 1 ? "nav-item active" : "nav-item"} size = "20px"/>
                     </Link>
                 </div>
                 <div>
-                    <Link to = '/' className = "nav-link" onClick={() => setActiveNav(2)}>
+                    <Link to = '/login' className = "nav-link" onClick={() => setActiveNav(2)}>
                         <RiPlantFill className = { activeNav === 2 ? "nav-item active" : "nav-item"} size = "20px"/>
                     </Link>
                 </div>
-                <div>
-                    <Link to = '/' className = "nav-link"onClick={() => setActiveNav(3)}>
+                {/* <div>
+                    <Link to = '/register' className = "nav-link"onClick={() => setActiveNav(3)}>
                         <BsFlower2 className = { activeNav === 3 ? "nav-item active" : "nav-item"} size = "20px"/>
+                    </Link>
+                </div> */}
+                <div>
+                    <Link to = '/login' className = "nav-link" onClick={() => setActiveNav(3)}>
+                        <AiFillVideoCamera className = { activeNav === 3 ? "nav-item active" : "nav-item"} size = "20px"/>
                     </Link>
                 </div>
                 <div>
                     <Link to = '/login' className = "nav-link" onClick={() => setActiveNav(4)}>
-                        <AiFillVideoCamera className = { activeNav === 4 ? "nav-item active" : "nav-item"} size = "20px"/>
-                    </Link>
-                </div>
-                <div>
-                    <Link to = '/login' className = "nav-link" onClick={() => setActiveNav(5)}>
-                        <BsFillPersonFill className = { activeNav === 5 ? "nav-item active" : "nav-item"} size = "20px"/>
+                        <BsFillPersonFill className = { activeNav === 4 ? "nav-item active" : "nav-item"} size = "20px"/>
                     </Link>
                 </div>
             

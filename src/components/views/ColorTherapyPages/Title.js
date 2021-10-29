@@ -3,10 +3,10 @@ import styled from 'styled-components'
 
 const HeadBlock = styled.div`
 
-  padding-top: 35px;
-  padding-left: 85px;
+  padding-top: 45px;
+  padding-left: 65px;
   padding-right: 50px;
-  padding-bottom : 24px;
+  padding-bottom : 20px;
   
   font-family: 'Nanum Myeongjo', serif; 
 

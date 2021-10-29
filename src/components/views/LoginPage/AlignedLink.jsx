@@ -7,7 +7,7 @@ const Aligner = styled.div`
     width: 71px;
     height: 20px;
     left: 165px;
-    top: 428px;
+    top: 470px;
 
 `;
 

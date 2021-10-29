@@ -17,7 +17,7 @@ export default function QuestionList() {
     const options = [
         {
             id : 1,
-            comment : '무기력하고 금방 피로감이 든다.',
+            comment : '무기력하고 금방 피로가 찾아와요.',
             color : [
                 "red",
                 "orange",
@@ -29,7 +29,7 @@ export default function QuestionList() {
 
         {
             id : 2,
-            comment : '슬픔과 우울감에 젖어있다.',
+            comment : '슬픔과 우울감에 젖어있어요.',
             color : [
                 "red",
                 "orange",
@@ -39,7 +39,7 @@ export default function QuestionList() {
 
         {
             id : 3,
-            comment : '자존감이 부족하다고 느낀다.',
+            comment : '자존감이 부족하다고 느껴요.',
             color : [
                 "yellow",
                 "pink"
@@ -48,7 +48,7 @@ export default function QuestionList() {
 
         {
             id : 4,
-            comment : '집중력이나 창의력이 부족한 것 같다.',
+            comment : '집중력이나 창의력이 부족한 것 같아요.',
             color : [
                 "yellow",
                 "purple"
@@ -57,7 +57,7 @@ export default function QuestionList() {
 
         {
             id : 5,
-            comment : '입맛이 없다.',
+            comment : '입맛이 별로 없어요.',
             color : [
                 "yellow",
                 "orange"
@@ -66,7 +66,7 @@ export default function QuestionList() {
 
         {
             id : 6,
-            comment : '스트레스와 불안감, 답답한 기분도 든다.',
+            comment : '스트레스와 불안감에 시달려요.',
             color : [
                 "green",
                 "blue",
@@ -77,7 +77,7 @@ export default function QuestionList() {
 
         {
             id : 7,
-            comment : '외로운 감정이 자주 들곤 한다.',
+            comment : '외로운 감정이 자주 들곤 해요.',
             color : [
                 "green",
                 "pink"

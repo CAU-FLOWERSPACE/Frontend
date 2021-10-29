@@ -51,7 +51,7 @@ const TextButton = styled.button`
   font-size: 13px;
 
   width: 279px;
-  height: 31px;
+  height: 34px;
 
   background: rgba(217, 207, 182, 0.7);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

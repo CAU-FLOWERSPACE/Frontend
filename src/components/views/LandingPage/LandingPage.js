@@ -12,7 +12,7 @@ function LandingPage(props) {
     const onClickHandler = (event) =>
     {   
         //event.preventDefault();
-        props.history.push('/recommend')
+        props.history.push('/')
         // axios.get(`api/users/logout`) 
         // .then(reponse => {
         //     //if(reponse.success) 페이지 이동

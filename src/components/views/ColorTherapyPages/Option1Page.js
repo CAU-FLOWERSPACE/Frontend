@@ -24,7 +24,8 @@ function Option1Page() {
         <>
             <div>
                 <Template>
-                    <Title> 요즘 당신은 어떤가요? </Title>
+                    <Title> 요즘 당신의 기분, 어떤가요? </Title>
+                    
                     <QuestionList/>
                 </Template>
             </div>

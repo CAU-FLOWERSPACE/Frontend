@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Text = styled.p`
 
     position: absolute;
-    width: 226px;
+    width: 220px;
     height: 161px;
     
     margin : 10px;

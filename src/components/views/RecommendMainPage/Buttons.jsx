@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Button = styled.button`
-// position: absolute;
+position: absolute;
 width: 140px;
 height: 38px;
 // left: 175px;
@@ -25,12 +25,8 @@ color : #897F65;
 `
 
 
-export default function Buttons({children, onClick, ...rest}) {
-    return (
-        <div>
-            <Button onClick={onClick}{...rest}>
-                {children}
-            </Button>
-        </div>
-    )
+export default function Buttons({children, ...rest}) {
+    console.log("onclick?")
+    return <Button>{children}</Button>
+        
 }

@@ -27,18 +27,18 @@ const CheckCircle = styled.div`
     props.checker &&
     css`
       border: 2px solid #CAB88D;
-      color: #CAB88D;
+      color: #968661;
     `}
 
     .done {
-        color : #CAB88D;
+        color : #968661;
         width : 18px;
     }
 `
 
 const Text = styled.div`
   flex: 1;
-  font-size: 13px;
+  font-size: 14px;
   color: #7D5A50;
 
 `;
@@ -47,8 +47,6 @@ const Text = styled.div`
 export default function CheckBox({id, text}) { //원 + 텍스트
 
     const [checker, setChecker] = useState(false);
-
-
     const onToggle = () =>
     {
         setChecker(!checker);
