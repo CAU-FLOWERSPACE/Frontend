@@ -44,7 +44,7 @@ function App() {
           <Route exact path = "/login" component = {Auth(LoginPage, false)}/>
           <Route exact path = "/register" component = {Auth(RegisterPage, false)}/> */}
           <Route exact path = "/" component = {LandingPage}/>
-          {/* <Route exact path = "/" component = {RecommendMainPage}/> */}
+          <Route exact path = "/recommend" component = {RecommendMainPage}/>
           <Route exact path = "/login" component = {LoginPage}/>
           <Route exact path = "/join" component = {RegisterPage}/>
         

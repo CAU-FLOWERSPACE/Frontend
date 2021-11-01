@@ -48,7 +48,7 @@ function LandingPage(props) {
             {/* <MenuButton onClick={onMoveToRegisterHandler} left = "194px">회원가입</MenuButton>
             <MenuButton onClick={onMoveToLoginHandler} left = "278px">로그인</MenuButton> */}
             
-            <StartButton top = "475px" onClick = {onClickHandler}>시작하기</StartButton>
+            <StartButton top = "475px" onClick = {onClickHandler}>잠시변경</StartButton>
 
         </div>
 

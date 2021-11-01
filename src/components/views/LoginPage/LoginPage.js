@@ -101,7 +101,7 @@ function LoginPage(props) {
         dispatch(loginUser(formData))
         .then(()=>{
             alert("환영합니다!")
-            props.history.push('/')
+            props.history.push('/recommend')
         })
         
        
