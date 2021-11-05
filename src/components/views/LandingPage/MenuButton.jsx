@@ -5,7 +5,7 @@ const Button = styled.button`
     position: absolute;
     width: 100px;
     height: 19px;
-    left: ${props=> props.left};
+    //left: ${props=> props.left};
     top: 35px;
 
     font-family: 'Nanum Myeongjo', serif;
@@ -20,10 +20,10 @@ const Button = styled.button`
     color: #8A8168;
 `
 
-export default function MenuButton({left, children, ...rest}) {
+export default function MenuButton({children, ...rest}) {
     return (
         <div>
-            <Button left = {left} {...rest}>{children}</Button>
+            <Button {...rest}>{children}</Button>
 
         </div>
     )

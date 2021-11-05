@@ -3,26 +3,30 @@ import styled from 'styled-components'
 
 const Inputs = styled.input`
 
-    position: absolute;
+    //position: absolute;
     width: 210px;
     height: 40px;
-    left: 83px;
-    top: ${props=>props.top};
+    //top: ${props=>props.top};
 
     background: #E6DDC6;
     border: 1px solid #E6DDC6;
     outline : none;
     box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    bbox-shadow: 0px 4px 4px rgba(150, 134, 97, 0.5);
     border-radius: 10px;
+    margin : 0 auto;
+    margin-bottom : 10px;
 
     font-family: 'Nanum Myeongjo', serif; 
     color : #B4846C;
     font-size : 13pt;
+    
 
     &:focus{
-        border : 2px solid #B4846C;
+        border : 2px solid #968661;
     }
+
+    
 
     ::placeholder{
         font-size : 13pt;
@@ -33,7 +37,7 @@ const Inputs = styled.input`
 export default function Input({top, ...rest}) {
     return (
         <div>
-            <Inputs top = {top} {...rest} />
+            <Inputs {...rest} />
         </div>
     )
 }

@@ -1,3 +1,4 @@
+export { default as Container} from './Container';
 export { default as IntroductionText } from './IntroductionText';
 export { default as StartButton } from './StartButton';
 export { default as MenuButton } from './MenuButton';

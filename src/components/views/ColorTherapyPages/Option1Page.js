@@ -6,16 +6,6 @@ import { createGlobalStyle } from 'styled-components';
 import {Template, Title, QuestionList} from './';
 
 
-const GlobalStyle = createGlobalStyle`
-
-    body {
-        background : #f7f4e3;
-    }
-
-`
-
-
-
 
 function Option1Page() {
 

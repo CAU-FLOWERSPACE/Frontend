@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import {ConfirmButton, Input, AlignedLink} from './';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
+import '../../../MainPage.css';
 
 const Container = styled.div`
     background : #F7F4E3;
@@ -108,17 +109,21 @@ function LoginPage(props) {
     }
 
     return (
-        <div>
+        <div style = {{display : 'flex', justifyContent : 'center', alignContent : 'center', marginTop : '240px'}}>
+    
 
-            <form style={{ display: 'flex', flexDirection: 'column' }} 
+            <form style={{ display: 'flex', flexDirection: 'column'}} 
             onSubmit={onSubmitHandler2}>
-                <Input type="email" value={Email} onChange={onEmailHandler} top = "300px" placeholder = "email" />
-                <Input type="password" value={Password} onChange={onPasswordHandler} top = "355px" placeholder = "password" />
+                <div>
+                <img src = "img/login.png" style ={{marginBottom : "12px", justifyContent : "center", marginLeft : "60px"}}/>
+                </div>
+                <Input type="email" value={Email} onChange={onEmailHandler} placeholder = "email" />
+                <Input type="password" value={Password} onChange={onPasswordHandler} placeholder = "password" />
 
-                <AlignedLink to = "/join">회원가입</AlignedLink>
-                <ConfirmButton type = "submit" top = "410px"> 
+                <ConfirmButton type = "submit"> 
                     확인
                 </ConfirmButton> 
+                <AlignedLink to = "/join">회원가입</AlignedLink>
                 
 
             </form>

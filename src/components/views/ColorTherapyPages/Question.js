@@ -63,17 +63,19 @@ const TextButton = styled.button`
   font-family: 'Nanum Myeongjo', serif; 
   color : #7D5A50;
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 13px;
   line-height: 15px;
 
 
-  &:hover{
+  &:active{
 
     background: #CFC19F;
     border: 1px solid #CFC19F;
+    
 
-    color : #F7F4E3;
+     color : #F7F4E3;
+   // color :  rgba(217, 207, 182, 0.9);
 
 
   }

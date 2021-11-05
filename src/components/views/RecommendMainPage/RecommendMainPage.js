@@ -22,7 +22,7 @@ function RecommendMainPage(props) {
     return (
         <div>
             <div className = "container" onClick={onMoveToColorHandler}>
-                {/* <Buttons top= "200px">컬러테라피</Buttons> */}
+            
                 <div className = "logo">
                     <Icons isFlower = {true}/>
                 </div>

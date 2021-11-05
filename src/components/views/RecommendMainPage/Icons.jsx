@@ -10,6 +10,7 @@ const Icon = styled.div`
     // width: 99px;
     // height: 115px;
     // top: ${props=>props.top};
+   // margin-left : 10px;
 
     .flower{
         margin-top : 25px;

@@ -7,14 +7,15 @@ const Text = styled.p`
     width: 220px;
     height: 161px;
     
-    margin : 10px;
+    
 
     font-family: 'Nanum Myeongjo', serif; 
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 15px;
 
     color : #897F65;
+    display : flex;
     justify-content : center;
 
 

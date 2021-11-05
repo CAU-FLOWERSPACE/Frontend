@@ -37,13 +37,17 @@ function App() {
  
     <Router>
       <Container>
+        <Switch>
+          <Route exact path = "/" component = {LandingPage}/>
+        </Switch>
+        
         <BottomNav/> 
         <Switch>
 {/* auth로 감싸줘야한다! 몇가지 옵션 더 붙여서(출입가능여부 옵션 주기) */}
           {/* <Route exact path = "/" component = {Auth(LandingPage, null )}/>
           <Route exact path = "/login" component = {Auth(LoginPage, false)}/>
           <Route exact path = "/register" component = {Auth(RegisterPage, false)}/> */}
-          <Route exact path = "/" component = {LandingPage}/>
+         
           <Route exact path = "/recommend" component = {RecommendMainPage}/>
           <Route exact path = "/login" component = {LoginPage}/>
           <Route exact path = "/join" component = {RegisterPage}/>

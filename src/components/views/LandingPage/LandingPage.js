@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react'
 import axios from 'axios';
-import { IntroductionText, StartButton, MenuButton} from './';
+import { Container, IntroductionText, StartButton, MenuButton} from './';
 import { withRouter } from 'react-router-dom';
+
+import '../../../MainPage.css';
 function LandingPage(props) {
 
     useEffect(() => {
@@ -12,7 +14,7 @@ function LandingPage(props) {
     const onClickHandler = (event) =>
     {   
         //event.preventDefault();
-        props.history.push('/')
+        props.history.push('/login')
         // axios.get(`api/users/logout`) 
         // .then(reponse => {
         //     //if(reponse.success) 페이지 이동
@@ -43,15 +45,21 @@ function LandingPage(props) {
         //     </button>
         // </div>
         
-        <div>
-            <IntroductionText/>
-            {/* <MenuButton onClick={onMoveToRegisterHandler} left = "194px">회원가입</MenuButton>
-            <MenuButton onClick={onMoveToLoginHandler} left = "278px">로그인</MenuButton> */}
-            
-            <StartButton top = "475px" onClick = {onClickHandler}>잠시변경</StartButton>
+        
+            <Container className = "containerarea">
+                <div className = "logoarea">
+                    <img src = "img/mainlogo.png" style = {{ marginTop : "30px", margin : "0 auto", marginLeft : "19px", weigtht: "100%"}} />
+                </div>
+                <div classname = "textarea"> 
+                    <IntroductionText/>
+                </div>
+                <div classname = "buttonarea" onClick={onClickHandler}>
+                    <StartButton>시작하기</StartButton>
+                </div>
+                
+            </Container>
 
-        </div>
-
+        
 
     )
 }
