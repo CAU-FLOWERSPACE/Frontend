@@ -3,12 +3,13 @@ import Axios from 'axios'
 import { useDispatch } from 'react-redux';
 import { loginUser } from '../../../_actions/user_action';
 import styled from 'styled-components';
-import {ConfirmButton, Input, AlignedLink} from './';
+import {ConfirmButton, Input, AlignedLink, GoogleButton} from './';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 import '../../../MainPage.css';
 
 const Container = styled.div`
+
     background : #F7F4E3;
 
     position : absolute;
@@ -36,25 +37,6 @@ function LoginPage(props) {
         setPassword(event.currentTarget.value)
     }
 
-    // const testHandler = () =>
-    // {
-    //     axios(
-    //         {
-    //           url: '/login',
-    //           method: 'post',
-    //           data: {
-    //             email:Email, password : Password
-    //           } , 
-             
-    //           baseURL: 'http://localhost:8080',
-    //         withCredentials: true,
-    //         }
-    //       ).then(function (response) {
-    //         console.log(response.data)
-    //       });
-
-
-    // }    
 
     const onSubmitHandler = (event) => {
         event.preventDefault();
@@ -110,12 +92,11 @@ function LoginPage(props) {
 
     return (
         <div style = {{display : 'flex', justifyContent : 'center', alignContent : 'center', marginTop : '240px'}}>
-    
 
             <form style={{ display: 'flex', flexDirection: 'column'}} 
             onSubmit={onSubmitHandler2}>
-                <div>
-                <img src = "img/login.png" style ={{marginBottom : "12px", justifyContent : "center", marginLeft : "60px"}}/>
+                <div style = {{ margin : "0 auto" }}>
+                    <img src = "img/login.png" style ={{margin : "12px"}}/>
                 </div>
                 <Input type="email" value={Email} onChange={onEmailHandler} placeholder = "email" />
                 <Input type="password" value={Password} onChange={onPasswordHandler} placeholder = "password" />
@@ -124,6 +105,9 @@ function LoginPage(props) {
                     확인
                 </ConfirmButton> 
                 <AlignedLink to = "/join">회원가입</AlignedLink>
+
+                {/* <GoogleButton/> */}
+                {/* 구글버튼 */}
                 
 
             </form>

@@ -4,11 +4,8 @@ import "../../../MainPage.css";
 
 const Button = styled.button`
 
-    // position: absolute;
     width: 150px;
     height: 40px;
-    // //left: 88px;
-    // top : ${props=> props.top};
 
     font-family: 'Nanum Myeongjo', serif;
     font-style: normal;
@@ -25,16 +22,15 @@ const Button = styled.button`
 
     display : flex;
     margin : 0 auto;
-    align-items : center;
+  
+    
+    //버튼 내 텍스트 가운데로 
     justify-content : center;
-    //float: center;
-
+    align-items : center;
+  
     &:active{
         background: #CFC19F;
         font-weight : normal;
-    
-        // color : #F7F4E3;
-        //color :rgba(230, 221, 198, 0.9);
         color : #FFFBE1;
 
     }
@@ -42,10 +38,6 @@ const Button = styled.button`
 `
 
 export default function StartButton({children}) {
-    return (
-        <div className = "buttonarea">
-            <Button>{children}</Button>
-       </div>
-    )
+    return <Button>{children}</Button>
 }
 

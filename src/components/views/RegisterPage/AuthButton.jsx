@@ -4,10 +4,14 @@ import styled from 'styled-components'
 const Button = styled.button`
 
 //임시 속성
-    width: 130px;
+    //position : absolute;
+    display : inline;
+    right : 10px;
+    width: 210px;
     height: 30px;
-    //left: 83px;
-    //top: ${props => props.top};
+    float :right;
+    text-align : center;
+   
 
     background: #D9CFB6;
     border: 1px solid #D9CFB6;
@@ -18,11 +22,10 @@ const Button = styled.button`
 
     font-family: 'Nanum Myeongjo', serif; 
     color : #B4846C;s
-    font-size : 12px;
-    font-weight : bold;
+    font-size : 7px;
+   
 
     margin : 0 auto;
-    margin-top : 10px;
     margin-bottom : 10px;
 
 

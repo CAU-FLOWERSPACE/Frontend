@@ -10,6 +10,7 @@ import ReduxThunk from 'redux-thunk';
 import Reducer from './_reducers'; //
 import { BrowserRouter } from 'react-router-dom';
 import BottomNav from './components/views/BottomNav';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore)
 

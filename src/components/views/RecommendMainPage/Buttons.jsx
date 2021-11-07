@@ -5,9 +5,7 @@ const Button = styled.button`
     position: absolute;
     width: 140px;
     height: 38px;
-    // left: 175px;
-    // top: ${props=>props.top};
-
+    
     background: #D9CFB6;
     border: 1px solid #D9CFB6;
     box-sizing: border-box;
@@ -35,6 +33,6 @@ const Button = styled.button`
 
 export default function Buttons({children, ...rest}) {
     console.log("onclick?")
-    return <Button>{children}</Button>
+    return <Button {...rest}>{children}</Button>
         
 }

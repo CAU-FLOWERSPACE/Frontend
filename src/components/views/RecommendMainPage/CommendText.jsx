@@ -6,8 +6,6 @@ const Text = styled.p`
     position: absolute;
     width: 220px;
     height: 161px;
-    
-    
 
     font-family: 'Nanum Myeongjo', serif; 
     font-style: normal;
@@ -15,11 +13,6 @@ const Text = styled.p`
     font-size: 15px;
 
     color : #897F65;
-    display : flex;
-    justify-content : center;
-
-
-
 
 `;
 

@@ -6,24 +6,29 @@ import {GiFlowerPot, GiPlantSeed, GiFlowers, GiButterflyFlower} from 'react-icon
 
 
 const Icon = styled.div`
-    // position: absolute;
-    // width: 99px;
-    // height: 115px;
-    // top: ${props=>props.top};
-   // margin-left : 10px;
+
+    display : flex;
+    justify-content : center;
+    align-items : center;
+ 
 
     .flower{
-        margin-top : 25px;
+        
         color : rgba(219, 188, 171, 0.7);
+        margin-top : 25px;
+
         weight : 120px;
         height : 120px;
     }
 
     .plant{
-        margin-top : 25px;
+
         color : rgba(153, 155, 132, 0.45);
+        margin-top : 25px;
+
         weight : 120px;
         height : 120px;
+        
     }
 `
 

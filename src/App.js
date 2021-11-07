@@ -18,6 +18,10 @@ import RecommendMainPage from './components/views/RecommendMainPage/RecommendMai
 import Option1Page from './components/views/ColorTherapyPages/Option1Page';
 import Option2Page from './components/views/ColorTherapyPages/Option2Page';
 import BottomNav from './components/views/BottomNav';
+import RecommendResultPage from './components/views/RecommendResultPage/RecommendResultPage';
+
+
+//import ResultPage from './components/views/ResultPage/ResultPage';
 
 //import Auth from './hoc/auth'; //Auth는 이름을 지은것!
 
@@ -54,6 +58,9 @@ function App() {
         
           <Route exact path = "/option1page" component = {Option1Page}/>
           <Route exact path = "/option2page" component = {Option2Page}/>
+          {/* <Route exact path = "/resultpage" component = {ResultPage}/> */}
+          <Route exact path = '/result' component = {RecommendResultPage}/>
+        
         </Switch>
       </Container> 
     </Router>

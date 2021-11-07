@@ -91,8 +91,8 @@ function RegisterPage(props) {
             <form style={{ display: 'flex', flexDirection: 'column' }}
                 onSubmit={onSubmitHandler}
             >
-                <div>
-                <img src = "img/login.png" style ={{marginBottom : "12px", justifyContent : "center", marginLeft : "60px"}}/>
+                <div style = {{ margin : "0 auto" }}>
+                <img src = "img/login.png" style ={{marginBottom : "12px"}}/>
                 </div>
                 <Input type="email" value={Email} onChange={onEmailHandler} placeholder = "이메일"/> 
                 <AuthButton onClick={onClickHandler}/> 

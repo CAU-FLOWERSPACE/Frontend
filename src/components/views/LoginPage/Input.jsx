@@ -3,10 +3,8 @@ import styled from 'styled-components'
 
 const Inputs = styled.input`
 
-    //position: absolute;
     width: 210px;
     height: 40px;
-    //top: ${props=>props.top};
 
     background: #E6DDC6;
     border: 1px solid #E6DDC6;
@@ -27,7 +25,6 @@ const Inputs = styled.input`
     }
 
     
-
     ::placeholder{
         font-size : 13pt;
     }

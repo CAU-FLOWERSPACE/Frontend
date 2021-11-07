@@ -21,7 +21,7 @@ function RecommendMainPage(props) {
 
     return (
         <div>
-            <div className = "container" onClick={onMoveToColorHandler}>
+            <div className = "container">
             
                 <div className = "logo">
                     <Icons isFlower = {true}/>
@@ -50,12 +50,6 @@ function RecommendMainPage(props) {
                 </div>
 
             </div>
-            
-            {/* <CommendText/>
-            <Icons isFlower = {true}/>
-            <Icons isFlower = {false}/>
-            <Buttons top = "286px" onClick = {onMoveToColorHandler}>컬러테라피</Buttons>
-            <Buttons top = "480px" onClick = {onMoveToSpaceHandler}>공간테라피</Buttons> */}
         </div>
     )
 }

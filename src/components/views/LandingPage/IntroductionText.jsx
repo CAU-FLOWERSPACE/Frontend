@@ -4,6 +4,11 @@ import styled from "styled-components";
 
 const Text = styled.p`
 
+
+    display : flex; //텍스트 가운데
+    justify-content : center;
+    align-items: center;
+
     font-family: 'Nanum Myeongjo', serif; 
     font-style: normal;
     font-weight: bold;
@@ -11,15 +16,7 @@ const Text = styled.p`
 
     color : #7E714B;
 
-     margin : 0 auto;
-     margin-top : 10px;
-     margin-bottom : 20px;
-    // margin-left : 10px;
-
-    display : flex;
-    justify-content : center;
-
-    
+    margin : 0 auto;
 
     & + & {
         margin : 1.5rem;
@@ -36,7 +33,7 @@ export default function IntroductionText() {
         <Text>곁에 두는 것만으로도 느낄 수 있는</Text>
         <Text>소소하지만 힐링이 되는 테라피,</Text>
         <Text>'꽃간'을 통해 누려보세요 !</Text>
-
+        
     </>
 
         
