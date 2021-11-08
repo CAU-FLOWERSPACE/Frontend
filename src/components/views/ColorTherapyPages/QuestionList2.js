@@ -209,6 +209,8 @@ export default function QuestionList({id}) {
         case 7 :
             symptomList = symp7.map((symp) => <CheckBox key = {symp} text = {symp}></CheckBox>);
             break;
+        default :
+        
 
     
     }

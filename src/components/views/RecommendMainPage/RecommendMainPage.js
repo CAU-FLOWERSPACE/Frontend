@@ -28,7 +28,6 @@ function RecommendMainPage(props) {
                 </div>
                 <div className = "text">
                     <CommendText>심신이 지친 당신을 위로해줄</CommendText>
-                    <br/>
                     <CommendText>꽃들을 찾아보세요</CommendText>
                 </div>
                 <div className = "button">
@@ -42,7 +41,7 @@ function RecommendMainPage(props) {
                 </div>
                 <div className = "text">
                     <CommendText>당신의 공간에 안정을 가져다줄</CommendText>
-                    <br/>
+                    
                     <CommendText>식물들을 찾아보세요</CommendText>
                 </div>
                 <div className = "button">
