@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 
+
 export default function BottomNav() {
 
     const [activeNav, setActiveNav] = useState(1);
@@ -15,35 +16,38 @@ export default function BottomNav() {
     console.log("bottomnav rendering ")
 
     return (
-        <div>
-            <nav className = "wrapper">
-                <div>
-                    <Link to = '/recommend' className = "nav-link" onClick={() => setActiveNav(1)}>
-                        <BsFlower2 className = { activeNav === 1 ? "nav-item active" : "nav-item"} size = "20px"/>
-                    </Link>
-                </div>
-                <div>
-                    <Link to = '/login' className = "nav-link" onClick={() => setActiveNav(2)}>
-                        <RiPlantFill className = { activeNav === 2 ? "nav-item active" : "nav-item"} size = "20px"/>
-                    </Link>
-                </div>
-                {/* <div>
-                    <Link to = '/register' className = "nav-link"onClick={() => setActiveNav(3)}>
-                        <BsFlower2 className = { activeNav === 3 ? "nav-item active" : "nav-item"} size = "20px"/>
-                    </Link>
-                </div> */}
-                <div>
-                    <Link to = '/login' className = "nav-link" onClick={() => setActiveNav(3)}>
-                        <AiFillVideoCamera className = { activeNav === 3 ? "nav-item active" : "nav-item"} size = "20px"/>
-                    </Link>
-                </div>
-                <div>
-                    <Link to = '/login' className = "nav-link" onClick={() => setActiveNav(4)}>
-                        <BsFillPersonFill className = { activeNav === 4 ? "nav-item active" : "nav-item"} size = "20px"/>
-                    </Link>
-                </div>
+        <>
             
-            </nav>
-        </div>
+            <div>
+                <nav className = "wrapper">
+                    <div>
+                        <Link to = '/recommend' className = "nav-link" onClick={() => setActiveNav(1)}>
+                            <BsFlower2 className = { activeNav === 1 ? "nav-item active" : "nav-item"} size = "20px"/>
+                        </Link>
+                    </div>
+                    <div>
+                        <Link to = '/login' className = "nav-link" onClick={() => setActiveNav(2)}>
+                            <RiPlantFill className = { activeNav === 2 ? "nav-item active" : "nav-item"} size = "20px"/>
+                        </Link>
+                    </div>
+                    {/* <div>
+                        <Link to = '/register' className = "nav-link"onClick={() => setActiveNav(3)}>
+                            <BsFlower2 className = { activeNav === 3 ? "nav-item active" : "nav-item"} size = "20px"/>
+                        </Link>
+                    </div> */}
+                    <div>
+                        <Link to = '/login' className = "nav-link" onClick={() => setActiveNav(3)}>
+                            <AiFillVideoCamera className = { activeNav === 3 ? "nav-item active" : "nav-item"} size = "20px"/>
+                        </Link>
+                    </div>
+                    <div>
+                        <Link to = '/login' className = "nav-link" onClick={() => setActiveNav(4)}>
+                            <BsFillPersonFill className = { activeNav === 4 ? "nav-item active" : "nav-item"} size = "20px"/>
+                        </Link>
+                    </div>
+                
+                </nav>
+            </div>
+        </>
     )
 }

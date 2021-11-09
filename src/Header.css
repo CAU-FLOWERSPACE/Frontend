@@ -1,0 +1,16 @@
+
+
+.header{
+    position : fixed;
+    top : 9;
+    left : 0;
+    right : 0;
+    height : 55px;
+
+
+    overflow : hidden;
+    border-bottom : 2px solid #DAD2BF;
+    
+    
+}
+

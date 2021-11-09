@@ -94,8 +94,11 @@ function RegisterPage(props) {
                 <div style = {{ margin : "0 auto" }}>
                 <img src = "img/login.png" style ={{marginBottom : "12px"}}/>
                 </div>
-                <Input type="email" value={Email} onChange={onEmailHandler} placeholder = "이메일"/> 
-                <AuthButton onClick={onClickHandler}/> 
+                
+                    <Input type="email" value={Email} onChange={onEmailHandler} placeholder = "이메일"/> 
+                    <AuthButton onClick={onClickHandler}/> 
+                
+                
                 <Input type="text" value={Name} onChange={onNameHandler} placeholder = "이름" />
                 <Input type="password" value={Password} onChange={onPasswordHandler} placeholder = "비밀번호"/>
                 <Input type="password" value={ConfirmPassword} onChange={onConfirmPasswordHandler} placeholder ="비밀번호 확인"/>

@@ -13,45 +13,13 @@ const QuestionBlock = styled.div`
     padding-bottom: 12px;
    
 `
-//필요x
-const CheckCircle = styled.div`
-  width: 20px;
-  height: 20px;
-  border-radius: 16px;
-  border: 1px solid #D7B19D;
-  font-size: 13px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px;
-  cursor: pointer;
-
-   ${props =>
-    props.done &&
-    css`
-      border: 1px solid #402218;
-      color: #402218;
-    `}
-`
-//필요x
-const Text = styled.div`
-  flex: 1;
-  font-size: 13px;
-  color: #B4846C;
-  ${props =>
-    props.done &&
-    css`
-      color: #402218;
-    `}
-`;
-
 const TextButton = styled.button`
 
   flex: 1;
   font-size: 13px;
 
   width: 279px;
-  height: 70px;
+  height: 30px;
 
   background: rgba(217, 207, 182, 0.7);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

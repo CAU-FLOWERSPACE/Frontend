@@ -18,6 +18,7 @@ import RecommendMainPage from './components/views/RecommendMainPage/RecommendMai
 import Option1Page from './components/views/ColorTherapyPages/Option1Page';
 import Option2Page from './components/views/ColorTherapyPages/Option2Page';
 import BottomNav from './components/views/BottomNav';
+import Header from './components/views/Header';
 import RecommendResultPage from './components/views/RecommendResultPage/RecommendResultPage';
 
 
@@ -41,27 +42,24 @@ function App() {
  
     <Router>
       <Container>
-        <Switch>
-          <Route exact path = "/" component = {LandingPage}/>
-        </Switch>
-        
+        <Header/>
+          <Switch>
+            {/* auth로 감싸줘야한다! 몇가지 옵션 더 붙여서(출입가능여부 옵션 주기) */}
+            {/* <Route exact path = "/" component = {Auth(LandingPage, null )}/>
+            <Route exact path = "/login" component = {Auth(LoginPage, false)}/>
+            <Route exact path = "/register" component = {Auth(RegisterPage, false)}/> */}
+            <Route exact path = "/" component = {LandingPage}/>
+            <Route exact path = "/recommend" component = {RecommendMainPage}/>
+            <Route exact path = "/login" component = {LoginPage}/>
+            <Route exact path = "/join" component = {RegisterPage}/>
+          
+            <Route exact path = "/option1page" component = {Option1Page}/>
+            <Route exact path = "/option2page" component = {Option2Page}/>
+            {/* <Route exact path = "/resultpage" component = {ResultPage}/> */}
+            <Route exact path = '/result' component = {RecommendResultPage}/>
+          
+          </Switch>
         <BottomNav/> 
-        <Switch>
-{/* auth로 감싸줘야한다! 몇가지 옵션 더 붙여서(출입가능여부 옵션 주기) */}
-          {/* <Route exact path = "/" component = {Auth(LandingPage, null )}/>
-          <Route exact path = "/login" component = {Auth(LoginPage, false)}/>
-          <Route exact path = "/register" component = {Auth(RegisterPage, false)}/> */}
-         
-          <Route exact path = "/recommend" component = {RecommendMainPage}/>
-          <Route exact path = "/login" component = {LoginPage}/>
-          <Route exact path = "/join" component = {RegisterPage}/>
-        
-          <Route exact path = "/option1page" component = {Option1Page}/>
-          <Route exact path = "/option2page" component = {Option2Page}/>
-          {/* <Route exact path = "/resultpage" component = {ResultPage}/> */}
-          <Route exact path = '/result' component = {RecommendResultPage}/>
-        
-        </Switch>
       </Container> 
     </Router>
     
