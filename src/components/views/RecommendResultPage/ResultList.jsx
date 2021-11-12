@@ -10,11 +10,14 @@ const ListBlock = styled.div`//바깥으로 안나가게
    // background : gray; 
 `
 
-export default function ResultList() {
+export default function ResultList({result}) 
+{
+    console.log(result);
 
-    const results = [1,2,3,4,5]; //temp
+    const results = result;
 
-    const resultList = results.map((resultNum) => (<Result key = {resultNum} title = {resultNum}></Result>));
+   //이미지 줘야함
+    const resultList = results.map((flower) => (<Result key = {flower.flower_id} name = {flower.flower_name} image = {flower.image}></Result>));
 
     return (
         <ListBlock>

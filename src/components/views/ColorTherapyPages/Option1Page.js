@@ -14,8 +14,10 @@ function Option1Page() {
         <>
             <div>
                 <Template>
-                    <Title> 요즘 당신의 기분, 어떤가요? </Title>
-                    
+                    <Title> 
+                        <p>다음 중 나의 현재 상태를 가장 잘 표현한</p>
+                        <p>이모티콘을 골라주세요 !</p>
+                    </Title>
                     <QuestionList/>
                 </Template>
             </div>

@@ -2,3 +2,8 @@ export {default as Container} from './Container';
 export {default as Result} from './Result';
 export {default as ResultList} from './ResultList';
 export {default as ArButton} from './ArButton';
+export {default as Card} from './Card';
+export {default as Img} from './Img';
+export {default as Name} from './Name';
+export {default as ToInfoButton} from './ToInfoButton';
+export {default as Title} from './Title';

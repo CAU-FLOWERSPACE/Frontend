@@ -53,11 +53,11 @@ function RegisterPage(props) {
         dispatch(registerUser(body)) //디스패치를 이용해 액션을 취한다 
             .then(response => 
             {
-                if(response.payload.id) 
+                if(response.payload.id) //뭉텅이를 풀어서!
                 { 
                     console.log(response.payload.id) //id 출력해보기
                     alert("회원가입이 완료되었습니다")
-                    props.history.push("/") //추천페이지
+                    props.history.push("/main") //메인페이지로 가기
                 }
                 else{
                     alert("failed to join")
@@ -96,7 +96,7 @@ function RegisterPage(props) {
                 </div>
                 
                     <Input type="email" value={Email} onChange={onEmailHandler} placeholder = "이메일"/> 
-                    <AuthButton onClick={onClickHandler}/> 
+                    {/* <AuthButton onClick={onClickHandler}/>  */}
                 
                 
                 <Input type="text" value={Name} onChange={onNameHandler} placeholder = "이름" />

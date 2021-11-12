@@ -7,7 +7,7 @@ import '../../../MainPage.css';
 function LandingPage(props) {
 
     useEffect(() => {
-        axios.get('http://localhost:8080/api/test')
+        axios.get('http://3.36.217.73:8080/api/test')
             .then(response => console.log(response.data))
     }, [])
 

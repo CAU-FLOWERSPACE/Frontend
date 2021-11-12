@@ -47,11 +47,12 @@ const Text = styled.div`
 `;
 
 
-export default function CheckBox({id, text}) { //원 + 텍스트
+export default function CheckBox({text, val}) { //원 + 텍스트
 
     const [checker, setChecker] = useState(false);
     const onToggle = () =>
     {
+        console.log(val);
         setChecker(!checker);
     }
 

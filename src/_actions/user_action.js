@@ -1,16 +1,17 @@
 import axios, { Axios } from 'axios';
 import {
-    LOGIN_USER, REGISTER_USER, AUTH_USER
+    LOGIN_USER, REGISTER_USER, AUTH_USER,COLOR_RECOMMEND
 } from './types'; //types.js에서 타입을 가져옴
 
 export function loginUser(dataToSubmit) { //액션함수 정의
 
-    //console.log(dataToSubmit);
 
-    const request = axios.post('http://localhost:8080/login', dataToSubmit, {withCredentials : true}) //서버에 리퀘스트 날림
-        .then(()=>{console.log("post 완료")})
+    const request = axios.post('http://3.36.217.73:8080/login', dataToSubmit, {withCredentials : true}) //서버에 리퀘스트 날림
+        // .then(()=>{console.log("post 완료")})
+        .then((response)=> {
+            console.log(response.status)
+        })
 
-   // console.log(request);
     return {  //리퀘스트를 리듀서에 넘겨줌, 
         type: LOGIN_USER,
         payload: request
@@ -19,8 +20,8 @@ export function loginUser(dataToSubmit) { //액션함수 정의
 
 export function registerUser(dataToSubmit) {
 
-    const request = axios.post('http://localhost:8080/api/join', dataToSubmit) //서버에 리퀘스트 날림
-         .then(response => response.data)
+    const request = axios.post('http://3.36.217.73:8080/api/join', dataToSubmit) //서버에 리퀘스트 날림
+         .then(response => response.data) //reponse.data를 받아와서 request에 저장
 
     return {  //리퀘스트를 리듀서에 넘겨줌
         type: REGISTER_USER,
@@ -42,5 +43,18 @@ export function auth() {
 export function toggle()
 {
 
+
+}
+
+export function colorRecommend(dataToSubmit) //dataToSubmit
+{
+    const request = axios.get(`http://3.36.217.73:8080/api/flower/flowerList/${dataToSubmit}`) //수정 필요
+    //dataToSubmit은 color 한개
+         .then(response => response.data) //reponse.data를 받아와서 request에 저장
+
+    return {  
+        type: COLOR_RECOMMEND,
+        payload: request //받은 건 꽃 객체 뭉텅이
+    }
 }
 

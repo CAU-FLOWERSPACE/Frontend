@@ -3,28 +3,29 @@ import styled from 'styled-components'
 
 const Block = styled.div`
 
-
-    height: 800px;
-   // border : 1px solid red;
+    width: 324px;
+    height: 600px;
+    background: rgba(230, 221, 198, 0.4);
 
     margin : 0 auto; 
+    padding-top : 90px; 
 
     display : flex;
-    justify-content : center;
-    align-items : center;
     flex-direction : column;
+
 
     margin-top : 90px;
     margin-bottom:32px;
 
 
+
 `
+
 
 export default function Container({children}) {
     return (
         <Block>
             {children}
         </Block>
-
     )
 }

@@ -1,10 +1,13 @@
 import React from 'react'
-import { withRouter } from 'react-router';
-import { ResultList, Container, ArButton } from './';
+import { useLocation, withRouter } from 'react-router';
+import { ResultList, Container, ArButton, Title } from './';
 
-function RecommendResultPage() {
+function RecommendResultPage() { 
 
-    
+    const location = useLocation();
+    const results = location.state.response;
+
+    console.log(results);
 
     const onClickHandler = (event) =>
     {
@@ -18,9 +21,10 @@ function RecommendResultPage() {
         <div style ={{display : "block", justifyContent : "center", alignItems : "center"}}>
             <div >
                 <Container>
-                    <ResultList/>
+                    <Title>flower님의 추천 꽃은 ... </Title>
+                    <ResultList  result = {results}/>
                 </Container>
-                <ArButton onClick = {onClickHandler}/>
+                {/* <ArButton onClick = {onClickHandler}/> */}
             </div>
            
         </div>

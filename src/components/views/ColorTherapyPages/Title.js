@@ -3,18 +3,20 @@ import styled from 'styled-components'
 
 const HeadBlock = styled.div`
 
-  padding-top: 45px;
-  padding-left: 65px;
-  padding-right: 50px;
-  padding-bottom : 20px;
+  margin-top : 20px;
+  padding-top : 20px;
+  //border : 1px solid red;
+  text-align : center;
   
+  font-color : #968661;
+  font-weight : bold;
   font-family: 'Nanum Myeongjo', serif; 
 
-  h1 {
-    margin: 0;
-    font-size: 15px;
-    color: #7D5A50;
-  }
+  // h1 {
+  //   margin: 0;
+  //   font-size: 15px;
+  //   color: #7D5A50;
+  // }
   
 
 `
@@ -22,7 +24,7 @@ const HeadBlock = styled.div`
 export default function Title({children}) {
     return (
         <HeadBlock>
-            <h1>{children}</h1>
+            {children}
         </HeadBlock>
     )
 }

@@ -20,6 +20,8 @@ import Option2Page from './components/views/ColorTherapyPages/Option2Page';
 import BottomNav from './components/views/BottomNav';
 import Header from './components/views/Header';
 import RecommendResultPage from './components/views/RecommendResultPage/RecommendResultPage';
+import MainPage from './components/views/MainPage/MainPage';
+import ColorTherapyIntroPage from './components/views/TherapyIntroPage/ColorTherapyIntroPage';
 
 
 //import ResultPage from './components/views/ResultPage/ResultPage';
@@ -57,6 +59,8 @@ function App() {
             <Route exact path = "/option2page" component = {Option2Page}/>
             {/* <Route exact path = "/resultpage" component = {ResultPage}/> */}
             <Route exact path = '/result' component = {RecommendResultPage}/>
+            <Route exact path = "/main" component = {MainPage} />
+            <Route exact path = "/colorintro" component = {ColorTherapyIntroPage}/>
           
           </Switch>
         <BottomNav/> 

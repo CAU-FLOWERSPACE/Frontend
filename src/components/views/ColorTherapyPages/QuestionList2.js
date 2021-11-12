@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Question, CheckBox} from './';
+import { Question, Question2, CheckBox, RadioButton} from './';
+
+
 
 
 const ListBlock = styled.div`
@@ -17,70 +19,76 @@ export default function QuestionList({id}) {
     console.log(optionId);
 
     const symp1 = [
-        "혈액순환이 부족해요.", 
-        "저혈압이 있어요.", 
-        "냉증 체질이예요.", 
-        "빈혈이 잦아요.", 
-        "당뇨병을 앓고 있어요.", 
-        "불면증이 있어요.",
-        "고혈압이 있어요.", 
-        "두통이 잦아요."];
+        {keyword : "혈액순환 부족", value : "RED"}, 
+        {keyword : "저혈압", value : "RED"}, 
+        {keyword : "냉증", value : "RED"}, 
+        {keyword : "빈혈", value : "ORANGE"}, 
+        {keyword : "당뇨병", value : "ORANGE"}, 
+        {keyword : "불면증", value :"BLUE"},
+        {keyword : "고혈압", value :"BLUE"}, 
+        {keyword : "두통", value :"BLUE"}
+    ];
     const symp2 = [
-        "혈액순환 부족해요.",
-        "저혈압이 있어요.",
-        "냉증이 있어요.",
-        "빈혈이 잦아요.",
-        "당뇨병을 앓고 있어요.",
-        "호흡기 질환이 있어요.",
-        "비염을 달고 살아요.",
-        "눈에 피로가 자주 와요."];
+        {keyword : "혈액순환 부족", value : "RED"}, 
+        {keyword : "저혈압", value : "RED"}, 
+        {keyword : "냉증", value : "RED"}, 
+        {keyword : "빈혈", value : "RED"}, 
+        {keyword : "당뇨병", value : "ORANGE"}, 
+        {keyword : "호흡기 질환", value : "GREEN"},
+        {keyword : "비염", value : "GREEN"},
+        {keyword : "눈 피로감", value : "GREEN"}
+    ];
 
     const symp3 = [
-        "변비가 있어요.",
-        "소화불량이 잦아요.",
-        "피부트러블이 잦아요."
+        {keyword : "변비", value : "YELLOW"},
+        {keyword : "소화불량", value : "YELLOW"},
+        {keyword : "피부트러블", value : "YELLOW"}
 
     ];
 
     const symp4 = [
-        "변비가 있어요.",
-        "소화불량이 잦아요.",
-        "불면증을 앓아요.",
-        "두통이 있어요.", 
-        "피부트러블이 잦아요.",
-        "어깨통증을 겪고 있어요.",
-        "귀울림이 가끔 있어요."
+        {keyword : "변비", value : "YELLOW"},
+        {keyword : "소화불량", value : "YELLOW"},
+        {keyword : "피부트러블", value : "YELLOW"},
+        {keyword : "불면증이 있어요.", value :"BLUE"},
+        {keyword : "고혈압이 있어요.", value :"BLUE"}, 
+        {keyword : "두통이 잦아요.", value :"BLUE"},
+        {keyword : "어깨통증", value : "PURPLE"},
+        {keyword : "정신피로", value : "PURPLE"},
+        {kewyord : "귀울림", value : "PURPLE"}
 
     ];
 
     const symp5 = [
-        "변비가 있어요.",
-        "소화불량이 잦아요.",
-        "피부트러블이 잦아요.",
-        "빈혈이 있어요.",
-        "저혈압 환자예요.",
-        "당뇨병을 앓고 있어요."
+        {keyword : "변비", value : "YELLOW"},
+        {keyword : "소화불량", value : "YELLOW"},
+        {keyword : "피부트러블", value : "YELLOW"},
+        {keyword : "빈혈", value : "ORANGE"}, 
+        {keyword : "빈혈", value : "ORANGE"}
 
     ];
 
     const symp6 = [
-        "호흡기 질환 환자예요.",
-        "비염을 달고 살아요.",
-        "눈 피로감이 자주 와요.",
-        "불면증이 있어요.",
-        "두통이 잦아요.",
-        "어깨통증이 가끔 있어요.",
-        "귀울림이 느껴져요.",
-        "고혈압 환자예요.",
-        "천식을 앓고 있어요.",
-        "피부병이 있어요.",
-        "다이어트를 하고 있어요."
+        {keyword : "호흡기 질환", value : "GREEN"},
+        {keyword : "비염", value : "GREEN"},
+        {keyword : "눈 피로감", value : "GREEN"},
+
     ];
 
     const symp7 = [
-        "불면증을 앓고 있어요.",
-        "두통이 잦아요.",
-        "고혈압 환자예요."
+        {keyword : "호흡기 질환", value : "GREEN"},
+        {keyword : "비염", value : "GREEN"},
+        {keyword : "눈 피로감", value : "GREEN"},
+        {keyword : "불면증", value :"BLUE"},
+        {keyword : "고혈압", value :"BLUE"}, 
+        {keyword : "두통", value :"BLUE"},
+        {keyword : "어깨통증", value : "PURPLE"},
+        {keyword : "정신피로", value : "PURPLE"},
+        {kewyord : "귀울림", value : "PURPLE"},
+        {keyword : "천식", value : "WHITE"},
+        {keyword : "피부병", value : "WHITE"},
+        {keyword : "다이어트", value : "WHITE"}
+
 
     ];
 
@@ -177,37 +185,32 @@ export default function QuestionList({id}) {
 
     // ];
 
-    //const option2 = symptoms.filter(symp => symp.id == optionId); //===?
-   // console.log(option2);
-
-    //const symptomList = Object.key(symptoms1).map((symp) => (<Question key = {symp} text = {symp}></Question>));
-     //symptoms1.map((symp) => (<Question key = { symptoms1}))
-    //const symptomList = option2.symptom.map((symp) => (<Question key = {option2.symptom} text = {option2.symptom}></Question>));//
-
+   
     var symptomList;
 
     switch(optionId)
     {
         case 1 :
-            symptomList = symp1.map((symp) => <CheckBox key = {symp} text = {symp}></CheckBox>); // 아래도 다 고치기, onClcik 하면!
+            // symptomList = symp1.map((symp) => <RadioButton key = {symp.keyword} text = {symp.keyword} val = {symp.value}></RadioButton>); // 아래도 다 고치기, onClcik 하면!
+            symptomList = symp1.map((symp) => <Question2 key = {symp.keyword} text={symp.keyword} color = {symp.value}></Question2>)
             break;
         case 2 :
-            symptomList = symp2.map((symp) => <CheckBox key = {symp} text = {symp}></CheckBox>);
+            symptomList = symp2.map((symp) => <Question2 key = {symp.keyword} text={symp.keyword} color = {symp.value}></Question2>)
             break;
         case 3 :
-            symptomList = symp3.map((symp) => <CheckBox key = {symp} text = {symp}></CheckBox>);
+            symptomList = symp3.map((symp) => <Question2 key = {symp.keyword} text={symp.keyword} color = {symp.value}></Question2>)
             break;
         case 4 :
-            symptomList = symp4.map((symp) => <CheckBox key = {symp} text = {symp}></CheckBox>);
+            symptomList = symp4.map((symp) => <Question2 key = {symp.keyword} text={symp.keyword} color = {symp.value}></Question2>)
             break;
         case 5 :
-            symptomList = symp5.map((symp) => <CheckBox key = {symp} text = {symp}></CheckBox>);
+            symptomList = symp5.map((symp) => <Question2 key = {symp.keyword} text={symp.keyword} color = {symp.value}></Question2>)
             break;
         case 6 :
-            symptomList = symp6.map((symp) => <CheckBox key = {symp} text = {symp}></CheckBox>);
+            symptomList = symp6.map((symp) => <Question2 key = {symp.keyword} text={symp.keyword} color = {symp.value}></Question2>)
             break;
         case 7 :
-            symptomList = symp7.map((symp) => <CheckBox key = {symp} text = {symp}></CheckBox>);
+            symptomList = symp7.map((symp) => <Question2 key = {symp.keyword} text={symp.keyword} color = {symp.value}></Question2>)
             break;
         default :
         

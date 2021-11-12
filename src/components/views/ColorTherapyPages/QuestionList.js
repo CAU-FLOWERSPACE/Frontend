@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Question from './Question';
+import { useHistory } from 'react-router';
 
 const ListBlock = styled.div`
     flex : 1;
@@ -17,7 +18,8 @@ export default function QuestionList() {
     const options = [
         {
             id : 1,
-            comment : '무기력하고 금방 피로가 찾아와요.',
+            comment : ' ① 무기력함',
+            img : "img/idle.PNG",
             color : [
                 "red",
                 "orange",
@@ -29,7 +31,8 @@ export default function QuestionList() {
 
         {
             id : 2,
-            comment : '슬픔과 우울감에 젖어있어요.',
+            comment : '② 슬픔, 우울',
+            img : "img/sad.PNG",
             color : [
                 "red",
                 "orange",
@@ -39,7 +42,8 @@ export default function QuestionList() {
 
         {
             id : 3,
-            comment : '자존감이 부족하다고 느껴요.',
+            comment : '③ 자신감 하락',
+            img : "img/proud.PNG",
             color : [
                 "yellow",
                 "pink"
@@ -48,7 +52,8 @@ export default function QuestionList() {
 
         {
             id : 4,
-            comment : '집중력이나 창의력이 부족한 것 같아요.',
+            comment : '④ 집중력 부족',
+            img : "img/study.PNG",
             color : [
                 "yellow",
                 "purple"
@@ -57,7 +62,8 @@ export default function QuestionList() {
 
         {
             id : 5,
-            comment : '입맛이 별로 없어요.',
+            comment : '⑤ 식욕 저하',
+            img : "img/eat.PNG",
             color : [
                 "yellow",
                 "orange"
@@ -66,7 +72,8 @@ export default function QuestionList() {
 
         {
             id : 6,
-            comment : '스트레스와 불안감에 시달려요.',
+            comment : '⑥ 스트레스',
+            img : "img/stress2.PNG",
             color : [
                 "green",
                 "blue",
@@ -77,7 +84,8 @@ export default function QuestionList() {
 
         {
             id : 7,
-            comment : '외로운 감정이 자주 들곤 해요.',
+            comment : '⑦ 외로움',
+            img : "img/lonely.PNG",
             color : [
                 "green",
                 "pink"
@@ -86,7 +94,11 @@ export default function QuestionList() {
     ];
 
 
-    const optionList = options.map((option) => (<Question key = {option.id} text = {option.comment} id ={option.id}></Question>));
+
+
+    const optionList = options.map((option) => (<Question key = {option.id} id ={option.id} comment = {option.comment}>
+        <img src = {option.img} />
+    </Question>));
 
     return (
         <ListBlock>
