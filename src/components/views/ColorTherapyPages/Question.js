@@ -12,6 +12,9 @@ const QuestionBlock = styled.div`
     align-items: center;
     padding-top: 12px;
     padding-bottom: 12px;
+
+    display : flex;
+    justify-content : center;
    
 `
 

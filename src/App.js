@@ -22,7 +22,7 @@ import Header from './components/views/Header';
 import RecommendResultPage from './components/views/RecommendResultPage/RecommendResultPage';
 import MainPage from './components/views/MainPage/MainPage';
 import ColorTherapyIntroPage from './components/views/TherapyIntroPage/ColorTherapyIntroPage';
-
+import FlowerDetailPage from './components/views/DetailInfoPage/FlowerDetailPage';
 
 //import ResultPage from './components/views/ResultPage/ResultPage';
 
@@ -50,7 +50,7 @@ function App() {
             {/* <Route exact path = "/" component = {Auth(LandingPage, null )}/>
             <Route exact path = "/login" component = {Auth(LoginPage, false)}/>
             <Route exact path = "/register" component = {Auth(RegisterPage, false)}/> */}
-            <Route exact path = "/" component = {LandingPage}/>
+            <Route exact path = "/" component = {MainPage}/>
             <Route exact path = "/recommend" component = {RecommendMainPage}/>
             <Route exact path = "/login" component = {LoginPage}/>
             <Route exact path = "/join" component = {RegisterPage}/>
@@ -59,9 +59,9 @@ function App() {
             <Route exact path = "/option2page" component = {Option2Page}/>
             {/* <Route exact path = "/resultpage" component = {ResultPage}/> */}
             <Route exact path = '/result' component = {RecommendResultPage}/>
-            <Route exact path = "/main" component = {MainPage} />
+            <Route exact path = "/main" component = {LandingPage} />
             <Route exact path = "/colorintro" component = {ColorTherapyIntroPage}/>
-          
+            <Route exact path = "/flower_detail" component = {FlowerDetailPage}/>
           </Switch>
         <BottomNav/> 
       </Container> 

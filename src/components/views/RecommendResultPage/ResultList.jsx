@@ -16,8 +16,7 @@ export default function ResultList({result})
 
     const results = result;
 
-   //이미지 줘야함
-    const resultList = results.map((flower) => (<Result key = {flower.flower_id} name = {flower.flower_name} image = {flower.image}></Result>));
+    const resultList = results.map((flower) => (<Result key = {flower.flower_id} name = {flower.flower_name} image = {flower.image} flower_id = {flower.flower_id}></Result>));
 
     return (
         <ListBlock>

@@ -11,7 +11,7 @@ import styled from 'styled-components';
 
 export default function BottomNav() {
 
-    const [activeNav, setActiveNav] = useState(1);
+    const [activeNav, setActiveNav] = useState(0);
 
     console.log("bottomnav rendering ")
 

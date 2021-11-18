@@ -6,12 +6,12 @@ import '../../../Card.css';
 
 //카드하나
 
-export default function Result({name, image}) { //이미지 넘겨받아야함
+export default function Result({name, image, flower_id}) { //이미지 넘겨받아야함
     return (
         <Card>
             <Img><img src = {image}/></Img> 
             <Name>{name}</Name>
-            <ToInfoButton>상세정보</ToInfoButton>
+            <ToInfoButton id = {flower_id}>상세정보</ToInfoButton>
         </Card>
 
     

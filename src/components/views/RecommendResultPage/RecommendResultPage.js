@@ -22,7 +22,7 @@ function RecommendResultPage() {
             <div >
                 <Container>
                     <Title>flower님의 추천 꽃은 ... </Title>
-                    <ResultList  result = {results}/>
+                    <ResultList result = {results}/>
                 </Container>
                 {/* <ArButton onClick = {onClickHandler}/> */}
             </div>

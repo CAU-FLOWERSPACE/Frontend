@@ -1,6 +1,6 @@
 import axios, { Axios } from 'axios';
 import {
-    LOGIN_USER, REGISTER_USER, AUTH_USER,COLOR_RECOMMEND
+    LOGIN_USER, REGISTER_USER, AUTH_USER,COLOR_RECOMMEND, FLOWER_DETAIL
 } from './types'; //types.js에서 타입을 가져옴
 
 export function loginUser(dataToSubmit) { //액션함수 정의
@@ -48,12 +48,23 @@ export function toggle()
 
 export function colorRecommend(dataToSubmit) //dataToSubmit
 {
-    const request = axios.get(`http://3.36.217.73:8080/api/flower/flowerList/${dataToSubmit}`) //수정 필요
+    const request = axios.get(`http://3.36.217.73:8080/api/flower/flowerList/${dataToSubmit}`) 
     //dataToSubmit은 color 한개
          .then(response => response.data) //reponse.data를 받아와서 request에 저장
 
     return {  
         type: COLOR_RECOMMEND,
+        payload: request //받은 건 꽃 객체 뭉텅이
+    }
+}
+
+export function flowerDetail(dataToSubmit)
+{
+    const request = axios.get(`http://3.36.217.73:8080/api/flower/${dataToSubmit}`)
+    .then(response => response.data) //reponse.data를 받아와서 request에 저장
+
+    return {  
+        type: FLOWER_DETAIL,
         payload: request //받은 건 꽃 객체 뭉텅이
     }
 }
