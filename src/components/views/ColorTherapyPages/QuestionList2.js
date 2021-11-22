@@ -7,10 +7,18 @@ import { Question, Question2, CheckBox, RadioButton} from './';
 
 const ListBlock = styled.div`
     flex : 1;
-    padding : 20px 32px;
+    //width : 200px;
+    height : 200px;
+    //line-height : 10px;
+    //display : inline-block;
+    //padding : 20px 32px;
     padding-bottom : 48px;
-    overflow-y: auto;
-   // background : gray; 
+    // overflow-y: auto; 
+    overflow : scroll;
+    
+    border : 1px solid green;
+    //flex-direction : row;
+    
 `
 
 export default function QuestionList({id}) {

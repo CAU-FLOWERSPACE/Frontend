@@ -39,6 +39,7 @@ const TextButton = styled.button`
   font-size: 13px;
   line-height: 15px;
 
+  display : inline-block;
 
   &:active{
 

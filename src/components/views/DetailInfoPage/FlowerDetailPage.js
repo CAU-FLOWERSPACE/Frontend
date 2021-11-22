@@ -17,9 +17,9 @@ function FlowerDetailPage() {
             <BackButton/>
             <div>
                 <Img><img src = {flower.image}/></Img>
-                <Name>{flower.flower_name}</Name>
+                <Name>{flower.name}</Name>
                 <FlowerMean>{flower.mean}</FlowerMean>
-                <Feature>{flower.flower_feature}</Feature>
+                <Feature>{flower.feature}</Feature>
             </div>
             
         </Container>

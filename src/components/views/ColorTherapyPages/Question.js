@@ -81,13 +81,14 @@ export default function Question({id, comment, children,...rest}) {
 
   const history = useHistory();
 
+
     const onClickHandler = (event) =>
     {
         event.preventDefault();
         history.push(
         {
             pathname : "/option2page",
-            state : {id : id}
+            state : {id : id} // 
         }
         ) //옵션 2페이지로 이동
     

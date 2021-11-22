@@ -1,6 +1,7 @@
 import axios, { Axios } from 'axios';
 import {
-    LOGIN_USER, REGISTER_USER, AUTH_USER,COLOR_RECOMMEND, FLOWER_DETAIL
+    LOGIN_USER, REGISTER_USER, AUTH_USER,COLOR_RECOMMEND, FLOWER_DETAIL, 
+    IMAGE_COLOR_SUBMIT, IMAGE_THERAPY_SUBMIT, DUP_CHECK, PLANT_DETAIL
 } from './types'; //types.js에서 타입을 가져옴
 
 export function loginUser(dataToSubmit) { //액션함수 정의
@@ -27,6 +28,18 @@ export function registerUser(dataToSubmit) {
         type: REGISTER_USER,
         payload: request //payload는 서버에게 받은 데이터 뭉텅이
     }
+}
+
+export function duplicateEmailCheck(dataToSubmit)
+{
+    const request = axios.post(`http://3.36.217.73:8080//api/user/check/email/${dataToSubmit}`)
+        .then(response => response.data)
+
+    return {
+        type : DUP_CHECK,
+        payload : request
+    }
+    
 }
 
 export function auth() {
@@ -66,6 +79,37 @@ export function flowerDetail(dataToSubmit)
     return {  
         type: FLOWER_DETAIL,
         payload: request //받은 건 꽃 객체 뭉텅이
+    }
+}
+
+export function plantDetail(dataToSubmit)
+{
+    const request = axios.get(`http://3.36.217.73:8080/api/place/plant/${dataToSubmit}`)
+    .then(response => response.data)
+
+    return {
+        type : PLANT_DETAIL,
+        payload : request
+    }
+}
+
+export function imageColorSubmit(dataToSubmit)
+{
+    const request = axios.post(`http://3.36.217.73:8080/api/place/flower`, dataToSubmit)
+    .then(response => response.data)
+    return {
+        type : IMAGE_COLOR_SUBMIT,
+        payload : request
+    }
+}
+
+export function imageTherapySubmit(dataToSubmit)
+{
+    const request = axios.post(`http://3.36.217.73:8080/api/place/plant`, dataToSubmit)
+    .then(response => response.data)
+    return {
+        type : IMAGE_THERAPY_SUBMIT,
+        payload : request
     }
 }
 

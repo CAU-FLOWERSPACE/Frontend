@@ -7,10 +7,12 @@ const Contents = styled.div`
 
     border : 1px solid red; // test
 
-    // display : flex;
-    // justify-content : center;
-    // align-items : center;
-    // flex-direction : column;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    flex-direction : column;
+
+    
 `
 
 export default function Container({children}) {

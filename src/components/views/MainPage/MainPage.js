@@ -1,9 +1,11 @@
 import React from 'react'
 import { Container, CommentBox, MenuBox, Img, TextBox, Text} from './';
 import {BsFlower2, BsFlower3} from 'react-icons/bs';
+import { withRouter } from 'react-router';
+import { Link } from 'react-router-dom';
 import {GiFlowerPot, GiPlantSeed, GiPhotoCamera, GiProtectionGlasses} from 'react-icons/gi';
 
-export default function MainPage(props) {
+function MainPage(props) {
 
     const onClickHandler1 = (event) =>
     {
@@ -27,6 +29,7 @@ export default function MainPage(props) {
             <CommentBox>
                 <Text style = {{float : "left"}}>일상 속 작은 변화 ,</Text>
                 <Text style = {{fontSize : "24px", float:"right", right: "20px" }}>꽃 : 간</Text>
+                <Link to = "webAR.html">ar로 이동</Link>
             </CommentBox>
 
             <MenuBox onClick = {onClickHandler1}> 
@@ -65,8 +68,11 @@ export default function MainPage(props) {
                     <GiProtectionGlasses size = "90%" style = {{ padding : "10px"}}/>
                 </Img>
             </MenuBox>
+            
 
 
         </Container>
     )
 }
+
+export default withRouter(MainPage)

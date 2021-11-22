@@ -23,7 +23,11 @@ import RecommendResultPage from './components/views/RecommendResultPage/Recommen
 import MainPage from './components/views/MainPage/MainPage';
 import ColorTherapyIntroPage from './components/views/TherapyIntroPage/ColorTherapyIntroPage';
 import FlowerDetailPage from './components/views/DetailInfoPage/FlowerDetailPage';
-
+import UploadPage from './components/views/UploadPage/UploadPage';
+import PlaceTherapyRecommendResultPage from './components/views/RecommendResultPage/PlaceTherapyRecommendResultPage';
+import PlaceColorRecommendResultPage from './components/views/RecommendResultPage/PlaceColorRecommendResultPage';
+import PlantDetailPage from './components/views/DetailInfoPage/PlantDetailPage';
+// import WebAR from './capstone_AR/webAR.html';
 //import ResultPage from './components/views/ResultPage/ResultPage';
 
 //import Auth from './hoc/auth'; //Auth는 이름을 지은것!
@@ -62,6 +66,11 @@ function App() {
             <Route exact path = "/main" component = {LandingPage} />
             <Route exact path = "/colorintro" component = {ColorTherapyIntroPage}/>
             <Route exact path = "/flower_detail" component = {FlowerDetailPage}/>
+            <Route exact path = "/upload" component = {UploadPage}/>
+            <Route exact path = "/place_color_result" component = {PlaceColorRecommendResultPage}/>
+            <Route exact path = "/place_therapy_result" component = {PlaceTherapyRecommendResultPage}/>
+            <Route exact path = "/plant_detail" component = {PlantDetailPage}/>
+            {/* <Route exact path = "/ar" component = {WebAR}/> */}
           </Switch>
         <BottomNav/> 
       </Container> 

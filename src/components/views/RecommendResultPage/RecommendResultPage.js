@@ -1,5 +1,6 @@
 import React from 'react'
 import { useLocation, withRouter } from 'react-router';
+import { Link } from 'react-router-dom';
 import { ResultList, Container, ArButton, Title } from './';
 
 function RecommendResultPage() { 
@@ -9,13 +10,12 @@ function RecommendResultPage() {
 
     console.log(results);
 
-    const onClickHandler = (event) =>
-    {
+    // const onClickHandler = (event) =>
+    // {
+    //     console.log("click! ar로 이동 ")
         
-
-        //console.log("click! ar로 이동 ")
         
-    }
+    // }
 
     return (
         <div style ={{display : "block", justifyContent : "center", alignItems : "center"}}>
@@ -25,6 +25,7 @@ function RecommendResultPage() {
                     <ResultList result = {results}/>
                 </Container>
                 {/* <ArButton onClick = {onClickHandler}/> */}
+                {/* <Link to = "webAR.html">ar로 이동</Link> */}
             </div>
            
         </div>

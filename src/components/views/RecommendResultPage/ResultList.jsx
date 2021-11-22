@@ -16,7 +16,7 @@ export default function ResultList({result})
 
     const results = result;
 
-    const resultList = results.map((flower) => (<Result key = {flower.flower_id} name = {flower.flower_name} image = {flower.image} flower_id = {flower.flower_id}></Result>));
+    const resultList = results.map((flower) => (<Result key = {flower.id} name = {flower.name} image = {flower.image} id = {flower.id}></Result>));
 
     return (
         <ListBlock>

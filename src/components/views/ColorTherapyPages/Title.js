@@ -5,7 +5,7 @@ const HeadBlock = styled.div`
 
   margin-top : 20px;
   padding-top : 20px;
-  //border : 1px solid red;
+  border : 1px solid red;
   text-align : center;
   
   font-color : #968661;
