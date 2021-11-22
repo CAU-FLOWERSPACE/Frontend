@@ -77,7 +77,7 @@ class ARButton {
 						message.href = document.location.href.replace( /^http:/, 'https:' );
 
 					} else {
-						document.location.href = 'http://localhost:3000/';  // 꽃 추천 리스트 페이지로 돌아가기
+						document.location.href = '';  // 꽃 추천 리스트 페이지로 돌아가기
 					}
 
 					message.style.left = 'calc(50% - 90px)';
