@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import './Upload.css';
 
 const Button = styled.button`
-    width: 150px;
-    height: 40px;
+    width: 270px;
+    height: 30px;
 
     font-family: 'Nanum Myeongjo', serif;
     font-style: normal;
@@ -11,33 +12,30 @@ const Button = styled.button`
     font-size: 15px;
     line-height: 15px;
 
-    background: #D9CFB6;
-    border: 1px solid #D9CFB6;
-    box-shadow: 0px 4px 4px rgba(150, 134, 97, 0.5);
-    border-radius: 50px;
+    background: rgba(217, 207, 182, 0.4);
+    border: 0.1px solid #D9CFB6;
+    border-radius: 5px;
 
-    color : #897F65;
-
+    //color : #897F65;
+    color : rgba(137, 127, 101, 0.7);
+    
     display : flex;
     margin : 0 auto;
-  
+    margin : 10px;
     
     //버튼 내 텍스트 가운데로 
     justify-content : center;
     align-items : center;
-  
-    &:active{
-        background: #CFC19F;
-        font-weight : normal;
-        color : #FFFBE1;
-
-    }
 
 `
 
-export default function SelectButton({children, ...rest}) {
+export default function SelectButton({children, id, choice, ...rest}) {
+
+    console.log(choice);
+
+
     return (
-        <Button {...rest}>{children}</Button>
+        <Button choice = {choice} className = {id === choice ? "choice" : "nchoice" } {...rest}>{children}</Button>
     )
 }
  

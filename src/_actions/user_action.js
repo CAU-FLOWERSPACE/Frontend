@@ -10,7 +10,7 @@ export function loginUser(dataToSubmit) { //액션함수 정의
     const request = axios.post('http://3.36.217.73:8080/login', dataToSubmit, {withCredentials : true}) //서버에 리퀘스트 날림
         // .then(()=>{console.log("post 완료")})
         .then((response)=> {
-            console.log(response.status)
+            console.log(response.status) //response.status로 바꿔서 request에 200 저장
         })
 
     return {  //리퀘스트를 리듀서에 넘겨줌, 

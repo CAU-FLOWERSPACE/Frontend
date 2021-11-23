@@ -21,7 +21,7 @@ const Button = styled.button`
     border: none;
 
     font-family: 'Nanum Myeongjo', serif; 
-    color : #B4846C;s
+    color : #B4846C;
     font-size : 7px;
    
 

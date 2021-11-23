@@ -83,9 +83,11 @@ function LoginPage(props) {
 
         dispatch(loginUser(formData))
         .then(()=>{
+            console.log(document.cookie) // 로그인 서세스 
             alert("환영합니다!")
-            props.history.push('/recommend')
+            props.history.push('/')
         })
+        
         
        
     }

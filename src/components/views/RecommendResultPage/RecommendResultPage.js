@@ -2,20 +2,30 @@ import React from 'react'
 import { useLocation, withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 import { ResultList, Container, ArButton, Title } from './';
+import { useHistory } from 'react-router';
 
 function RecommendResultPage() { 
 
     const location = useLocation();
     const results = location.state.response;
-
+    const hitory = useHistory();
     console.log(results);
 
-    // const onClickHandler = (event) =>
-    // {
-    //     console.log("click! ar로 이동 ")
+    const onClickHandler = (event) =>
+    {
+        console.log("click! ar로 이동 ");
+        hitory.push(
+            { 
+                pathname : "web_ar",
+                state : { plant_list : results}
+            }
+        )
         
         
-    // }
+    }
+
+
+
 
     return (
         <div style ={{display : "block", justifyContent : "center", alignItems : "center"}}>
@@ -25,7 +35,7 @@ function RecommendResultPage() {
                     <ResultList result = {results}/>
                 </Container>
                 {/* <ArButton onClick = {onClickHandler}/> */}
-                {/* <Link to = "webAR.html">ar로 이동</Link> */}
+                <Link to = '/web_ar'>ar로 이동</Link>
             </div>
            
         </div>

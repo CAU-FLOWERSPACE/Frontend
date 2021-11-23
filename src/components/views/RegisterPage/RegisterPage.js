@@ -4,7 +4,7 @@ import { duplicateEmailCheck, registerUser } from '../../../_actions/user_action
 import {Input, ConfirmButton, AuthButton, AuthenMessage, ConfirmMessage} from './';
 import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
-
+import './Register.css';
 function RegisterPage(props) {
 
     const dispatch = useDispatch();
@@ -14,9 +14,9 @@ function RegisterPage(props) {
     const [Password, setPassword] = useState("") //서버에게 보내고자 하는 값
     const [ConfirmPassword, setConfirmPassword] = useState("")
 
-    const [emailMessage, setEmailMessage] = useState("")
-    const [nameMessage, setNameMessage] = useState("")
-    const [passwordMessage, setPasswordMessage] = useState("")
+    const [emailMessage, setEmailMessage] = useState("이메일을 입력하세요")
+    const [nameMessage, setNameMessage] = useState("이름을 입력하세요")
+    const [passwordMessage, setPasswordMessage] = useState("비밀번호를 입력하세요")
     const [passwordConfirmMessage, setPasswordConfirmMessage] = useState("")
 
     const [isName, setIsName] = useState(false)
@@ -55,9 +55,9 @@ function RegisterPage(props) {
 
     const onNameHandler = (event) => {
         setName(event.currentTarget.value)
-        if(event.currentTarget.value.length < 2 || event.currentTarget.value.length >5)
+        if(event.currentTarget.value.length < 2 || event.currentTarget.value.length >10)
         {
-            setNameMessage('5글자 미만 입력')
+            setNameMessage('10자 미만으로 입력 필수')
             setIsName(false)
         }
 
@@ -78,7 +78,7 @@ function RegisterPage(props) {
 
         if(!passwordRegex.test(passwordCurrent))
         {
-            setPasswordMessage('숫자+영문자+특수문자 조합으로 8자리 이상 필수')
+            setPasswordMessage('숫자+영문자+특수문자 조합 8자리 이상')
             setIsPassword(false)
         }
 
@@ -136,7 +136,7 @@ function RegisterPage(props) {
 
         
         dispatch(registerUser(body)) //디스패치를 이용해 액션을 취한다 
-            .then(response => 
+            .then(response =>  //여기한번 register.id로 출력해보기 
             {
                 if(response.payload.id) //뭉텅이를 풀어서!
                 { 
@@ -182,19 +182,22 @@ function RegisterPage(props) {
                 <img src = "img/login.png" style ={{marginBottom : "12px"}}/>
                 </div>
                 
-                <Input type="email" value={Email} onChange={onEmailHandler} placeholder = "이메일"/> 
+                <label className = "join_label">이메일</label>
+                <Input type="email" value={Email} onChange={onEmailHandler}/> 
                 <ConfirmMessage>{emailMessage}</ConfirmMessage>
                     {/* <AuthButton onClick={onClickHandler}/>  */}
                     {/* <AuthenMessage>{Message}</AuthenMessage> */}
                 
-                
-                <Input type="text" value={Name} onChange={onNameHandler} placeholder = "이름" />
+                 <label className = "join_label">이름</label>
+                <Input type="text" value={Name} onChange={onNameHandler} />
                 <ConfirmMessage>{nameMessage}</ConfirmMessage>
 
-                <Input type="password" value={Password} onChange={onPasswordHandler} placeholder = "비밀번호"/>
+                <label className = "join_label">비밀번호</label>
+                <Input type="password" value={Password} onChange={onPasswordHandler}/>
                 <ConfirmMessage>{passwordMessage}</ConfirmMessage>
 
-                <Input type="password" value={ConfirmPassword} onChange={onConfirmPasswordHandler} placeholder ="비밀번호 확인"/>
+                <label className = "join_label">비밀번호 확인</label>
+                <Input type="password" value={ConfirmPassword} onChange={onConfirmPasswordHandler}/>
                 <ConfirmMessage>{passwordConfirmMessage}</ConfirmMessage>
 
                 <ConfirmButton type="submit" top = "475px" disabled = {!(isName && isEmail && isPassword && isPasswordConfirm)} > 

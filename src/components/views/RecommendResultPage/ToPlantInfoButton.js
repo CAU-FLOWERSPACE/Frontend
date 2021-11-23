@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useHistory } from 'react-router';
 import { useDispatch } from 'react-redux';
-import { flowerDetail } from '../../../_actions/user_action';
+import { flowerDetail, plantDetail } from '../../../_actions/user_action';
 
 const Button = styled.button`
     width: 130px;
@@ -49,7 +49,14 @@ export default function ToPlantInfoButton({id, children}) {
         
         console.log(id);
 
-        //dispatch로 상세정보 받고 그걸 식물상세정보 페이지에 넘기기
+        dispatch(plantDetail(id))
+        .then((response) => {
+
+            history.push({
+                pathname : '/plant_detail',
+                state : {response : response.payload}
+            })
+        })
 
     }
 

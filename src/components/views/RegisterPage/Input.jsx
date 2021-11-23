@@ -9,27 +9,26 @@ const Inputs = styled.input`
     //left: 83px;
     //top: ${props=>props.top};
 
-    background: #E6DDC6;
-    border: 1px solid #E6DDC6;
+    //background: #E6DDC6;
+    border: 2px solid #E6DDC6;
     outline : none;
     box-sizing: border-box;
-    //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 
     font-family: 'Nanum Myeongjo', serif; 
     color : #B4846C;
     font-size : 13pt;
     margin : 0 auto;
-    margin-bottom : 10px;
+    //margin-bottom : 10px;
 
     &:focus{
         border : 2px solid #968661;
     }
 
-    ::placeholder{
-        margin-left : 10pt;
-        font-size : 14px;
-    }
+    // ::placeholder{
+    //     margin-left : 10pt;
+    //     font-size : 14px;
+    // }
     
 `
 

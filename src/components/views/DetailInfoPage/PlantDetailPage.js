@@ -16,9 +16,10 @@ function PlantDetailPage() {
         <Container>
             <div>
                 <Img><img src = {plant.image}/></Img>
-                <Name>{plant.plant_name}</Name>
+                <Name>{plant.name}</Name>
                 <Effect>{plant.effect}</Effect>
-                <Feature>{plant.plant_feature}</Feature>
+                <div>장소 : {plant.place}</div>
+                <Feature>{plant.feature}</Feature>
             </div>
         </Container>
     )

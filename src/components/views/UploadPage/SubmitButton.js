@@ -11,10 +11,11 @@ const Button = styled.button`
     font-size: 15px;
     line-height: 15px;
 
-    background: #D9CFB6;
-    border: 1px solid #D9CFB6;
-    box-shadow: 0px 4px 4px rgba(150, 134, 97, 0.5);
+    //background: #D9CFB6;
+    background : rgba(217, 207, 182, 0.7);
+    border: 3px solid #CFC19F;
     border-radius: 50px;
+    box-sizing: border-box;
 
     color : #897F65;
 
@@ -27,16 +28,19 @@ const Button = styled.button`
     align-items : center;
   
     &:active{
-        background: #CFC19F;
-        font-weight : normal;
-        color : #FFFBE1;
+        
 
     }
+
+
 
 `
 
 export default function SubmitButton({children, ...rest}) {
     return (
-        <Button {...rest}>{children}</Button>
+        <div style={{margin : "10px"}}>
+            <Button {...rest}>{children}</Button>
+        </div>
+        
     )
 }
