@@ -48,7 +48,7 @@ function webAR() {
     const plantList = location.state.plant_list;
 
 	plant_list.forEach((item) => console.log(item.name))
-	const plant_list = plantList.map((plant) => (<a key={plant.id} class="plant-obj" name={plant.name} id={plant.id} src={plant.image}><img src={plant.image} width="90px" height="120px"><p>{plant.name}</p></img></a>))
+	const plant_list = plantList.map((plant) => (<a key={plant.id} class="plant-obj" onclick={plantObjectClick} name={plant.name} id={plant.id} src={plant.image}><img src={plant.image} width="90px" height="120px"><p>{plant.name}</p></img></a>))
 
 	function openNav() {
 		document.getElementById("mySidenav").style.width = "130px";
@@ -71,33 +71,34 @@ function webAR() {
 
 	var touchDown, touchX, touchY, deltaX, deltaY;
 
+	var arButton;
+
 	init();
 	animate();
 
 	/* 꽃 사진 선택하면 띄워줘야 함 -> 수정 완료 */
-	$(".plant-obj").click(function(){
+	// $(".plant-obj").click(
+	function plantObjectClick() {
 		if(current_object != null){
 			scene.remove(current_object);
 		}
 
-		loadModel($(this).attr("src"));  // src=plant.image
+		loadModel($(this).attr("src"));  // src=plant.image / this 는 click 된 애를 말하는건가!?
 	
-	});
+	};
 
-	/* AR Button */
-
+	/* AR Button 
 	$("#ARButton").click(function(){
 		current_object.visible = false;
 		isAR = true;
 	});
-
-	
+	*/
+	arButton.click = function() {
+		current_object.visible = false;
+		isAR = true;
+	};
 
 	/* 꽃 사진 place 하는 버튼 -> 수정 완료 */
-	$("#place-button").click(function(){
-		arPlace();
-	});
-
 	function arPlace(){
 		if ( reticle.visible ) {
 			current_object.position.setFromMatrixPosition(reticle.matrix);
@@ -198,7 +199,9 @@ function webAR() {
 			domOverlay: { root: document.body }  // root: document.body -> 이렇게 넣어야 카메라 켜도 STOP AR 버튼이 생김
 		}
 
-		document.body.appendChild( ARButton.createButton(renderer, options) );
+		arButton = ARButton.createButton(renderer, options);
+		
+		document.body.appendChild( arButton );
 
 		reticle = new THREE.Mesh(
 			new THREE.RingBufferGeometry( 0.15, 0.2, 32 ).rotateX( - Math.PI / 2 ),  // hit-test 할 때 object 를 위치시킬 ring
@@ -350,7 +353,7 @@ function webAR() {
 			
 			<span style="font-size:30px;cursor:pointer;position: absolute;" onclick={openNav}>&#9776; open</span>
 		
-			<button type="button" id="place-button">PLACE</button>
+			<button type="button" id="place-button" onclick={arPlace} >PLACE</button>
 		</div>
 		</body>
 
