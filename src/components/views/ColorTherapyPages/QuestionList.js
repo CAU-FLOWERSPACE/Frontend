@@ -18,7 +18,7 @@ export default function QuestionList() {
     const options = [
         {
             id : 1,
-            comment : ' ① 무기력함',
+            comment : '활력',
             img : "img/idle.PNG",
             color : [
                 "red",
@@ -31,7 +31,7 @@ export default function QuestionList() {
 
         {
             id : 2,
-            comment : '② 슬픔, 우울',
+            comment : '행복',
             img : "img/sad.PNG",
             color : [
                 "red",
@@ -42,7 +42,7 @@ export default function QuestionList() {
 
         {
             id : 3,
-            comment : '③ 자신감 하락',
+            comment : '자신감',
             img : "img/proud.PNG",
             color : [
                 "yellow",
@@ -52,7 +52,7 @@ export default function QuestionList() {
 
         {
             id : 4,
-            comment : '④ 집중력 부족',
+            comment : '집중력',
             img : "img/study.PNG",
             color : [
                 "yellow",
@@ -62,7 +62,7 @@ export default function QuestionList() {
 
         {
             id : 5,
-            comment : '⑤ 식욕 저하',
+            comment : '식욕',
             img : "img/eat.PNG",
             color : [
                 "yellow",
@@ -72,7 +72,7 @@ export default function QuestionList() {
 
         {
             id : 6,
-            comment : '⑥ 스트레스',
+            comment : '안정',
             img : "img/stress2.PNG",
             color : [
                 "green",
@@ -84,7 +84,7 @@ export default function QuestionList() {
 
         {
             id : 7,
-            comment : '⑦ 외로움',
+            comment : '애정',
             img : "img/lonely.PNG",
             color : [
                 "green",

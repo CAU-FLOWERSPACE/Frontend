@@ -6,8 +6,6 @@ const Image = styled.div`
     width : 230px;
     height: 230px;
 
-    border : 1px solid green;
-
     outline : none;
     position : relative;
     overflow : hidden;

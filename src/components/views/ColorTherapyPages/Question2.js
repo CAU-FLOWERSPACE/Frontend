@@ -27,9 +27,7 @@ const TextButton = styled.button`
   height: 30px;
 
   background: rgba(217, 207, 182, 0.7);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  //border: 1px solid rgba(217, 207, 182, 0.7);
-  border : 1px solid red;
+  border: 3px solid #CFC19F;
   border-radius: 50px;
 
   outline : none;

@@ -33,6 +33,7 @@ const ImoticonButton = styled.div`
 
   width: 110px;
   height: 110px;
+  object-fit : contain;
 
   //background: rgba(217, 207, 182, 0.7);
   //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -67,6 +68,11 @@ export default function Question({id, comment, children,...rest}) {
 
   const history = useHistory();
 
+  let data = {
+    id : id,
+    comment : comment
+  }
+
 
     const onClickHandler = (event) =>
     {
@@ -74,7 +80,7 @@ export default function Question({id, comment, children,...rest}) {
         history.push(
         {
             pathname : "/option2page",
-            state : {id : id} // 
+            state : {data : data} // 
         }
         ) //옵션 2페이지로 이동
     

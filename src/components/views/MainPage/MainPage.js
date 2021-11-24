@@ -46,15 +46,16 @@ function MainPage(props) {
             </MenuBox>
 
             <MenuBox onClick = {onClickHandler2}>
+                <Img>
+                    {/* <img src = "img/place.jpg" width = "100%"/> */}
+                    <GiPlantSeed size = "90%" style = {{ padding : "10px"}}/>
+                </Img>
                 <TextBox>
                     <p>당신의 공간에</p>
                     <p>안정을 선물해줄 , </p>
                     <p style ={{ fontSize : "17px", paddingTop : "10px"}}>공간 테라피</p>
                 </TextBox>
-                <Img>
-                    {/* <img src = "img/place.jpg" width = "100%"/> */}
-                    <GiPlantSeed size = "90%" style = {{ padding : "10px"}}/>
-                </Img>
+            
             </MenuBox>
 
             <MenuBox onClick = {onClickHandler3}>

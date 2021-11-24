@@ -6,20 +6,26 @@ import {Template, Title, QuestionList2, Img} from './';
 
 function Option2Page() {
 
+
+
     const location = useLocation();
-    const optionId = location.state.id; 
+
+    console.log(location.state);
+    const optionId = location.state.data.id;
+    const comment = location.state.data.comment; 
     console.log(optionId);
     //case 1~7에 대한 키워드 여기서도 정의 
 
     return (
         <>
             <Template>
-                <Title>
-                    <p>다음 중 나의 요즘 몸 상태를 잘 나타내는</p>
-                    <p>키워드를 골라주세요 !</p>
-                </Title>
-                
                 <Img><img src = "img/disease.jpg" style ={{width : "100%"}}/></Img>
+                <Title>
+                    <p>'{comment}'을 얻고 싶어하는 당신, </p>
+                    <p>아래의 보기 중 경험한 적이 있거나</p>
+                    <p>걱정되는 증상이 있다면</p>
+                    <p>하나를 선택해주세요 ! </p>
+                </Title>
                 <QuestionList2 id = {optionId}/>
                 
             </Template>
