@@ -12,3 +12,4 @@ export {default as ToPlantInfoButton} from './ToPlantInfoButton';
 export {default as Title} from './Title';
 export {default as PlaceColorTitle} from './PlaceColorTitle';
 export {default as PlaceTherapyTitle} from './PlaceTherapyTitle';
+export {default as TherapyEffect} from './TherapyEffect';

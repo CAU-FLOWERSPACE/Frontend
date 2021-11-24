@@ -8,15 +8,17 @@ function RecommendResultPage() {
 
     const location = useLocation();
     const results = location.state.response;
-    const hitory = useHistory();
     console.log(results);
+
+    const history = useHistory();
+    
 
     const onClickHandler = (event) =>
     {
         console.log("click! ar로 이동 ");
-        hitory.push(
+        history.push(
             { 
-                pathname : "web_ar",
+                pathname : "/ar",
                 state : { plant_list : results}
             }
         )
@@ -25,6 +27,7 @@ function RecommendResultPage() {
     }
 
 
+ 
 
 
     return (
@@ -35,7 +38,12 @@ function RecommendResultPage() {
                     <ResultList result = {results}/>
                 </Container>
                 {/* <ArButton onClick = {onClickHandler}/> */}
-                <Link to = '/web_ar'>ar로 이동</Link>
+                {/* <ArButton onClick = {onClickHandler}>ar로 이동</ArButton> */}
+                <Link to = 
+                {{
+                    pathname : "/ar",
+                    state : {plant_list : results}
+                }}>ar로 이동</Link>
             </div>
            
         </div>

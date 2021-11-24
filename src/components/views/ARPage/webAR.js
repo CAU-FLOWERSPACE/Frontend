@@ -43,13 +43,13 @@ document.write(<body>
 	</body>);
 */
 
-function webAR() {
+function webAR({location}) {
 
-	const location = useLocation();
+	//const location = useLocation();
     const plantList = location.state.plant_list;
 
-	plant_list.forEach((item) => console.log(item.name))
-	const plant_list = plantList.map((plant) => (<a key={plant.id} class="plant-obj" onclick={plantObjectClick} name={plant.name} id={plant.id} src={plant.image}><img src={plant.image} width="90px" height="120px"><p>{plant.name}</p></img></a>))
+	//plant_list.forEach((item) => console.log(item.name))
+	const plant_list = plantList.map((plant) => (<a key={plant.id} class="plant-obj" onclick={() => plantObjectClick()} name={plant.name} id={plant.id} src={plant.image}><img src={plant.image} width="90px" height="120px"><p>{plant.name}</p></img></a>))
 
 	function openNav() {
 		document.getElementById("mySidenav").style.width = "130px";
@@ -357,6 +357,7 @@ function webAR() {
 			<button type="button" id="place-button" onclick={arPlace} >PLACE</button>
 		</div>
 		</body>
+		
 
 	);
 

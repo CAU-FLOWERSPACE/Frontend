@@ -8,6 +8,7 @@ const Title = styled.div`
     font-weight: bold;
     font-size: 15px;
     line-height: 15px;
+    color: #968661;
 
     margin : 15px;
 
@@ -15,6 +16,6 @@ const Title = styled.div`
 
 export default function PlaceTherapyTitle({children}) {
     return (
-        <Title>당신의 {children}에 알맞은 식물은 ...</Title>
+        <Title>당신의 {children} 속</Title>
     )
 }

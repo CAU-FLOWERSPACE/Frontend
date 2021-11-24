@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
 import {BiArrowBack} from 'react-icons/bi';
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
+import { useHistory } from 'react-router';
 
 const Button = styled.div`
 
@@ -22,11 +23,15 @@ const Button = styled.div`
 `
 function BackButton(props) {
 
+
+    const history = useHistory();
+
     const onClickHandler = (event) =>
     {
         //뒤로 가기 또는 다른거 추천받기
     
-        props.history.push('/');
+        //props.history.push('/');
+        history.goBack();
     }
     return <Button onClick = {onClickHandler}><BiArrowBack size = "70%"/></Button>
 }

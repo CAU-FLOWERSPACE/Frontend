@@ -8,7 +8,7 @@ const Container = styled.div`
     font-weight: bold;
     font-size: 15px;
     line-height: 15px;
-
+    color : #897F65;
     margin : 15px;
 
 `

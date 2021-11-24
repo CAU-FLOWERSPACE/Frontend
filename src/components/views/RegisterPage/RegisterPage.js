@@ -173,7 +173,7 @@ function RegisterPage(props) {
 
     
     return (
-        <div style = {{display : 'flex', justifyContent : 'center', alignContent : 'center', marginTop : '230px'}}>
+        <div style = {{display : 'flex', justifyContent : 'center', alignContent : 'center', marginTop : '170px'}}>
 
             <form style={{ display: 'flex', flexDirection: 'column' }} 
                 onSubmit={onSubmitHandler}

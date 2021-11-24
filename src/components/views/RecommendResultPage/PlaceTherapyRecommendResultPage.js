@@ -1,6 +1,6 @@
 import React from 'react'
 import { useLocation, withRouter } from 'react-router';
-import { Container, ArButton, PlaceTherapyTitle, PlantResultList } from './';
+import { Container, ArButton, PlaceTherapyTitle, PlantResultList, TherapyEffect } from './';
 
 function PlaceTherapyRecommendResultPage() {
 
@@ -9,14 +9,14 @@ function PlaceTherapyRecommendResultPage() {
 
     console.log(results); 
 
-    const place = results.place;
     const plants = results.plants;
 
     return (
         <div style ={{display : "block", justifyContent : "center", alignItems : "center"}}>
             <div >
                 <Container>
-                    <PlaceTherapyTitle>{place}</PlaceTherapyTitle>
+                    <PlaceTherapyTitle>{results.place}</PlaceTherapyTitle>
+                    <TherapyEffect>{results.effect}</TherapyEffect>
                     <PlantResultList result = {plants}/>
                 </Container>
                 {/* <ArButton onClick = {onClickHandler}/> */}

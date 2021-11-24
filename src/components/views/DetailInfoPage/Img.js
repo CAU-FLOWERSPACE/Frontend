@@ -9,7 +9,7 @@ const ImgBox = styled.div`
     //object-fit : cover;
     // background-size : 100%;
     
-    border : 1px solid red;
+    //border : 1px solid red;
     margin : 0 auto;
 
     outline : none;
@@ -17,6 +17,8 @@ const ImgBox = styled.div`
     display : flex;
     justify-content : center;
     align-items : center;
+
+    margin : 35px;
 
     
 `

@@ -1,5 +1,5 @@
 import {
-    LOGIN_USER, REGISTER_USER, AUTH_USER, COLOR_RECOMMEND
+    LOGIN_USER, REGISTER_USER, AUTH_USER, COLOR_RECOMMEND, FLOWER_DETAIL, PLANT_DETAIL, IMAGE_THERAPY_SUBMIT, IMAGE_COLOR_SUBMIT
 } from '../_actions/types';
 
 export default function foo(state = {}, action) { //하나하나 적어야함
@@ -20,6 +20,24 @@ export default function foo(state = {}, action) { //하나하나 적어야함
         case COLOR_RECOMMEND:
             return { ...state, recommendResult : action.payload }
             break;
+
+        case FLOWER_DETAIL:
+            return { ...state, flowerDetail : action.payload }
+            break;
+
+        case PLANT_DETAIL:
+            return { ...state, plantDetail : action.payload }
+            break;
+
+        case IMAGE_THERAPY_SUBMIT :
+            return {...state, imageTherapySubmit : action.payload }
+            break;
+        
+        case IMAGE_COLOR_SUBMIT :
+            return {...state, imageColorSubmit : action.payload}
+            break;
+
+        
             
         default:
             return state;

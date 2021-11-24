@@ -6,7 +6,7 @@ const ImgBox = styled.div`
     width: 190px;
     height: 214px;
 
-    //object-fit : cover;
+    object-fit : contain;
     // background-size : 100%;
     
     //border : 1px solid red;
@@ -17,6 +17,8 @@ const ImgBox = styled.div`
     display : flex;
     justify-content : center;
     align-items : center;
+
+    
 `
 
 export default function Img({children}) {

@@ -3,17 +3,18 @@ import styled from 'styled-components'
 
 const Mean = styled.p`
 
-font-style: normal;
-font-weight: normal;
-font-size: 15px;
+    font-family: 'Nanum Myeongjo', serif; 
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
 
-color: #968661;
+    color: #968661;
 
-display : flex;
-justify-content : center;
-align-items : center;
+    display : flex;
+    justify-content : center;
+    align-items : center;
 
-padding : 5px;
+    padding : 5px;
 
 
 `
