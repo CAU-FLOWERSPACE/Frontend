@@ -19,7 +19,7 @@ export default function QuestionList() {
         {
             id : 1,
             comment : '활력',
-            img : "img/idle.PNG",
+            img : "img/condition/fairness.png",
             color : [
                 "red",
                 "orange",
@@ -32,7 +32,7 @@ export default function QuestionList() {
         {
             id : 2,
             comment : '행복',
-            img : "img/sad.PNG",
+            img : "img/condition/happiness.png",
             color : [
                 "red",
                 "orange",
@@ -43,7 +43,7 @@ export default function QuestionList() {
         {
             id : 3,
             comment : '자신감',
-            img : "img/proud.PNG",
+            img : "img/condition/proud.png",
             color : [
                 "yellow",
                 "pink"
@@ -53,7 +53,7 @@ export default function QuestionList() {
         {
             id : 4,
             comment : '집중력',
-            img : "img/study.PNG",
+            img : "img/condition/concentration.png",
             color : [
                 "yellow",
                 "purple"
@@ -63,7 +63,7 @@ export default function QuestionList() {
         {
             id : 5,
             comment : '식욕',
-            img : "img/eat.PNG",
+            img : "img/condition/eating.png",
             color : [
                 "yellow",
                 "orange"
@@ -73,7 +73,7 @@ export default function QuestionList() {
         {
             id : 6,
             comment : '안정',
-            img : "img/stress2.PNG",
+            img : "img/condition/stress.png",
             color : [
                 "green",
                 "blue",
@@ -85,7 +85,7 @@ export default function QuestionList() {
         {
             id : 7,
             comment : '애정',
-            img : "img/lonely.PNG",
+            img : "img/condition/alone.png",
             color : [
                 "green",
                 "pink"
@@ -97,7 +97,7 @@ export default function QuestionList() {
 
 
     const optionList = options.map((option) => (<Question key = {option.id} id ={option.id} comment = {option.comment}>
-        <img src = {option.img} />
+        <img src = {option.img} width = "100%" height = "100%" overFit = "cover"/>
     </Question>));
 
     return (

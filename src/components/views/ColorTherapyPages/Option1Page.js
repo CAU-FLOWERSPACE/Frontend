@@ -16,10 +16,12 @@ function Option1Page() {
             
                 <Template>
                     <Title> 
-                        <p>다음 중 나의 현재 상태를 가장 잘 표현한</p>
-                        <p>이모티콘을 골라주세요 !</p>
+                        <p>요즘 가장 필요한 것이라고 생각되는</p>
+                        <p>보기를 하나 골라주세요. </p>
                     </Title>
+                    <div style={{border:  "1px solid red", overflowY : "auto"}}>
                     <QuestionList/>
+                    </div>
                 </Template>
             
             

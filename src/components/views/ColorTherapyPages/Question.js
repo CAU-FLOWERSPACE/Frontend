@@ -7,7 +7,10 @@ import {useHistory} from 'react-router-dom';
 //질문 한개
 const QuestionBlock = styled.div`
 
-    display: inline;
+    display: inline-block;
+    object-fit : cover;
+    border : 1px solid green;
+  
  
     align-items: center;
     padding-top: 12px;
@@ -15,49 +18,36 @@ const QuestionBlock = styled.div`
 
     //display : flex;
     justify-content : center;
+    margin : 10px;
    
 `
 
 const TextBlock = styled.div`
 
-  font-family: 'Nanum Myeongjo', serif; 
-  font-size: 14px;
+  //font-family: 'Nanum Myeongjo', serif; 
+  font-size: 16px;
 
   margin-bottom : 5px;
 `
 
 const ImoticonButton = styled.div`
 
-  flex: 1;
+  //flex: 1;
   font-size: 13px;
+  width : 120px;
+  height : 120px;
 
-  width: 110px;
-  height: 110px;
-  object-fit : contain;
-
-  //background: rgba(217, 207, 182, 0.7);
-  //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  //border: 1px solid rgba(217, 207, 182, 0.7);
-  //border-radius: 50px;
-
+  border : 1px solid red;
+  
   outline : none;
-  overflow : hidden;
+  //overflow : hidden;
 
-  display : inline;
+  display : inline-block;
   justify-content : center;
   align-items : center;
-
-  font-family: 'Nanum Myeongjo', serif; 
-  // color : #7D5A50;
-  // font-style: normal;
-  font-weight: bold;
-  // font-size: 13px;
-  // line-height: 15px;
   
-
-  & + & {
-    margin : 10rem;
-  }
+  margin : 2px;
+  
 
 `
 
@@ -88,7 +78,7 @@ export default function Question({id, comment, children,...rest}) {
   
     return (
         <QuestionBlock>
-            {/* <TextBlock>{comment}</TextBlock> */}
+            <TextBlock>{id}. {comment}</TextBlock>
             <ImoticonButton onClick= {onClickHandler}>{children}</ImoticonButton>
         </QuestionBlock>
     )
