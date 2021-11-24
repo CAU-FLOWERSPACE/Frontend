@@ -2,10 +2,11 @@ import React from 'react'
 import styled from 'styled-components';
 
 
+
 const Container = styled.div`
 
-width: 225px;
-height: 306px;
+width: 160px;
+height: 270px;
 
 margin : 20px;
 

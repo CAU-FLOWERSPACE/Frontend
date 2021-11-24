@@ -7,38 +7,37 @@ export default function foo(state = {}, action) { //하나하나 적어야함
 
         case LOGIN_USER:
             return { ...state, loginSuccess: action.payload } //스프레드 연산자는 받은 값을 똑같이 가져오는거!!, 
-            break; //여기가 전역데이터 저장인가?! 
+            //break; //여기가 전역데이터 저장인가?! 
 
         case REGISTER_USER :
             return { ...state, register : action.payload } //스프레드 연산자는 받은 값을 똑같이 가져오는거!! , 서버에게 받은 데이터 뭉텅이는 register변수에 저장 다 되어잇음
-            break;
+            //break;
 
         case AUTH_USER :
             return { ...state, userData : action.payload } //userData 아니어도됨! 유저의 모든 정보가 이어서 그런것
-            break;
+            //break;
 
         case COLOR_RECOMMEND:
             return { ...state, recommendResult : action.payload }
-            break;
+            //break;
 
         case FLOWER_DETAIL:
             return { ...state, flowerDetail : action.payload }
-            break;
+            //break;
 
         case PLANT_DETAIL:
             return { ...state, plantDetail : action.payload }
-            break;
+            //break;
 
         case IMAGE_THERAPY_SUBMIT :
             return {...state, imageTherapySubmit : action.payload }
-            break;
+            //break;
         
         case IMAGE_COLOR_SUBMIT :
             return {...state, imageColorSubmit : action.payload}
-            break;
+            //break;
 
-        
-            
+    
         default:
             return state;
     }

@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 const Block = styled.div`
 
-    width: 324px;
-    height: 600px;
+    //width: 324px;
+    //height: 600px;
 
     position : relative;
    // background: rgba(230, 221, 198, 0.4);
@@ -15,7 +15,9 @@ const Block = styled.div`
     margin-bottom:32px;
 
     display : flex;
-    flex-direction : column;
+    flex-direction : column; //?
+
+    padding : 10px 0;
 
     border : 1px solid black;
     overflow-y : auto;

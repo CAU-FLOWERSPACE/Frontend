@@ -8,7 +8,7 @@ import { colorRecommend } from '../../../_actions/user_action';
 
 const QuestionBlock = styled.div`
 
-    display: flex;
+    display: inline;
     justify-content : center;
     align-items: center;
 
@@ -20,6 +20,7 @@ const QuestionBlock = styled.div`
 const TextButton = styled.button`
 
   //flex: 1;
+  margin : 10px;
   font-size: 13px;
 
   width: 100px;
@@ -27,7 +28,8 @@ const TextButton = styled.button`
 
   background: rgba(217, 207, 182, 0.7);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(217, 207, 182, 0.7);
+  //border: 1px solid rgba(217, 207, 182, 0.7);
+  border : 1px solid red;
   border-radius: 50px;
 
   outline : none;

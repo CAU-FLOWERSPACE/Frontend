@@ -14,15 +14,11 @@ function FlowerDetailPage() {
 
     return (
         <Container>
-            {/* <BackButton/> */}
-            <div>
                 <Img><img src = {flower.image}/></Img>
                 <Name>{flower.name}</Name>
                 <FlowerMean>{flower.mean}</FlowerMean>
                 <Feature>{flower.feature}</Feature>
-                <BackButton>뒤로가기</BackButton>
-            </div>
-            
+                <BackButton/>
         </Container>
     )
 }

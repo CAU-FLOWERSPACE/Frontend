@@ -7,13 +7,13 @@ import {useHistory} from 'react-router-dom';
 //질문 한개
 const QuestionBlock = styled.div`
 
-    // display: flex;
+    display: inline;
  
     align-items: center;
     padding-top: 12px;
     padding-bottom: 12px;
 
-    display : flex;
+    //display : flex;
     justify-content : center;
    
 `
@@ -42,9 +42,9 @@ const ImoticonButton = styled.div`
   outline : none;
   overflow : hidden;
 
-  display : flex;
+  display : inline;
   justify-content : center;
-  align-items : center
+  align-items : center;
 
   font-family: 'Nanum Myeongjo', serif; 
   // color : #7D5A50;
@@ -53,20 +53,6 @@ const ImoticonButton = styled.div`
   // font-size: 13px;
   // line-height: 15px;
   
-
-
-
-  // &:active{
-
-  //   background: #CFC19F;
-  //   border: 1px solid #CFC19F;
-    
-
-  //    color : #F7F4E3;
-  //  // color :  rgba(217, 207, 182, 0.9);
-
-
-  // }
 
   & + & {
     margin : 10rem;
@@ -96,7 +82,7 @@ export default function Question({id, comment, children,...rest}) {
   
     return (
         <QuestionBlock>
-            <TextBlock>{comment}</TextBlock>
+            {/* <TextBlock>{comment}</TextBlock> */}
             <ImoticonButton onClick= {onClickHandler}>{children}</ImoticonButton>
         </QuestionBlock>
     )

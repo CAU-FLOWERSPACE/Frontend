@@ -6,18 +6,31 @@ import { useHistory } from 'react-router';
 
 const Button = styled.div`
 
-    width: 45px;
+    width: 100px;
     height: 34px;
 
     background: #D9CFB6;
-    border: 1px solid #D9CFB6;
+    border: 2px solid #D9CFB6;
     box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    line-height: 34px;
+
+    font-family: 'Nanum Myeongjo', serif; 
+    font-weight : bold;
+    font-size : 13px;
 
     margin : 15px;
-    padding : 2px 0;
+    
 
+    /버튼 내 텍스트 가운데로 
+    
+    display : flex;
+    justify-content : center;
+    //align-items : center;
+    text-align : center;
+
+    margin : 0 auto;
     color : #968661;
 
 `
@@ -28,12 +41,10 @@ function BackButton(props) {
 
     const onClickHandler = (event) =>
     {
-        //뒤로 가기 또는 다른거 추천받기
-    
-        //props.history.push('/');
         history.goBack();
     }
-    return <Button onClick = {onClickHandler}><BiArrowBack size = "70%"/></Button>
+
+    return <Button onClick = {onClickHandler}>뒤로가기</Button>
 }
 
 

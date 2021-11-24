@@ -2,7 +2,7 @@ import React from 'react'
 import { withRouter } from 'react-router';
 import { Container } from '../Common';
 import {useLocation} from 'react-router-dom';
-import {Img, Name, Feature} from './';
+import {Img, Name, Feature, BackButton} from './';
 
 function PlantDetailPage() {
 
@@ -20,6 +20,7 @@ function PlantDetailPage() {
                 <Img><img src = {plant.image}/></Img>
                 <Name>{plant.name}</Name>
                 <Feature>{plant.feature}</Feature>
+                <BackButton/>
             </div>
         </Container>
     )

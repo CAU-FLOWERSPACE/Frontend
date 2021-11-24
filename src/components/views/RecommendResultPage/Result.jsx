@@ -11,7 +11,8 @@ export default function Result({name, image, id}) { //이미지 넘겨받아야�
         <Card>
             <Img><img src = {image} width = "100%" height = "100%" overFit = "cover"/></Img> 
             <Name>{name}</Name>
-            <ToInfoButton id = {id}>상세정보</ToInfoButton>
+            {/* 상세정보라는 말 없애고 />로 마무리하기 */}
+            <ToInfoButton id = {id}/>
         </Card>
 
     

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Block = styled.div`
 
 
-    height: 800px;
+    height: 600px;
    // border : 1px solid red;
 
     margin : 0 auto; 
@@ -16,6 +16,7 @@ const Block = styled.div`
 
     margin-top : 90px;
     margin-bottom:32px;
+    overflow-y : auto;
 
 
 `

@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import { useHistory } from 'react-router';
 import { useDispatch } from 'react-redux';
 import { flowerDetail, plantDetail } from '../../../_actions/user_action';
-
+import {MdManageSearch } from 'react-icons/md';
 const Button = styled.button`
-    width: 130px;
+    width: 40px;
     height: 30px;
 
     font-family: 'Nanum Myeongjo', serif;
@@ -17,12 +17,14 @@ const Button = styled.button`
     background: #D9CFB6;
     border: 1px solid #D9CFB6;
     box-shadow: 0px 4px 4px rgba(150, 134, 97, 0.5);
-    border-radius: 50px;
+    border-radius: 10px;
 
     color : #897F65;
 
     display : flex;
     margin : 0 auto;
+    float : right;
+    margin-right : 17px;
   
     
     //버튼 내 텍스트 가운데로 
@@ -61,6 +63,6 @@ export default function ToPlantInfoButton({id, children}) {
     }
 
     return (
-        <Button onClick = {onClickHandler}>{children}</Button>
+        <Button onClick = {onClickHandler}><MdManageSearch size = "85%"/></Button>
     )
 }

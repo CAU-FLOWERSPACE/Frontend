@@ -2,17 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Button = styled.button`
-    position: absolute;
-    right : 20px;
+
     width: 100px;
     height: 30px;
-    // left: 175px;
-    // top: ${props=>props.top};
 
     background: #D9CFB6;
     border: 1px solid #D9CFB6;
     box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 
     font-family: 'Nanum Myeongjo', serif;
@@ -26,6 +23,8 @@ const Button = styled.button`
     justify-content : center;
     align-items : center;
     text-align : center;
+
+    margin : 10px;
     
     margin-bottom : 10px;
 
@@ -39,10 +38,8 @@ const Button = styled.button`
 
 `
 
-export default function ArButton({...rest}) {
+export default function ToGoButton({children, ...rest}) {
     return (
-        <Button {...rest}>
-            AR 바로가기
-        </Button>
+        <Button {...rest}>{children}</Button>
     )
 }

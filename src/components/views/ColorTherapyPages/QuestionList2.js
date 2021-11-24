@@ -58,12 +58,12 @@ export default function QuestionList({id}) {
         {keyword : "변비", value : "YELLOW"},
         {keyword : "소화불량", value : "YELLOW"},
         {keyword : "피부트러블", value : "YELLOW"},
-        {keyword : "불면증이 있어요.", value :"BLUE"},
-        {keyword : "고혈압이 있어요.", value :"BLUE"}, 
-        {keyword : "두통이 잦아요.", value :"BLUE"},
+        {keyword : "불면증", value :"BLUE"},
+        {keyword : "고혈압", value :"BLUE"}, 
+        {keyword : "두통", value :"BLUE"},
         {keyword : "어깨통증", value : "PURPLE"},
         {keyword : "정신피로", value : "PURPLE"},
-        {kewyord : "귀울림", value : "PURPLE"}
+        //{kewyord : "귀울림", value : "PURPLE"},
 
     ];
 
@@ -71,7 +71,6 @@ export default function QuestionList({id}) {
         {keyword : "변비", value : "YELLOW"},
         {keyword : "소화불량", value : "YELLOW"},
         {keyword : "피부트러블", value : "YELLOW"},
-        {keyword : "빈혈", value : "ORANGE"}, 
         {keyword : "빈혈", value : "ORANGE"}
 
     ];

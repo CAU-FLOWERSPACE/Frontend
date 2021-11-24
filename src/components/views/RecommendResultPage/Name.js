@@ -9,10 +9,12 @@ const NameContainer = styled.div`
     font-size: 15px;
     line-height: 15px;
 
+    //border : 1px solid red;
 
     display : flex;
     // margin : 0 auto;
-    margin : 10px;
+    margin-top : 10px;
+    margin-bottom : 10px;
   
     color : #897F65;
     justify-content : center;

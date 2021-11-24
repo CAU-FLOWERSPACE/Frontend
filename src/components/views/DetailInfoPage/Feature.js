@@ -4,7 +4,8 @@ import styled from 'styled-components'
 const Container = styled.div`
 
     width: 277px;
-    height: 221px;
+    //height: 221px;
+    //border : 1px solid red;
 
     border-top : 1px solid #968661;
 
