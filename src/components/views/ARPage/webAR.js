@@ -1,7 +1,8 @@
 import * as THREE from "../../../capstone_AR/build/three.module.js";
 import { ARButton } from "../../../capstone_AR/jsm/webxr/ARButton.js";
 import { OrbitControls } from "../../../capstone_AR/jsm/controls/OrbitControls.js";
-import { withRouter,useLocation } from "react-router";
+import { withRouter } from "react-router";
+import { useLocation } from "react-router-dom";
 // import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
 // import { RGBELoader } from './jsm/loaders/RGBELoader.js';
 // import { RoughnessMipmapper } from './jsm/utils/RoughnessMipmapper.js';
