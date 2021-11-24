@@ -49,7 +49,7 @@ function webAR({location}) {
     const plantList = location.state.plant_list;
 
 	//plant_list.forEach((item) => console.log(item.name))
-	const plant_list = plantList.map((plant) => (<a key={plant.id} class="plant-obj" onclick={() => plantObjectClick()} name={plant.name} id={plant.id} src={plant.image}><img src={plant.image} width="90px" height="120px"><p>{plant.name}</p></img></a>))
+	const plant_list = plantList.map((plant) => (<a key={plant.id} class="plant-obj" onclick={() => plantObjectClick(plant.image)} name={plant.name} id={plant.id} src={plant.image}><img src={plant.image} width="90px" height="120px"><p>{plant.name}</p></img></a>))
 
 	function openNav() {
 		document.getElementById("mySidenav").style.width = "130px";
