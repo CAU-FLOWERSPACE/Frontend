@@ -79,13 +79,13 @@ function webAR({location}) {
 
 	/* 꽃 사진 선택하면 띄워줘야 함 -> 수정 완료 */
 	// $(".plant-obj").click(
-	function plantObjectClick() {
+	function plantObjectClick(plant_img) {
 		if(current_object != null){
 			scene.remove(current_object);
 		}
 
-		loadModel($(this).attr("src"));  // src=plant.image / this 는 click 된 애를 말하는건가!?
-	
+		// loadModel($(this).attr("src"));  // src=plant.image / this 는 click 된 애를 말하는건가!?
+		loadModel(plant_img);
 	};
 
 	/* AR Button 
