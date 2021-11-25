@@ -9,7 +9,7 @@ const QuestionBlock = styled.div`
 
     display: inline-block;
     object-fit : cover;
-    border : 1px solid green;
+    //border : 1px solid green;
   
  
     align-items: center;
@@ -26,6 +26,8 @@ const TextBlock = styled.div`
 
   //font-family: 'Nanum Myeongjo', serif; 
   font-size: 16px;
+  //font-weight : bold;
+  color : #83744F;
 
   margin-bottom : 5px;
 `
@@ -34,10 +36,10 @@ const ImoticonButton = styled.div`
 
   //flex: 1;
   font-size: 13px;
-  width : 120px;
-  height : 120px;
+  width : 123px;
+  height : 123px;
 
-  border : 1px solid red;
+  border : 5px solid rgba(217, 207, 182, 0.5);
   
   outline : none;
   //overflow : hidden;

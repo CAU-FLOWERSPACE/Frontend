@@ -48,7 +48,7 @@ function App() {
  
     <Router>
       <Container>
-        <Header/>
+        {/* <Header/> */}
           <Switch>
             {/* auth로 감싸줘야한다! 몇가지 옵션 더 붙여서(출입가능여부 옵션 주기) */}
             {/* <Route exact path = "/" component = {Auth(LandingPage, null )}/>

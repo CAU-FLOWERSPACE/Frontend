@@ -7,8 +7,10 @@ const ListBlock = styled.div`
     flex : 1;
     padding : 20px 32px;
     padding-bottom : 48px;
+    justify-content : center;
     overflow-y: auto;
    // background : gray; 
+  
 `
 
 export default function QuestionList() {

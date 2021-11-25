@@ -17,6 +17,9 @@ const Effect = styled.p`
 `
 export default function TherapyEffect({children}) {
     return (
-        <Effect>{children}에 탁월한 식물들</Effect>
+        <>
+            <Effect>{children}에</Effect>
+            <Effect>탁월한 식물들입니다.</Effect>
+        </>
     )
 }

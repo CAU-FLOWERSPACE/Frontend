@@ -29,7 +29,6 @@ function MainPage(props) {
             <CommentBox>
                 <Text style = {{float : "left"}}>일상 속 작은 변화 ,</Text>
                 <Text style = {{fontSize : "24px", float:"right", right: "20px" }}>꽃 : 간</Text>
-                <Link to = "webAR.html">ar로 이동</Link>
             </CommentBox>
 
             <MenuBox onClick = {onClickHandler1}> 
@@ -60,7 +59,7 @@ function MainPage(props) {
 
             <MenuBox onClick = {onClickHandler3}>
                 <TextBox>
-                    <p>추천 받은 꽃들로</p>
+                    <p>내 공간에</p>
                     <p>직접 배치해보는</p>
                     <p style ={{ fontSize : "17px", paddingTop : "10px"}}>나만의 AR</p>
                 </TextBox>

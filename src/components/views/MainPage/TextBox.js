@@ -10,8 +10,7 @@ const Box = styled.div`
     font-size : 11.5pt;
     font-weight : bold;
 
-    padding-top : 18px;
-    padding-left : 20px;
+    padding : 25px;
     
     line-height : 0.7rem; //텍스트 간격
     

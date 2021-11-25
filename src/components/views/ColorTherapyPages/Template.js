@@ -11,8 +11,8 @@ const Block = styled.div`
 
     margin : 0 auto; 
 
-    margin-top : 98px;
-    margin-bottom:32px;
+    //margin-top : 98px;
+    //margin-bottom:32px;
 
     display : flex;
     flex-direction : column; //?
