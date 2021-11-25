@@ -3,14 +3,16 @@ import { useLocation, withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 import { ResultList, Container, Title, ToGoButton, ButtonContainer } from './';
 import { useHistory } from 'react-router';
-
+import { useDispatch } from 'react-redux';
+import {arSubmit} from '../../../_actions/user_action';
 function RecommendResultPage() { 
 
     const location = useLocation();
     const results = location.state.response;
-    console.log(results);
+    console.log(`result : ${results}`);
 
     const history = useHistory();
+    const dispatch = useDispatch();
     
 
     // const onClickHandler = (event) =>
@@ -28,6 +30,12 @@ function RecommendResultPage() {
         
     // }
 
+    let body = {
+        "plants" : results
+    }
+
+    console.log(`body : ${body}`);
+
     const onMoveToMain = (event) =>
     {
         history.push('/');
@@ -36,7 +44,16 @@ function RecommendResultPage() {
 
     const onMoveToAR = (event) =>
     {
-        console.log("ar 이동")
+        dispatch(arSubmit(body))
+        .then(response => {
+            console.log(`데이터 : ${response.payload}`)
+            history.push(
+                {
+                    pathname : "/ar",
+                    state : { response : response.payload}
+                }
+            )
+        })
     }
 
 

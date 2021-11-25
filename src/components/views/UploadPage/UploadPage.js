@@ -174,19 +174,22 @@ export default function UploadPage({props}) {
                     : <BsFillImageFill  size = "10%" style ={{margin : "0 auto"}}/>
                 }
             </Image> 
+
             <SelectGuideMessage>원하시는 보기를 선택해주세요 !</SelectGuideMessage>
+
             <div> 
                 {/* <SelectButton onClick={onTherapy} disabled = {!isUpload} id = '1' choice = {choice}>내 공간에 딱 알맞은 테라피</SelectButton>
                 <SelectButton onClick={onColor} disabled = {!isUpload} id = '2' choice = {choice}>내 공간에 어울리는 스타일링</SelectButton> */}
-                <input type ="radio" name = "place" onClick={onTherapy} className = "therapy"/>내 공간에 딱 알맞은 테라피
-                <br/>
-                <input type ="radio" name = "place" onClick={onColor} style={{color : "black"}}/>내 공간에 어울리는 스타일링
-            </div>
+                <div className = "item">
+                    <input type ="radio" name = "place" onClick={onTherapy} className = "place"/> 내 공간에 딱 알맞은 테라피
+                </div>
 
-           
+                <div className = "item">
+                    <input type ="radio" name = "place" onClick={onColor} className = "place"/> 내 공간에 어울리는 스타일링
+                </div>
+            </div>
             <SubmitButton onClick={onSubmitHandler} disabled = {!isSelect}>추천결과 보기 go</SubmitButton>
-            
-            {/* accept="image/*" capture="camera" */}
+        
         </Container>
     )
 }

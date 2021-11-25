@@ -1,7 +1,7 @@
 import axios, { Axios } from 'axios';
 import {
     LOGIN_USER, REGISTER_USER, AUTH_USER,COLOR_RECOMMEND, FLOWER_DETAIL, 
-    IMAGE_COLOR_SUBMIT, IMAGE_THERAPY_SUBMIT, DUP_CHECK, PLANT_DETAIL
+    IMAGE_COLOR_SUBMIT, IMAGE_THERAPY_SUBMIT, DUP_CHECK, PLANT_DETAIL, AR_SUBMIT
 } from './types'; //types.js에서 타입을 가져옴
 
 export function loginUser(dataToSubmit) { //액션함수 정의
@@ -111,5 +111,18 @@ export function imageTherapySubmit(dataToSubmit)
         type : IMAGE_THERAPY_SUBMIT,
         payload : request
     }
+}
+
+export function arSubmit(dataToSubmit)
+{
+    const request = axios.post(`http://3.36.217.73:8080/api/ar`, dataToSubmit)
+     .then(response => response.data)
+     
+    
+    return {
+        type : AR_SUBMIT,
+        payload : request
+    }
+    
 }
 

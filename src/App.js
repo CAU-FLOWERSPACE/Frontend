@@ -27,7 +27,7 @@ import UploadPage from './components/views/UploadPage/UploadPage';
 import PlaceTherapyRecommendResultPage from './components/views/RecommendResultPage/PlaceTherapyRecommendResultPage';
 import PlaceColorRecommendResultPage from './components/views/RecommendResultPage/PlaceColorRecommendResultPage';
 import PlantDetailPage from './components/views/DetailInfoPage/PlantDetailPage';
-import webAR from './components/views/ARPage/webAR';
+import ARpage from './components/views/ARPage/ARpage';
 //import ResultPage from './components/views/ResultPage/ResultPage';
 
 //import Auth from './hoc/auth'; //Auth는 이름을 지은것!
@@ -71,7 +71,7 @@ function App() {
             <Route exact path = "/place_therapy_result" component = {PlaceTherapyRecommendResultPage}/>
             <Route exact path = "/plant_detail" component = {PlantDetailPage}/>
             {/* <Route exact path = "/web_ar" component = {}/> */}
-            <Route exact path = "/ar" component = {webAR}/>
+            <Route exact path = "/ar" component = {ARpage}/>
           </Switch>
         <BottomNav/> 
       </Container> 

@@ -8,6 +8,27 @@
     /* color : #897F65; */
 }
 
-.therapy{
-    active: black;
+.place{
+    margin : 10px;
+}
+
+.wrapper{
+    /* //height: auto */
+    width: 100%;
+    padding: 0px 16px 24px 16px;
+    box-sizing: border-box;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    position: relative;
+    
+    font-family: 'Nanum Myeongjo', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    color : #897F65;
+    
 }
