@@ -12,7 +12,7 @@ function ARpage() {
     const code = location.state.response;
 
     return (
-        <div >
+        <div style={{height : "100%", padding : "100px"}}>
             <iframe srcdoc = {code} 
             frameborder = "0" 
             width = "100%" 

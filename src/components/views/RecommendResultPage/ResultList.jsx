@@ -6,11 +6,12 @@ const ListBlock = styled.div`//바깥으로 안나가게
     flex : 1;
     //display : flex;//
     //width : 400px;
-    //height : 700px; 
-    border : 1px solid red;
+    height : 600px; 
+    //border : 1px solid green;
     padding : 20px 32px;
     padding-bottom : 48px;
-    overflow-y: auto;
+    //overflow-y: auto;
+    overflow:scroll;
 `
 
 export default function ResultList({result}) 

@@ -9,7 +9,9 @@ const Container = styled.div`
     font-size: 15px;
     line-height: 15px;
     color : #897F65;
+    text-align : center;
     margin : 15px;
+    
 
 `
 

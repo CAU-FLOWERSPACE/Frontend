@@ -30,25 +30,28 @@ import PlantDetailPage from './components/views/DetailInfoPage/PlantDetailPage';
 import ARpage from './components/views/ARPage/ARpage';
 //import ResultPage from './components/views/ResultPage/ResultPage';
 
-//import Auth from './hoc/auth'; //Auth는 이름을 지은것!
+import Navbar from './components/views/Navbar';
+
 
 const Container = styled.div`
   position: absolute;
   top: 0;
+  bottom : 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-color : #F7F4E3;
 `
-
 function App() {
 
   return (
  
     <Router>
+      
       <Container>
-        {/* <Header/> */}
+      {/* <Navbar/> */}
+        <Header/>
           <Switch>
             {/* auth로 감싸줘야한다! 몇가지 옵션 더 붙여서(출입가능여부 옵션 주기) */}
             {/* <Route exact path = "/" component = {Auth(LandingPage, null )}/>

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Block = styled.div`
 
-
+    padding-top : 55px;
     height: 600px;
    // border : 1px solid red;
 
@@ -14,7 +14,8 @@ const Block = styled.div`
     align-items : center;
     flex-direction : column;
 
-    margin-top : 90px;
+    
+    margin-top : 40px;
     margin-bottom:32px;
     overflow-y : auto;
 

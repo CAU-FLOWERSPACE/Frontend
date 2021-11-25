@@ -23,6 +23,7 @@ const Button = styled.button`
     justify-content : center;
     align-items : center;
     text-align : center;
+    border: 3px solid #CFC19F;
 
     margin : 10px;
     

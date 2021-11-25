@@ -9,27 +9,28 @@ function MainPage(props) {
 
     const onClickHandler1 = (event) =>
     {
-        props.history.push('/colorintro')
+        props.history.push('/option1page')
     }
 
     const onClickHandler2 = (event) =>
     {
-        props.history.push('/main')
+        props.history.push('/upload')
     }
 
     const onClickHandler3 = (event) =>
     {
-        props.history.push('/main')
+        props.history.push('/login')
     }
 
 
     return (
         <Container>
+            <div><img src = "img/mainlogo.png"/></div>
 
-            <CommentBox>
+            {/* <CommentBox>
                 <Text style = {{float : "left"}}>일상 속 작은 변화 ,</Text>
                 <Text style = {{fontSize : "24px", float:"right", right: "20px" }}>꽃 : 간</Text>
-            </CommentBox>
+            </CommentBox> */}
 
             <MenuBox onClick = {onClickHandler1}> 
             {/* 각 메뉴박스의 이미지, 텍스트는 여기서 명시 */}

@@ -3,14 +3,16 @@ import styled from 'styled-components'
 
 const Contents = styled.div`
 
-    margin-top : 60px;
+    //margin-top : 60px;
 
-    border : 1px solid red; // test
+    //border : 1px solid red; // test
+    padding-top: 55px;
 
     display : flex;
     justify-content : center;
     align-items : center;
     flex-direction : column;
+    overflow-y : auto;
 
     
 `

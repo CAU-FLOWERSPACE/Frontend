@@ -12,7 +12,7 @@ const Container = styled.div`
 
     background : #F7F4E3;
 
-    position : absolute;
+    //position : absolute;
     border: none;
     outline : none;
 
@@ -93,7 +93,7 @@ function LoginPage(props) {
     }
 
     return (
-        <div style = {{display : 'flex', justifyContent : 'center', alignContent : 'center', marginTop : '240px'}}>
+        <div style = {{display : 'flex', justifyContent : 'center', alignContent : 'center', marginTop : '200px'}}>
 
             <form style={{ display: 'flex', flexDirection: 'column'}} 
             onSubmit={onSubmitHandler2}>

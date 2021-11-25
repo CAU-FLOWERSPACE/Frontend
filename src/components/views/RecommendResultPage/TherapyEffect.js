@@ -13,7 +13,7 @@ const Effect = styled.p`
     justify-content : center;
     align-items : center;
 
-    padding : 5px;
+    // padding : 5px;
 `
 export default function TherapyEffect({children}) {
     return (

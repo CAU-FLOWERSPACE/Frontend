@@ -11,6 +11,7 @@ const Title = styled.div`
     color: #968661;
 
     margin : 15px;
+    padding : 3px;
 
 `
 

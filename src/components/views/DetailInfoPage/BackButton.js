@@ -10,7 +10,8 @@ const Button = styled.div`
     height: 34px;
 
     background: #D9CFB6;
-    border: 2px solid #D9CFB6;
+    //border: 2px solid #D9CFB6;
+    border: 3px solid #CFC19F;
     box-sizing: border-box;
     //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -22,7 +23,6 @@ const Button = styled.div`
 
     margin : 15px;
     
-
     /버튼 내 텍스트 가운데로 
     
     display : flex;

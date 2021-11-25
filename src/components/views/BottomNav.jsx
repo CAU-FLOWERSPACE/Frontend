@@ -21,12 +21,12 @@ export default function BottomNav() {
             <div>
                 <nav className = "wrapper">
                     <div>
-                        <Link to = '/colorintro' className = "nav-link" onClick={() => setActiveNav(1)}>
+                        <Link to = '/option1page' className = "nav-link" onClick={() => setActiveNav(1)}>
                             <BsFlower2 className = { activeNav === 1 ? "nav-item active" : "nav-item"} size = "20px"/>
                         </Link>
                     </div>
                     <div>
-                        <Link to = '/login' className = "nav-link" onClick={() => setActiveNav(2)}>
+                        <Link to = '/upload' className = "nav-link" onClick={() => setActiveNav(2)}>
                             <RiPlantFill className = { activeNav === 2 ? "nav-item active" : "nav-item"} size = "20px"/>
                         </Link>
                     </div>

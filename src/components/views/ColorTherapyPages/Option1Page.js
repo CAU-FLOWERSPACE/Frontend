@@ -19,7 +19,7 @@ function Option1Page() {
                         <p>요즘 가장 필요한 것이라고 생각되는</p>
                         <p>보기를 하나 골라주세요. </p>
                     </Title>
-                    <div style={{border:  "1px solid red", overflowY : "auto"}}>
+                    <div style={{overflowY : "auto"}}>
                     <QuestionList/>
                     </div>
                 </Template>

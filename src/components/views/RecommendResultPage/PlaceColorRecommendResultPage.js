@@ -1,7 +1,8 @@
 import React from 'react'
 import { useLocation, useHistory, withRouter } from 'react-router';
 import { Title, ResultList, Container, ArButton, PlaceColorTitle, ButtonContainer, ToGoButton } from './';
-
+import { useDispatch } from 'react-redux';
+import { arSubmit } from '../../../_actions/user_action';
 
 function PlaceColorRecommendResultPage() {
 
@@ -10,18 +11,33 @@ function PlaceColorRecommendResultPage() {
     
     const history = useHistory();
 
+    const dispatch = useDispatch();
+
     console.log(`결과 : ${results}`);
     const flowerList = results.flowers;
 
+    let body = {
+        "plants" : flowerList
+    }
+
     const onMoveToMain = (event) =>
     {
-        history.push('/');
+        history.goBack();
 
     }
 
     const onMoveToAR = (event) =>
     {
-        console.log("ar 이동")
+        dispatch(arSubmit(body))
+        .then(response => {
+            console.log(`데이터 : ${response.payload}`)
+            history.push(
+                {
+                    pathname : "/ar",
+                    state : { response : response.payload}
+                }
+            )
+        })
     }
 
 
@@ -29,9 +45,13 @@ function PlaceColorRecommendResultPage() {
         <div style ={{display : "block", justifyContent : "center", alignItems : "center"}}>
             <div>
                 <Container>
-                    <Title>당신의 공간에 어울리는 꽃은 ...</Title>
+                    <Title>
+                        <p>당신의 소중한 공간에 </p>
+                        <p>인테리어 효과를 줄 수 있는 꽃들입니다.</p>
+                       
+                    </Title>
                     <ButtonContainer>
-                        <ToGoButton onClick = {onMoveToMain}>메인으로</ToGoButton>
+                        <ToGoButton onClick = {onMoveToMain}>이전으로</ToGoButton>
                         <ToGoButton onClick = {onMoveToAR}>ar 이동</ToGoButton>
                     </ButtonContainer>
                     <ResultList result = {flowerList}/>

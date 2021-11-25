@@ -7,16 +7,16 @@ import { Question, Question2, CheckBox, RadioButton} from './';
 
 const ListBlock = styled.div`
     flex : 1;
-    //width : 200px;
-    height : 200px;
+    margin-top : 10px;
+   
     //line-height : 10px;
     //display : inline-block;
-    //padding : 20px 32px;
-    padding-bottom : 48px;
+    padding-left : 5px;
+    padding-right : 5px;
     // overflow-y: auto; 
-    overflow : scroll;
+    //overflow : scroll;
     
-    border : 1px solid green;
+    //border : 1px solid green;
     //flex-direction : row;
     
 `
