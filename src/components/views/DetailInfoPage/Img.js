@@ -5,21 +5,14 @@ const ImgBox = styled.div`
 
     width: 225px;
     height: 317px;
-
-    //object-fit : cover;
-    // background-size : 100%;
-    
-    //border : 1px solid red;
     margin : 0 auto;
     object-fit : contain;
 
     outline : none;
     overflow : hidden;
-    display : flex;
-    justify-content : center;
-    align-items : center;
 
-    margin : 35px;
+    margin-top : 50px;
+    margin-bottom : 20px;
 
     
 `

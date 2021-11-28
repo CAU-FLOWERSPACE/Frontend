@@ -15,14 +15,12 @@ function PlantDetailPage() {
 
 
     return (
-        <Container>
-            <div>
-                <Img><img src = {plant.image} width = "100%" height = "100%" overFit = "cover"/></Img>
-                <Name>{plant.name}</Name>
-                <Feature>{plant.feature}</Feature>
-                <BackButton/>
-            </div>
-        </Container>
+        <>
+            <Img><img src = {plant.image} width = "100%" height = "100%" overFit = "cover"/></Img>
+            <Name>{plant.name}</Name>
+            <Feature>{plant.feature}</Feature>
+            <BackButton/>
+        </>
     )
 }
 export default withRouter(PlantDetailPage)

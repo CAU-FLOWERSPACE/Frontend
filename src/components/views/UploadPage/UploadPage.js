@@ -30,17 +30,6 @@ export default function UploadPage({props}) {
     const dispatch = useDispatch();
     const REGION = "ap-northeast-2";
 
-    // useEffect(() => {
-    //     window.localStorage.setItem('choice', choice);
-    //   }, [choice]);
-
-    // const s3 = new AWS.S3({
-    //     accessKeyId: process.env.REACT_APP_ACCESS_ID,
-    //     secretAccessKey: process.env.REACT_APP_ACCESS_KEY,
-    //     //region: process.env.REACT_APP_REGION,
-    //     region : REGION,
-    // });
-
     const onChangeHandler = (event) =>
     {
         event.preventDefault();
@@ -48,19 +37,8 @@ export default function UploadPage({props}) {
         setFileURL(URL.createObjectURL(event.target.files[0])); 
         const file = event.target.files[0];
         const uuidKey = v1();
-       console.log(uuidKey);
+        console.log(uuidKey);
        
-
-        // var s3_params = {
-        //     Bucket : process.env.REACT_APP_BUCKET_NAME,
-        //     Body : file,
-        //     // Key : `upload_image/${v1().toString().replace("-", "")}.${
-        //     //     file.type.split("/")[1]
-        //     // }`,
-        //     Key : `upload_image/${uuidKey}`+".jpg",
-        //     ContentType : file.type,
-        //     ACL : "public-read",
-        // };
 
         const config = {
             bucketName: process.env.REACT_APP_BUCKET_NAME,
@@ -68,13 +46,8 @@ export default function UploadPage({props}) {
             region: REGION,
             accessKeyId: process.env.REACT_APP_ACCESS_ID,
             secretAccessKey: process.env.REACT_APP_ACCESS_KEY,
-            //s3Url: 'https:/your-custom-s3-url.com/', /* optional */
+            
         }
-
-        // s3.putObject(s3_params, function(err,data){
-        //     if(err) console.log(err, err.stack);
-        //     else    console.log(data);
-        // });
         const ReactS3Client = new S3(config);
  
         ReactS3Client
@@ -165,9 +138,13 @@ export default function UploadPage({props}) {
 
 
     return (
-        <Container>
+        <>
             <Title>공간 사진을 업로드 해주세요. </Title>
-            <input type="file" accept="image/*" onChange = {onChangeHandler}/>
+
+            <div style = {{display : "flex", justifyContent : "center", margin : "0 auto", border : "1px solid red", width : "80%"}}>
+                <input type="file" accept="image/*" onChange = {onChangeHandler}/>
+            </div>
+            
             <Image>
                 {isUpload ? 
                     <img src = {fileURL} width = "100%" height = "100%" overFit = "cover"/>
@@ -178,8 +155,6 @@ export default function UploadPage({props}) {
             <SelectGuideMessage>원하시는 보기를 선택해주세요 !</SelectGuideMessage>
 
             <div> 
-                {/* <SelectButton onClick={onTherapy} disabled = {!isUpload} id = '1' choice = {choice}>내 공간에 딱 알맞은 테라피</SelectButton>
-                <SelectButton onClick={onColor} disabled = {!isUpload} id = '2' choice = {choice}>내 공간에 어울리는 스타일링</SelectButton> */}
                 <div className = "item">
                     <input type ="radio" name = "place" onClick={onTherapy} className = "place"/> 내 공간에 딱 알맞은 테라피
                 </div>
@@ -188,8 +163,8 @@ export default function UploadPage({props}) {
                     <input type ="radio" name = "place" onClick={onColor} className = "place"/> 내 공간에 어울리는 스타일링
                 </div>
             </div>
-            <SubmitButton onClick={onSubmitHandler} disabled = {!isSelect}>추천결과 보기 go</SubmitButton>
-        
-        </Container>
+
+            <SubmitButton onClick={onSubmitHandler} disabled = {!isSelect}>추천결과 go</SubmitButton>
+        </>
     )
 }

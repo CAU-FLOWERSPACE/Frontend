@@ -14,21 +14,18 @@ function Option2Page() {
     const optionId = location.state.data3.id;
     const comment = location.state.data3.comment; 
     console.log(optionId);
-    //case 1~7에 대한 키워드 여기서도 정의 
 
     return (
         <>
-            <Template>
-                <Img><img src = "img/disease.jpg" style ={{width : "100%"}}/></Img>
-                <Title>
-                    <p>'{comment}'을 얻고 싶어하는 당신, </p>
-                    <p>아래의 보기 중 경험한 적이 있거나</p>
-                    <p>걱정되는 증상이 있다면</p>
-                    <p>하나를 선택해주세요 ! </p>
-                </Title>
-                <QuestionList2 id = {optionId}/>
-                
-            </Template>
+            <Img><img src = "img/disease.jpg" style ={{width : "100%"}}/></Img>
+            <Title>
+                <p>'{comment}'을 얻고 싶어하는 당신, </p>
+                <p>아래의 보기 중 경험한 적이 있거나</p>
+                <p>걱정되는 증상이 있다면</p>
+                <p>하나를 선택해주세요 ! </p>
+            </Title>
+            <QuestionList2 id = {optionId}/>
+
         </>
     )
 }

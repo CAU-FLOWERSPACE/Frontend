@@ -10,8 +10,7 @@ const Container = styled.div`
     line-height: 15px;
     color : #897F65;
     text-align : center;
-    margin : 15px;
-    
+    margin-top : 40px;
 
 `
 

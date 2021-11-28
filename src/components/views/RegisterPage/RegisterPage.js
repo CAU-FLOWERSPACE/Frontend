@@ -173,15 +173,15 @@ function RegisterPage(props) {
 
     
     return (
-        <div style = {{display : 'flex', justifyContent : 'center', alignContent : 'center', marginTop : '140px'}}>
+        <div style = {{marginTop : '50px', marginBottom : "50px"}}>
 
             <form style={{ display: 'flex', flexDirection: 'column' }} 
                 onSubmit={onSubmitHandler}
             >
-                {/* <div style = {{ margin : "0 auto" }}>
-                <img src = "img/login.png" style ={{marginBottom : "12px"}}/>
+                <div style = {{ margin : "0 auto" }}>
+                    회원가입
                 </div>
-                 */}
+                
                 <label className = "join_label">이메일</label>
                 <Input type="email" value={Email} onChange={onEmailHandler}/> 
                 <ConfirmMessage>{emailMessage}</ConfirmMessage>

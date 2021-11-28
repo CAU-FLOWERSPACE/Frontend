@@ -28,57 +28,64 @@ import PlaceTherapyRecommendResultPage from './components/views/RecommendResultP
 import PlaceColorRecommendResultPage from './components/views/RecommendResultPage/PlaceColorRecommendResultPage';
 import PlantDetailPage from './components/views/DetailInfoPage/PlantDetailPage';
 import ARpage from './components/views/ARPage/ARpage';
-//import ResultPage from './components/views/ResultPage/ResultPage';
-
-import Navbar from './components/views/Navbar';
 
 
-const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  padding-top : 47px;
-  overflow-y : 0 auto;
-  
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: #F7F4E3;
+  }
 `;
 
+// common
+const Container = styled.div` 
+
+    margin-top : 57px;
+    width : 100%;
+    height : 100%;
+    
+    overflow-y : auto;
+    border : 2px solid red;
+
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    flex-direction : column;
+
+`
 
 function App() {
 
   return (
     <div className = "app">
-    <Router>
-      
-      {/* <BottomNav/> */}
-        {/* <Header/> */}
-        {/* <GlobalStyle/> */}
-        {/* <Container> */}
-          <Switch>
-            {/* auth로 감싸줘야한다! 몇가지 옵션 더 붙여서(출입가능여부 옵션 주기) */}
-            {/* <Route exact path = "/" component = {Auth(LandingPage, null )}/>
-            <Route exact path = "/login" component = {Auth(LoginPage, false)}/>
-            <Route exact path = "/register" component = {Auth(RegisterPage, false)}/> */}
-            <Route exact path = "/" component = {MainPage}/>
-            <Route exact path = "/recommend" component = {RecommendMainPage}/>
-            <Route exact path = "/login" component = {LoginPage}/>
-            <Route exact path = "/join" component = {RegisterPage}/>
-          
-            <Route exact path = "/option1page" component = {Option1Page}/>
-            <Route exact path = "/option2page" component = {Option2Page}/>
-            {/* <Route exact path = "/resultpage" component = {ResultPage}/> */}
-            <Route exact path = '/result' component = {RecommendResultPage}/>
-            <Route exact path = "/main" component = {LandingPage} />
-            <Route exact path = "/colorintro" component = {ColorTherapyIntroPage}/>
-            <Route exact path = "/flower_detail" component = {FlowerDetailPage}/>
-            <Route exact path = "/upload" component = {UploadPage}/>
-            <Route exact path = "/place_color_result" component = {PlaceColorRecommendResultPage}/>
-            <Route exact path = "/place_therapy_result" component = {PlaceTherapyRecommendResultPage}/>
-            <Route exact path = "/plant_detail" component = {PlantDetailPage}/>
-            {/* <Route exact path = "/web_ar" component = {}/> */}
-            <Route exact path = "/ar" component = {ARpage}/>
-          </Switch>
-        {/* </Container>  */}
-        <BottomNav/>
-    </Router>
+      <GlobalStyle/>
+      <Container>
+        <Router>
+              <Switch>
+                {/* auth로 감싸줘야한다! 몇가지 옵션 더 붙여서(출입가능여부 옵션 주기) */}
+                {/* <Route exact path = "/" component = {Auth(LandingPage, null )}/>
+                <Route exact path = "/login" component = {Auth(LoginPage, false)}/>
+                <Route exact path = "/register" component = {Auth(RegisterPage, false)}/> */}
+                <Route exact path = "/" component = {MainPage}/>
+                <Route exact path = "/recommend" component = {RecommendMainPage}/>
+                <Route exact path = "/login" component = {LoginPage}/>
+                <Route exact path = "/join" component = {RegisterPage}/>
+              
+                <Route exact path = "/option1page" component = {Option1Page}/>
+                <Route exact path = "/option2page" component = {Option2Page}/>
+                <Route exact path = '/result' component = {RecommendResultPage}/>
+                <Route exact path = "/main" component = {LandingPage} />
+                <Route exact path = "/colorintro" component = {ColorTherapyIntroPage}/>
+                <Route exact path = "/flower_detail" component = {FlowerDetailPage}/>
+                <Route exact path = "/upload" component = {UploadPage}/>
+                <Route exact path = "/place_color_result" component = {PlaceColorRecommendResultPage}/>
+                <Route exact path = "/place_therapy_result" component = {PlaceTherapyRecommendResultPage}/>
+                <Route exact path = "/plant_detail" component = {PlantDetailPage}/>
+                <Route exact path = "/ar" component = {ARpage}/>
+              </Switch>
+            <BottomNav/>
+        </Router>
+      </Container>
     </div>
   );
 }

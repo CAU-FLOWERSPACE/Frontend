@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLocation, withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
-import { ResultList, Container, Title, ToGoButton, ButtonContainer } from './';
+import { ResultList, Title, ToGoButton, ButtonContainer } from './';
 import { useHistory } from 'react-router';
 import { useDispatch } from 'react-redux';
 import {arSubmit} from '../../../_actions/user_action';
@@ -13,22 +13,6 @@ function RecommendResultPage() {
 
     const history = useHistory();
     const dispatch = useDispatch();
-    
-
-    // const onClickHandler = (event) =>
-    // {
-    //     console.log("click! ar로 이동 ");
-    //     // history.push(
-    //     //     { 
-    //     //         pathname : "/ar",
-    //     //         state : { plant_list : results}
-    //     //     }
-    //     // )
-
-    //     //dispatch
-        
-        
-    // }
 
     let body = {
         "plants" : results.flowers
@@ -58,25 +42,18 @@ function RecommendResultPage() {
 
 
     return (
-        <div style ={{display : "block", justifyContent : "center", alignItems : "center"}}>
-            <div >
-                
-                <Container>
-                    <Title>
-                        <p>flower님의 심신을 안정시켜줄</p>
-                        <p>테라피 컬러 키워드는</p>
-                        <p>{results.color}입니다.</p>
-                    </Title>
-                    <ButtonContainer>
-                        <ToGoButton onClick = {onMoveToMain}>메인으로</ToGoButton>
-                        <ToGoButton onClick = {onMoveToAR}>ar 이동</ToGoButton>
-                    </ButtonContainer>
-                    <ResultList result = {results.flowers}/>
-                </Container>
-                
-            </div>
-           
-        </div>
+        <>
+            <Title>
+                <p>flower님의 심신을 안정시켜줄</p>
+                <p>테라피 컬러 키워드는</p>
+                <p>{results.color}입니다.</p>
+            </Title>
+            <ButtonContainer>
+                <ToGoButton onClick = {onMoveToMain}>메인으로</ToGoButton>
+                <ToGoButton onClick = {onMoveToAR}>ar 이동</ToGoButton>
+            </ButtonContainer>
+            <ResultList result = {results.flowers}/>
+        </>
     )
 }
 

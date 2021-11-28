@@ -41,21 +41,16 @@ function PlaceTherapyRecommendResultPage() {
 
 
     return (
-        <div style ={{display : "block", justifyContent : "center", alignItems : "center"}}>
-            <div >
-                <Container>
-                    <PlaceTherapyTitle>{results.place}</PlaceTherapyTitle>
-                    <TherapyEffect>{results.effect}</TherapyEffect>
-                    <ButtonContainer>
-                        <ToGoButton onClick = {onMoveToMain}>이전으로</ToGoButton>
-                        <ToGoButton onClick = {onMoveToAR}>ar 이동</ToGoButton>
-                    </ButtonContainer>
-                    <PlantResultList result = {plants}/>
-                </Container>
-                {/* <ArButton onClick = {onClickHandler}/> */}
-            </div>
-           
-        </div>
+        <>
+            <PlaceTherapyTitle>{results.place}</PlaceTherapyTitle>
+            <TherapyEffect>{results.effect}</TherapyEffect>
+
+            <ButtonContainer>
+                <ToGoButton onClick = {onMoveToMain}>이전으로</ToGoButton>
+                <ToGoButton onClick = {onMoveToAR}>ar 이동</ToGoButton>
+            </ButtonContainer>
+            <PlantResultList result = {plants}/>
+        </>
     )
 }
 export default withRouter(PlaceTherapyRecommendResultPage)

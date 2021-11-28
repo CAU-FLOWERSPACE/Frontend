@@ -9,10 +9,6 @@ const Title = styled.div`
     font-size: 15px;
     line-height: 15px;
     color: #968661;
-
-    margin : 15px;
-    padding : 3px;
-
 `
 
 export default function PlaceTherapyTitle({children}) {

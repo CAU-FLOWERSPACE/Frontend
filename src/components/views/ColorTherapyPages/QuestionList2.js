@@ -8,10 +8,10 @@ import { Question, Question2, CheckBox, RadioButton} from './';
 const ListBlock = styled.div`
 
     border : 1px solid red;
+    margin : 20px;
     flex-wrap : wrap;
 
     display : flex;
-    //justify-content : space-around;
     justify-content : center;
     
 `
@@ -94,106 +94,11 @@ export default function QuestionList({id}) {
 
     ];
 
-    // const symptoms = [
-    //     {
-    //         id : 1,
-    //         symptom : [
-    //             "혈액순환 부족",
-    //             "저혈압",
-    //             "냉증",
-    //             "빈혈",
-    //             "암예방",
-    //             "당뇨병",
-    //             "불면증",
-    //             "고혈압",
-    //             "두통"
-    //         ]
-    //     },
-
-    //     {
-    //         id : 2,
-    //         symptom : [
-    //             "혈액순환 부족",
-    //             "저혈압",
-    //             "냉증",
-    //             "빈혈",
-    //             "당뇨병",
-    //             "호흡기 질환",
-    //             "비염",
-    //             "눈 피로감"
-    //         ]
-    //     },
-
-    //     {
-    //         id : 3,
-    //         symptom : [
-    //             "변비",
-    //             "소화불량",
-    //             "피부트러블"
-    //         ]
-    //     },
-
-    //     {
-    //         id : 4,
-    //         symptom : [
-    //             "변비",
-    //             "소화불량",
-    //             "피부트러블",
-    //             "불면증",
-    //             "두통", 
-    //             "어깨통증",
-    //             "귀울림"
-    //         ]
-    //     },
-
-    //     {
-    //         id : 5,
-    //         symptom : [
-    //             "변비",
-    //             "소화불량",
-    //             "피부트러블",
-    //             "빈혈",
-    //             "저혈압",
-    //             "당뇨병"
-                
-    //         ]
-    //     },
-
-    //     {
-    //         id : 6,
-    //         symptom : [
-    //             "호흡기 질환",
-    //             "비염",
-    //             "눈 피로감",
-    //             "불면증",
-    //             "두통",
-    //             "어깨통증",
-    //             "귀울림",
-    //             "고혈압",
-    //             "천식",
-    //             "피부병",
-    //             "다이어트"
-    //         ]
-    //     },
-
-    //     {
-    //         id : 7,
-    //         symptom : [
-    //             "불면증",
-    //             "고혈압",
-    //             "두통"
-    //         ]
-    //     }
-
-    // ];
-
-   
     var symptomList;
 
     switch(optionId)
     {
         case 1 :
-            // symptomList = symp1.map((symp) => <RadioButton key = {symp.keyword} text = {symp.keyword} val = {symp.value}></RadioButton>); // 아래도 다 고치기, onClcik 하면!
             symptomList = symp1.map((symp) => <Question2 key = {symp.keyword} text={symp.keyword} color = {symp.value}></Question2>)
             break;
         case 2 :

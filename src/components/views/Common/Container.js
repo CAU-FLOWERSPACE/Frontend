@@ -3,7 +3,9 @@ import styled from 'styled-components'
 
 const Contents = styled.div`
 
-    margin-top: 55px;
+     padding-top: 55px;
+    width: 100vw;
+    height: 100vh;
 
     display : flex;
     justify-content : center;
@@ -12,6 +14,8 @@ const Contents = styled.div`
     overflow-y : auto;
 
     border : 2px solid red;
+
+    background : grey;
 
     
 `

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Effect = styled.p`
+const Effect = styled.div`
 
     font-family: 'Nanum Myeongjo', serif; 
     font-style: normal;
@@ -9,11 +9,9 @@ const Effect = styled.p`
     font-size: 15px;
 
     color: #968661;
-    display : flex;
-    justify-content : center;
-    align-items : center;
-
-    // padding : 5px;
+    // display : flex;
+    // justify-content : center;
+    // align-items : center;
 `
 export default function TherapyEffect({children}) {
     return (
