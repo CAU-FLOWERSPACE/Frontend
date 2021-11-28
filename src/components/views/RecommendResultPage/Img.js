@@ -3,13 +3,14 @@ import styled from 'styled-components'
 
 const ImgBox = styled.div`
 
-    width: 170px;
-    height: 200px;
+    width: 220px;
+    height: 250px;
 
     object-fit : contain;
     // background-size : 100%;
     
     //border : 1px solid red;
+    border: 1px solid #CFC19F;
     margin : 0 auto;
 
     outline : none;
@@ -23,6 +24,6 @@ const ImgBox = styled.div`
 
 export default function Img({children}) {
     return (
-        <ImgBox>{children}</ImgBox>
+        <ImgBox >{children}</ImgBox>
     )
 }

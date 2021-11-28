@@ -25,12 +25,12 @@ function MainPage(props) {
 
     return (
         <Container>
-            <div><img src = "img/mainlogo.png"/></div>
+            
 
-            {/* <CommentBox>
-                <Text style = {{float : "left"}}>일상 속 작은 변화 ,</Text>
+            <CommentBox>
+                <Text style = {{float : "left"}}> 안녕 일상 속 작은 변화 ,</Text>
                 <Text style = {{fontSize : "24px", float:"right", right: "20px" }}>꽃 : 간</Text>
-            </CommentBox> */}
+            </CommentBox>
 
             <MenuBox onClick = {onClickHandler1}> 
             {/* 각 메뉴박스의 이미지, 텍스트는 여기서 명시 */}

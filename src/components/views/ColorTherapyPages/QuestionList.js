@@ -4,14 +4,13 @@ import Question from './Question';
 import { useHistory } from 'react-router';
 
 const ListBlock = styled.div`
-    flex : 1;
-    padding : 20px 32px;
-    //padding-bottom : 48px;
-    justify-content : center;
-    //overflow-y: auto;
-    overflow:scroll;
-    height: 600px;
-   // background : gray; 
+
+   border : 1px solid red;
+    flex-wrap : wrap;
+
+    display : flex;
+    justify-content : space-around;
+   // justify-content : center;
   
 `
 

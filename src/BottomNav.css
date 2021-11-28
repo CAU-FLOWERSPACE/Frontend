@@ -1,12 +1,48 @@
 .wrapper{
     position : fixed;
-    bottom : 0; 
-    /* top : 0; */
+ 
+    top : 0;
     left : 0;
     right : 0;
-    height : 47px;
-    background-color: #CFC19F;
+    width: 100%;
+    height : 60px;
+    /* background-color: #CFC19F; */
+    border-bottom : 2px solid #968661;
+    display : flex;
+    justify-content: flex-end;
+    align-items: center;
+ 
 }
+
+
+.navbar{
+    /* position : fixed;
+    bottom : 0;  
+    top : 0;
+    left : 0;
+    right : 0;
+    height : 60px;
+    background-color: #CFC19F;
+    display : flex;
+    justify-content: flex-end;
+    align-items: center;
+  */
+
+    position : fixed;
+    bottom : 0;
+    left : 0;
+    right : 0;
+    height : 60px;
+    width : 100%;
+    /* background-color : #CFC19F; */
+    color : white; 
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 0.2rem;
+    font-size : 1.2rem;
+}
+
 
 
 
@@ -15,18 +51,43 @@ nav {
     border-top : 2px solid #DAD2BF;
 }
 
+.temp {
+    /* text-align : center; */
+    float : right;
+    /* float : left; */
+    width : 45%;
+
+    height : 60px;
+    line-height : 60px;
+}
+
 nav > div {
     text-align : center;
-    float : left;
-    width : 25%;
+    /* float : left;
+    width : 25%; */
 
     height : 45px;
     line-height : 45px;
 }
 
+.nav-logo {
+    text-decoration: none;
+}
+
+.nav-links{
+    /* display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 20px;
+    list-style: none; */
+}
+
+.nav-link:hover {
+    /* color : red; */
+}
+
 .nav-item {
     color : #F7F4E3;
-    margin-bottom : 20px;
+    
 }
 
 .active {

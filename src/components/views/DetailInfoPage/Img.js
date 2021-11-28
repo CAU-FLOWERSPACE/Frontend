@@ -11,6 +11,7 @@ const ImgBox = styled.div`
     
     //border : 1px solid red;
     margin : 0 auto;
+    object-fit : contain;
 
     outline : none;
     overflow : hidden;

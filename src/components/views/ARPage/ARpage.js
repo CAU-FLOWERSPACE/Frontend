@@ -12,13 +12,13 @@ function ARpage() {
     const code = location.state.response;
 
     return (
-        <div style={{height : "100%", padding : "100px"}}>
+        <div style={{width : "100%", height : "100%", paddingTop : "55px"}}>
             <iframe srcdoc = {code} 
             frameborder = "0" 
             width = "100%" 
-            height = "110vh" 
+            height = "100%" 
             //scrolling = "no" 
-            //onLoad = "do"
+     
             >
                 대체정보
             </iframe>

@@ -1,14 +1,17 @@
 .navbar{
-    background-color: #060b26;
+  /* 헤더 div */
+    background-color: red;
     height: 80px;
     display: flex;
     justify-items: center;
     align-items: center;
   }
-  .menu-bars{
+  .menu-bars{ 
+    /* 햄버거 이모티콘하고 엑스 영역 */
     margin-left: 2rem;
     font-size: 2rem;
     background:none;
+    border : 1px solid green;
   }
   .nav-menu {
     background-color: #060b26;
@@ -19,6 +22,8 @@
     top:0;
     left:-100%;
     transition: 850ms;
+    
+    border : 1px solid green;
   }
   .nav-menu.active {
     left: 0;

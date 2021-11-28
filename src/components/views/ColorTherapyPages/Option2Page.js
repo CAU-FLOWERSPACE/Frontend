@@ -11,8 +11,8 @@ function Option2Page() {
     const location = useLocation();
 
     console.log(location.state);
-    const optionId = location.state.data.id;
-    const comment = location.state.data.comment; 
+    const optionId = location.state.data3.id;
+    const comment = location.state.data3.comment; 
     console.log(optionId);
     //case 1~7에 대한 키워드 여기서도 정의 
 

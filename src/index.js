@@ -26,20 +26,6 @@ ReactDOM.render(
     >
       <App />
     </Provider>
-    // <React.StrictMode>
-    //   <BrowserRouter>
-    //     <BottomNav/>
-    //       <Provider
-    //         store = {createStoreWithMiddleware(Reducer,
-    //         window.__REDUX_DEVTOOLS_EXTENSION__ && 
-    //         window.__REDUX_DEVTOOLS_EXTENSION__ ()
-    //         )}
-    //       >
-    //       <App />
-    //      </Provider>
-    //   </BrowserRouter>
-
-    // </React.StrictMode>
     
     ,
   document.getElementById('root')

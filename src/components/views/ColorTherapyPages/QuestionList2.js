@@ -6,18 +6,13 @@ import { Question, Question2, CheckBox, RadioButton} from './';
 
 
 const ListBlock = styled.div`
-    flex : 1;
-    margin-top : 10px;
-   
-    //line-height : 10px;
-    //display : inline-block;
-    padding-left : 5px;
-    padding-right : 5px;
-    // overflow-y: auto; 
-    //overflow : scroll;
-    
-    //border : 1px solid green;
-    //flex-direction : row;
+
+    border : 1px solid red;
+    flex-wrap : wrap;
+
+    display : flex;
+    //justify-content : space-around;
+    justify-content : center;
     
 `
 
@@ -63,7 +58,7 @@ export default function QuestionList({id}) {
         {keyword : "두통", value :"BLUE"},
         {keyword : "어깨통증", value : "PURPLE"},
         {keyword : "정신피로", value : "PURPLE"},
-        //{kewyord : "귀울림", value : "PURPLE"},
+        {keyword : "귀울림", value : "PURPLE"}
 
     ];
 
@@ -89,9 +84,9 @@ export default function QuestionList({id}) {
         {keyword : "불면증", value :"BLUE"},
         {keyword : "고혈압", value :"BLUE"}, 
         {keyword : "두통", value :"BLUE"},
+        {keyword : "귀울림", value : "PURPLE"},
         {keyword : "어깨통증", value : "PURPLE"},
         {keyword : "정신피로", value : "PURPLE"},
-        {kewyord : "귀울림", value : "PURPLE"},
         {keyword : "천식", value : "WHITE"},
         {keyword : "피부병", value : "WHITE"},
         {keyword : "다이어트", value : "WHITE"}

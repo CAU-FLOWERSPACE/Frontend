@@ -14,7 +14,7 @@ function FlowerDetailPage() {
 
     return (
         <Container>
-                <Img><img src = {flower.image}/></Img>
+                <Img><img src = {flower.image} width = "100%" height = "100%" overFit = "cover"/></Img>
                 <Name>{flower.name}</Name>
                 <FlowerMean>{flower.mean}</FlowerMean>
                 <Feature>{flower.feature}</Feature>

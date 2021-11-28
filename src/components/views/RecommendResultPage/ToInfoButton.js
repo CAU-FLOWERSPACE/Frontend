@@ -6,8 +6,8 @@ import { flowerDetail } from '../../../_actions/user_action';
 import {MdManageSearch} from 'react-icons/md';
 
 const Button = styled.div`
-    width: 40px;
-    height: 30px;
+    width: 70px;
+    height: 40px;
 
     font-family: 'Nanum Myeongjo', serif;
     font-style: normal;
@@ -16,17 +16,18 @@ const Button = styled.div`
     line-height: 15px;
 
     background: #D9CFB6;
-    border: 1px solid #D9CFB6;
+    //border: 1px solid #D9CFB6;
+    border: 3px solid #CFC19F;
     //border : 1px solid red;
-    box-shadow: 0px 4px 4px rgba(150, 134, 97, 0.5);
+    //box-shadow: 0px 4px 4px rgba(150, 134, 97, 0.5);
     border-radius: 10px;
 
     color : #897F65;
 
     display : flex;
-    //margin : 0 auto;
-    float : right;
-    margin-right : 17px;
+    margin : 0 auto;
+    // float : right;
+    // margin-right : 17px;
 
     
   

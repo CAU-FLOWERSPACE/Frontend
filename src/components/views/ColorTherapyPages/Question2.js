@@ -8,12 +8,6 @@ import { colorRecommend } from '../../../_actions/user_action';
 
 const QuestionBlock = styled.div`
 
-    display: inline;
-    justify-content : center;
-    align-items: center;
-
-    padding-top: 12px;
-    padding-bottom: 12px;
    
 `
 
@@ -88,8 +82,8 @@ export default function Question2({text, color}) {
     }
 
     return (
-        <QuestionBlock>
+        // <QuestionBlock>
             <TextButton onClick= {onClickHandler}>{text}</TextButton>
-        </QuestionBlock>
+        // </QuestionBlock>
     )
 }

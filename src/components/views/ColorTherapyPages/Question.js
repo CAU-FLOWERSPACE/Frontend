@@ -7,18 +7,8 @@ import {useHistory} from 'react-router-dom';
 //질문 한개
 const QuestionBlock = styled.div`
 
-    display: inline-block;
-    object-fit : cover;
-    //border : 1px solid green;
-  
- 
-    align-items: center;
-    padding-top: 12px;
-    padding-bottom: 12px;
-
-    //display : flex;
-    justify-content : center;
-    margin : 10px;
+   display : flex;
+   flex-direction : column;
    
 `
 
@@ -36,8 +26,10 @@ const ImoticonButton = styled.div`
 
   //flex: 1;
   font-size: 13px;
-  width : 123px;
-  height : 123px;
+  width : 80px;
+  height : 80px;
+
+  border-radius : 15px;
 
   border : 5px solid rgba(217, 207, 182, 0.5);
   
@@ -48,7 +40,7 @@ const ImoticonButton = styled.div`
   justify-content : center;
   align-items : center;
   
-  margin : 2px;
+  margin : 5px;
   
 
 `
@@ -60,7 +52,7 @@ export default function Question({id, comment, children,...rest}) {
 
   const history = useHistory();
 
-  let data = {
+  let data2 = {
     id : id,
     comment : comment
   }
@@ -72,7 +64,7 @@ export default function Question({id, comment, children,...rest}) {
         history.push(
         {
             pathname : "/option2page",
-            state : {data : data} // 
+            state : {data3 : data2} // 
         }
         ) //옵션 2페이지로 이동
     

@@ -13,8 +13,8 @@ const Block = styled.div`
     padding-top : 55px;
     //margin-bottom:32px;
 
-    display : flex;
-    flex-direction : column; //?
+    // display : flex;
+    //  flex-direction : column; //?
 
     //padding : 10px 0;
 
