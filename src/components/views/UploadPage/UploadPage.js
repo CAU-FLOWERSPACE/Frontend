@@ -6,6 +6,7 @@ import { Container } from '../Common';
 import { SelectButton, SubmitButton, Title, SelectGuideMessage, Image } from './';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import { imageColorSubmit, imageTherapySubmit } from '../../../_actions/user_action';
 //import AWS, { S3 } from 'aws-sdk';
 import S3 from 'react-aws-s3';
@@ -13,19 +14,17 @@ import {v1, v3, v4, v5} from 'uuid';
 
 export default function UploadPage({props}) {
 
-    useEffect(() => {
-        console.log('컴포넌트가 화면에 나타남');
-        return () => {
-          console.log('컴포넌트가 화면에서 사라짐');
-        };
-      }, []);
+    const location = useLocation();
+    const choice = location.state.choice;
+
+    console.log(choice);
+
 
     const [fileURL, setFileURL] = useState(""); //미리보기용 로컬 url
-   const [choice, setChoice] = useState(0); //선택 therapy : 1, color : 2
+    // const [choice, setChoice] = useState(0); //선택 therapy : 1, color : 2
     const [imageURL, setImageURL] = useState(""); //s3 url
 
     const [isUpload, setIsUpload] = useState(false);
-    const [isSelect, setIsSelect] = useState(false);
     const history = useHistory(); //페이지 인자 전달
     const dispatch = useDispatch();
     const REGION = "ap-northeast-2";
@@ -66,52 +65,17 @@ export default function UploadPage({props}) {
        
     }
 
-    const onTherapy = (event) => //1
-    {
-        setChoice(1);
-        //choice = 1;
-        setIsSelect(true);
-        console.log(choice);//
-
-    }
-
-    const onColor = (event) => //2
-    {
-        setChoice(2);
-       // choice = 2;
-        setIsSelect(true);
-        console.log(choice);//
-    }
-
     const onSubmitHandler = (event) =>
     {
-        console.log("submit")
-
         let body = {
             "image_path" : imageURL
         }
         
-        console.log(body)
         
         if(choice !== 0)
         {
-            if(choice === 2)
-            {
-                dispatch(imageColorSubmit(body)) //색감
-                .then(response => {
-                 console.log(response);//
 
-                history.push(
-                    {
-                        pathname : "/place_color_result",
-                        state : {response : response.payload}
-
-                    })
-                 })
-
-            }
-
-            else if(choice === 1) //테라피
+            if(choice === 1) //테라피
             {
                 dispatch(imageTherapySubmit(body)) //테라피
                 .then(response => {
@@ -126,6 +90,22 @@ export default function UploadPage({props}) {
                     
                 )
                  }) 
+            }
+
+            else if(choice === 2)
+            {
+                dispatch(imageColorSubmit(body)) //색감
+                .then(response => {
+                 console.log(response);//
+
+                history.push(
+                    {
+                        pathname : "/place_color_result",
+                        state : {response : response.payload}
+
+                    })
+                 })
+
             }
 
             
@@ -154,7 +134,7 @@ export default function UploadPage({props}) {
 
             <SelectGuideMessage>원하시는 보기를 선택해주세요 !</SelectGuideMessage>
 
-            <div> 
+            {/* <div> 
                 <div className = "item">
                     <input type ="radio" name = "place" onClick={onTherapy} className = "place"/> 내 공간에 딱 알맞은 테라피
                 </div>
@@ -162,9 +142,9 @@ export default function UploadPage({props}) {
                 <div className = "item">
                     <input type ="radio" name = "place" onClick={onColor} className = "place"/> 내 공간에 어울리는 스타일링
                 </div>
-            </div>
+            </div> */}
 
-            <SubmitButton onClick={onSubmitHandler} disabled = {!isSelect}>추천결과 go</SubmitButton>
+            <SubmitButton onClick={onSubmitHandler}>추천결과 go</SubmitButton>
         </>
     )
 }

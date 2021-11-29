@@ -4,44 +4,38 @@ import {MdDone, MdDelete} from 'react-icons/md';
 import { css } from 'styled-components';
 import {useHistory} from 'react-router-dom';
 
-//질문 한개
-const QuestionBlock = styled.div`
 
-   display : flex;
-   flex-direction : column;
-   
-`
+const TextButton = styled.button`
 
-const TextBlock = styled.div`
-
-  //font-family: 'Nanum Myeongjo', serif; 
-  font-size: 16px;
-  //font-weight : bold;
-  color : #83744F;
-
-  margin-bottom : 5px;
-`
-
-const ImoticonButton = styled.div`
-
-  //flex: 1;
+  margin : 5px;
   font-size: 13px;
-  width : 80px;
-  height : 80px;
 
-  border-radius : 15px;
+  width: 80px;
+  height: 30px;
 
-  border : 5px solid rgba(217, 207, 182, 0.5);
-  
+  background: rgba(217, 207, 182, 0.7);
+  border: 3px solid #CFC19F;
+  border-radius: 50px;
+
   outline : none;
-  //overflow : hidden;
+
+  font-family: 'Nanum Myeongjo', serif; 
+  color : #7D5A50;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
 
   display : inline-block;
-  justify-content : center;
-  align-items : center;
-  
-  margin : 5px;
-  
+
+  &:active{
+
+    background: #CFC19F;
+    border: 1px solid #CFC19F;
+    
+
+     color : #F7F4E3;
+  }
 
 `
 
@@ -71,9 +65,7 @@ export default function Question({id, comment, children,...rest}) {
     }
   
     return (
-        <QuestionBlock>
-            <TextBlock>{id}. {comment}</TextBlock>
-            <ImoticonButton onClick= {onClickHandler}>{children}</ImoticonButton>
-        </QuestionBlock>
+            <TextButton onClick= {onClickHandler}>{comment}</TextButton>
+
     )
 }

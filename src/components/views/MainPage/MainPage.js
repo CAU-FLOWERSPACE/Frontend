@@ -1,11 +1,13 @@
 import React from 'react'
 import { Container, CommentBox, MenuBox, Img, TextBox, Text} from './';
 import {BsFlower2, BsFlower3} from 'react-icons/bs';
-import { withRouter } from 'react-router';
+import { useHistory, withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 import {GiFlowerPot, GiPlantSeed, GiPhotoCamera, GiProtectionGlasses} from 'react-icons/gi';
 
 function MainPage(props) {
+
+    const history = useHistory();
 
     const onClickHandler1 = (event) =>
     {
@@ -14,12 +16,18 @@ function MainPage(props) {
 
     const onClickHandler2 = (event) =>
     {
-        props.history.push('/upload')
+        history.push({
+            pathname : '/upload',
+            state : {choice : 1}
+        })
     }
 
     const onClickHandler3 = (event) =>
     {
-        props.history.push('/login')
+        history.push({
+            pathname : '/upload',
+            state : {choice : 2}
+        })
     }
 
 

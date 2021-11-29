@@ -82,8 +82,7 @@ export default function Question2({text, color}) {
     }
 
     return (
-        // <QuestionBlock>
             <TextButton onClick= {onClickHandler}>{text}</TextButton>
-        // </QuestionBlock>
+
     )
 }
