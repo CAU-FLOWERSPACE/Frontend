@@ -20,9 +20,9 @@ function RecommendResultPage() {
 
     console.log(`body : ${body}`);
 
-    const onMoveToMain = (event) =>
+    const onMoveToGoBack = (event) =>
     {
-        history.push('/');
+        history.push('/option1page');
 
     }
 
@@ -44,13 +44,13 @@ function RecommendResultPage() {
     return (
         <>
             <Title>
-                <p>flower님의 심신을 안정시켜줄</p>
-                <p>테라피 컬러 키워드는</p>
+                <p>회원님의 심신을 안정시켜줄</p>
+                <p>테라피 컬러는</p>
                 <p>{results.color}입니다.</p>
             </Title>
             <ButtonContainer>
-                <ToGoButton onClick = {onMoveToMain}>메인으로</ToGoButton>
-                <ToGoButton onClick = {onMoveToAR}>ar 이동</ToGoButton>
+                <ToGoButton onClick = {onMoveToGoBack}>다시하기</ToGoButton>
+                <ToGoButton onClick = {onMoveToAR}>AR 이동</ToGoButton>
             </ButtonContainer>
             <ResultList result = {results.flowers}/>
         </>

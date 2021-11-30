@@ -3,11 +3,11 @@ import styled from 'styled-components'
 
 
 const ImgBox = styled.div`
-    width : 300px;
-    height : 400px;
-    background-color : #C4C4C4;
+    width : 375px;
+    height : 45vh;
+    background-color : #DDDDDD;
 
-    color : grey;
+    color : #828282;
     
     overflow : hidden;
 

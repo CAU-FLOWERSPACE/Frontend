@@ -5,12 +5,13 @@ import { useHistory } from 'react-router';
 
 const ListBlock = styled.div`
 
-   border : 1px solid red;
+    margin : 30px;
     flex-wrap : wrap;
 
     display : flex;
-    justify-content : space-around;
-   // justify-content : center;
+    justify-content : flex-start;
+    margin-left : auto;
+    margin-right : auto;
   
 `
 
@@ -99,9 +100,7 @@ export default function QuestionList() {
 
 
 
-    const optionList = options.map((option) => (<Question key = {option.id} id ={option.id} comment = {option.comment}>
-        <img src = {option.img} width = "100%" height = "100%" overFit = "cover"/>
-    </Question>));
+    const optionList = options.map((option) => (<Question key = {option.id} id ={option.id} comment = {option.comment}/>));
 
     return (
         <ListBlock>

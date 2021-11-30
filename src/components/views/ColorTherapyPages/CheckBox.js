@@ -38,11 +38,9 @@ const CheckCircle = styled.div`
 
 const Text = styled.div`
   flex: 1;
-  font-family: 'Nanum Myeongjo', serif; 
   font-size: 14px;
   font-weight : bold;
   color: #7D5A50;
-  //color : 7E714B;
 
 `;
 

@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 const ImgBox = styled.div`
 
-    width: 225px;
-    height: 317px;
+    width: 170px;
+    height: 250px;
     margin : 0 auto;
     object-fit : contain;
 

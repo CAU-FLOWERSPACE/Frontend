@@ -3,12 +3,9 @@ import styled from 'styled-components'
 
 const Mean = styled.p`
 
-    font-family: 'Nanum Myeongjo', serif; 
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
+    font-size: 13px;
 
-    color: #968661;
+    color: #9D9D9D;
 
     display : flex;
     justify-content : center;

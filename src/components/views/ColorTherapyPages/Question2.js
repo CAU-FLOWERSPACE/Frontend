@@ -13,38 +13,29 @@ const QuestionBlock = styled.div`
 
 const TextButton = styled.button`
 
-  //flex: 1;
-  margin : 10px;
+  margin : 12px;
   font-size: 13px;
 
   width: 100px;
   height: 30px;
 
-  background: rgba(217, 207, 182, 0.7);
-  border: 3px solid #CFC19F;
-  border-radius: 50px;
+  background-color: #AEC4BA;
+  border : none;
+  border-radius: 5px;
 
   outline : none;
 
-  font-family: 'Nanum Myeongjo', serif; 
-  color : #7D5A50;
+  color : #FFFFFF;
   font-style: normal;
-  font-weight: bold;
   font-size: 13px;
   line-height: 15px;
 
-  display : inline-block;
-
   &:active{
+    background-color : #698F7E;
+  }
 
-    background: #CFC19F;
-    border: 1px solid #CFC19F;
-    
-
-     color : #F7F4E3;
-   // color :  rgba(217, 207, 182, 0.9);
-
-
+  &:hover{
+    background-color : #698F7E;
   }
 
 `

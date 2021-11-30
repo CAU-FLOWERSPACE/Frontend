@@ -119,32 +119,22 @@ export default function UploadPage({props}) {
 
     return (
         <>
-            <Title>공간 사진을 업로드 해주세요. </Title>
+            <Title>원하는 공간을 업로드 해주세요. </Title>
 
-            <div style = {{display : "flex", justifyContent : "center", margin : "0 auto", border : "1px solid red", width : "80%"}}>
+            <div style = {{display : "flex", justifyContent : "center", margin : "0 auto", width : "80%"}}>
                 <input type="file" accept="image/*" onChange = {onChangeHandler}/>
             </div>
             
             <Image>
                 {isUpload ? 
                     <img src = {fileURL} width = "100%" height = "100%" overFit = "cover"/>
-                    : <BsFillImageFill  size = "10%" style ={{margin : "0 auto"}}/>
+                    : <BsFillImageFill  size = "8%" style = {{margin : "0 auto"}}/>
                 }
             </Image> 
 
-            <SelectGuideMessage>원하시는 보기를 선택해주세요 !</SelectGuideMessage>
+            <SelectGuideMessage>아래 버튼을 누르면 추천 결과로 이동합니다.</SelectGuideMessage>
 
-            {/* <div> 
-                <div className = "item">
-                    <input type ="radio" name = "place" onClick={onTherapy} className = "place"/> 내 공간에 딱 알맞은 테라피
-                </div>
-
-                <div className = "item">
-                    <input type ="radio" name = "place" onClick={onColor} className = "place"/> 내 공간에 어울리는 스타일링
-                </div>
-            </div> */}
-
-            <SubmitButton onClick={onSubmitHandler}>추천결과 go</SubmitButton>
+            <SubmitButton onClick={onSubmitHandler}>결과보기</SubmitButton>
         </>
     )
 }

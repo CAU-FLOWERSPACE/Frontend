@@ -3,14 +3,11 @@ import styled from 'styled-components'
 
 const Message = styled.div`
 
-    //border : 1px solid red;
-    padding-top : 20px;
+    padding : 20px;
+    color : #828282;
     padding-bottom : 10px;
-
-    font-family: 'Nanum Myeongjo', serif;
     font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 15px;
 `
 

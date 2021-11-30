@@ -7,36 +7,30 @@ import {useHistory} from 'react-router-dom';
 
 const TextButton = styled.button`
 
-  margin : 5px;
-  font-size: 13px;
+    margin : 12px;
+    font-size: 13px;
 
-  width: 80px;
-  height: 30px;
+    width: 100px;
+    height: 30px;
 
-  background: rgba(217, 207, 182, 0.7);
-  border: 3px solid #CFC19F;
-  border-radius: 50px;
+    background-color: #AEC4BA;
+    border : none;
+    border-radius: 5px;
 
-  outline : none;
+    outline : none;
 
-  font-family: 'Nanum Myeongjo', serif; 
-  color : #7D5A50;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 15px;
+    color : #FFFFFF;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 15px;
 
-  display : inline-block;
+    &:active{
+      background-color : #698F7E;
+    }
 
-  &:active{
-
-    background: #CFC19F;
-    border: 1px solid #CFC19F;
-    
-
-     color : #F7F4E3;
-  }
-
+    &:hover{
+      background-color : #698F7E;
+    }
 `
 
 

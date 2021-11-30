@@ -33,24 +33,21 @@ import ARpage from './components/views/ARPage/ARpage';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background-color: #F7F4E3;
+    background-color: #FFFFFF;
   }
 `;
 
 // common
 const Container = styled.div` 
 
-    margin-top : 57px;
-    width : 100%;
-    height : 100%;
-    
-    overflow-y : auto;
-    border : 2px solid red;
+padding-top : 57px;
+width : 100%;
 
-    display : flex;
-    justify-content : center;
-    align-items : center;
-    flex-direction : column;
+overflow-y : auto;
+display : flex;
+justify-content : center;
+align-items : center;
+flex-direction : column;
 
 `
 
@@ -59,8 +56,8 @@ function App() {
   return (
     <div className = "app">
       <GlobalStyle/>
-      <Container>
-        <Router>
+        <Container>
+          <Router>
               <Switch>
                 {/* auth로 감싸줘야한다! 몇가지 옵션 더 붙여서(출입가능여부 옵션 주기) */}
                 {/* <Route exact path = "/" component = {Auth(LandingPage, null )}/>
@@ -83,9 +80,9 @@ function App() {
                 <Route exact path = "/plant_detail" component = {PlantDetailPage}/>
                 <Route exact path = "/ar" component = {ARpage}/>
               </Switch>
-            <BottomNav/>
+              <BottomNav/>
         </Router>
-      </Container>
+        </Container>
     </div>
   );
 }

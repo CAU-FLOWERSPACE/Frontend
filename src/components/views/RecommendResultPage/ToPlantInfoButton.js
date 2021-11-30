@@ -5,27 +5,16 @@ import { useDispatch } from 'react-redux';
 import { flowerDetail, plantDetail } from '../../../_actions/user_action';
 import {MdManageSearch } from 'react-icons/md';
 const Button = styled.button`
-    width: 50px;
+    width: 60px;
     height: 40px;
 
-    font-family: 'Nanum Myeongjo', serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 15px;
+    border : none;
 
-    background: #D9CFB6;
-    //border: 1px solid #D9CFB6;
-    border: 3px solid #CFC19F;
-    //box-shadow: 0px 4px 4px rgba(150, 134, 97, 0.5);
-    border-radius: 10px;
-
-    color : #897F65;
+    color : #698F7E;
 
     display : flex;
-    margin : 0 auto;
-    // float : right;
-    // margin-right : 17px;
+    justify-content : center;
+    // margin : 0 auto;
   
     
     //버튼 내 텍스트 가운데로 
@@ -33,9 +22,6 @@ const Button = styled.button`
     align-items : center;
   
     &:active{
-        background: #CFC19F;
-        font-weight : normal;
-        color : #FFFBE1;
 
     }
 
@@ -64,6 +50,6 @@ export default function ToPlantInfoButton({id, children}) {
     }
 
     return (
-        <Button onClick = {onClickHandler}><MdManageSearch size = "85%"/></Button>
+        <Button onClick = {onClickHandler}><MdManageSearch/></Button>
     )
 }

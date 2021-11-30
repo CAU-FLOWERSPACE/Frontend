@@ -3,14 +3,11 @@ import styled from 'styled-components'
 
 const ImgBox = styled.div`
 
-    width: 220px;
-    height: 250px;
+    width: 140px;
+    height: 180px;
 
     object-fit : contain;
-    // background-size : 100%;
     
-    //border : 1px solid red;
-    border: 1px solid #CFC19F;
     margin : 0 auto;
 
     outline : none;

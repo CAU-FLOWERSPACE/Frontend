@@ -10,15 +10,14 @@ const Aligner = styled.div`
     margin : 0 auto;
     margin-top : 5px;
     margin-bottom : 10px;
+    color : #828282;
 
 `;
 
 const StyledLink = styled(Link)`
 
-    font-family: 'Nanum Myeongjo', serif;
-    font-style : normal;
-    font-weight: normal;
     font-size: 12px;
+    color : #828282;
     line-height: 12px;
     text-decoration-line: underline;
 

@@ -4,22 +4,26 @@ import { Img } from '.';
 
 const Box = styled.div`
 
-width: 328px;
-height: 140px;
+    width: 260px;
+    height: 45px;
 
+    border-radius: 50px;
+    border : 3px solid #698F7E;
+    margin : 0 auto;
+    margin : 13px;
+    padding : 3px;
+    text-align : center;
+    display : flex;
+    justify-content : center;
+    align-items : center;
 
-background: rgba(217, 207, 182, 0.5);
-border-radius: 20px;
-margin : 0 auto;
-margin-top : 18px;
+    font-size : 12px;
+    color : #698F7E;
 
- 
-
-
-display : flex; //텍스트와 사진 가로로 하기 위해
-justify-content : center;
-padding : 10px;
-// align-items : center;
+    &:active{
+        background-color : #698F7E;
+        color : #E8F0EF;
+    }
 
 `
 

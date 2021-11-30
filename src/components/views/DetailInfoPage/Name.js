@@ -3,12 +3,11 @@ import styled from 'styled-components'
 
 const PlantName = styled.p`
 
-    font-family: 'Nanum Myeongjo', serif; 
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 15px;
 
-    color: #968661;
+    color: #828282;
 
     display : flex;
     justify-content : center;

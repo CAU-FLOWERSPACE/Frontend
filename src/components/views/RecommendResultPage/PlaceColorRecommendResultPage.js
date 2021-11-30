@@ -43,20 +43,18 @@ function PlaceColorRecommendResultPage() {
 
     return (
         <div style ={{display : "block", justifyContent : "center", alignItems : "center"}}>
-            <div>
-                <Container>
-                    <Title>
-                        <p>당신의 소중한 공간에 </p>
-                        <p>인테리어 효과를 줄 수 있는 꽃들입니다.</p>
-                       
-                    </Title>
-                    <ButtonContainer>
-                        <ToGoButton onClick = {onMoveToMain}>이전으로</ToGoButton>
-                        <ToGoButton onClick = {onMoveToAR}>ar 이동</ToGoButton>
-                    </ButtonContainer>
-                    <ResultList result = {flowerList}/>
-                </Container>
-            </div>
+    
+            <Title>
+                <p>회원님의 공간에 </p>
+                <p>추천드리는 꽃입니다.</p>          
+            </Title>
+            <ButtonContainer>
+                <ToGoButton onClick = {onMoveToMain}>이전으로</ToGoButton>
+                <ToGoButton onClick = {onMoveToAR}>AR 이동</ToGoButton>
+            </ButtonContainer>
+            <ResultList result = {flowerList}/>
+           
+ 
         </div>
     )
 }

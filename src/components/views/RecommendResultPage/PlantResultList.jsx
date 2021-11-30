@@ -3,12 +3,12 @@ import { PlantResult } from './';
 import styled from 'styled-components';
 
 const ListBlock = styled.div`//바깥으로 안나가게
-    flex : 1;
+    display: flex;
+
+    width : 375px; //수정
     padding : 20px 32px;
     padding-bottom : 48px;
-    overflow-y: auto;
-   // background : gray; 
-   //height 지정해야할듯 안튀어나가게 하려면
+    overflow-x: auto;
 `
 
 

@@ -4,18 +4,12 @@ import styled from 'styled-components'
 const Container = styled.div`
 
     width: 277px;
-    //height: 221px;
-    //border : 1px solid red;
 
-    border-top : 1px solid #968661;
+    border-top : 1px solid #AEC4BA;
 
-    font-family: 'Nanum Myeongjo', serif; 
-    font-size : 15px;
-    // display : flex;
-    // justify-content : center;
-    // align-items : center;
+    font-size : 13px;
 
-    color: #968661;
+    color: #828282;
     padding : 10px;
     margin : 0 auto;
     overflow-y : auto;

@@ -16,7 +16,6 @@ const Button = styled.button`
     border: 0.1px solid #D9CFB6;
     border-radius: 5px;
 
-    //color : #897F65;
     color : rgba(137, 127, 101, 0.7);
     
     display : flex;

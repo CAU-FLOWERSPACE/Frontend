@@ -13,16 +13,11 @@ function Option1Page() {
 
     return (
         <>
-            <Img><img src = "img/disease.jpg" style ={{width : "100%"}}/></Img>
-
             <Title> 
-                <p>요즘 가장 필요한 것이라고 생각되는</p>
-                <p>보기를 하나 골라주세요. </p>
+                요즘 당신에게 가장 필요한 것은 무엇인가요?
             </Title>
+            <Img><img src = "img/disease.jpg" style ={{width : "100%"}}/></Img>
             <QuestionList/>
-        
-            
-            
         </>
     );
 }

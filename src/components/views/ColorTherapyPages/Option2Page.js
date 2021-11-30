@@ -21,7 +21,7 @@ function Option2Page() {
             <Title>
                 <p>'{comment}'을 얻고 싶어하는 당신, </p>
                 <p>아래의 보기 중 경험한 적이 있거나</p>
-                <p>걱정되는 증상이 있다면</p>
+                <p>걱정되는 것이 있다면</p>
                 <p>하나를 선택해주세요 ! </p>
             </Title>
             <QuestionList2 id = {optionId}/>

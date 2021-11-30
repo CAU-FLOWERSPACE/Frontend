@@ -3,21 +3,14 @@ import styled from 'styled-components';
 
 const Effect = styled.div`
 
-    font-family: 'Nanum Myeongjo', serif; 
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-
-    color: #968661;
-    // display : flex;
-    // justify-content : center;
-    // align-items : center;
+    font-size: 13px;
+    color: #828282;
 `
 export default function TherapyEffect({children}) {
     return (
         <>
-            <Effect>{children}에</Effect>
-            <Effect>탁월한 식물들입니다.</Effect>
+            <Effect>아래의 식물들로</Effect>
+            <Effect>{children} 효과를 누려보세요.</Effect>
         </>
     )
 }

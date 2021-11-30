@@ -3,16 +3,13 @@ import styled from 'styled-components'
 
 const Image = styled.div`
 
-    width : 250px;
-    height: 250px;
+    width : 200px;
+    height: 200px;
 
     outline : none;
-    //position : relative;
     overflow : hidden;
-    //border : 1px solid red;
    
-   margin : 0 auto;
-   margin-top : 60px;
+    margin : 0 auto;
 
     display : flex;
     justify-content : center;

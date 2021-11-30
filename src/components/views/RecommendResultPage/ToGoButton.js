@@ -3,27 +3,22 @@ import styled from 'styled-components'
 
 const Button = styled.button`
 
-    width: 100px;
-    height: 30px;
+    width: 80px;
+    height: 25px;
 
-    background: #D9CFB6;
-    border: 1px solid #D9CFB6;
+    background: #698F7E;
+    border: none;
     box-sizing: border-box;
-    //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+    border-radius: 5px;
 
-    font-family: 'Nanum Myeongjo', serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 15px;
-    color : #897F65;
+    color : #E8F0EF;
 
     display : flex;
     justify-content : center;
     align-items : center;
     text-align : center;
-    border: 3px solid #CFC19F;
 
     margin : 10px;
     

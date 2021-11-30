@@ -42,12 +42,12 @@ function PlaceTherapyRecommendResultPage() {
 
     return (
         <>
-            <PlaceTherapyTitle>{results.place}</PlaceTherapyTitle>
-            <TherapyEffect>{results.effect}</TherapyEffect>
+                <PlaceTherapyTitle>{results.place}</PlaceTherapyTitle>
+                <TherapyEffect>{results.effect}</TherapyEffect>
 
             <ButtonContainer>
                 <ToGoButton onClick = {onMoveToMain}>이전으로</ToGoButton>
-                <ToGoButton onClick = {onMoveToAR}>ar 이동</ToGoButton>
+                <ToGoButton onClick = {onMoveToAR}>AR 이동</ToGoButton>
             </ButtonContainer>
             <PlantResultList result = {plants}/>
         </>

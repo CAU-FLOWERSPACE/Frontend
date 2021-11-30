@@ -142,7 +142,7 @@ function RegisterPage(props) {
                 { 
                     console.log(response.payload.id) //id 출력해보기
                     alert("회원가입이 완료되었습니다")
-                    props.history.push("/main") //메인페이지로 가기
+                    props.history.push("/") //메인페이지로 가기
                 }
                 else{
                     alert("failed to join")
@@ -175,10 +175,12 @@ function RegisterPage(props) {
     return (
         <div style = {{marginTop : '50px', marginBottom : "50px"}}>
 
-            <form style={{ display: 'flex', flexDirection: 'column' }} 
+            <form style={{display: 'flex', flexDirection: 'column', margin : "0 auto"}} 
                 onSubmit={onSubmitHandler}
             >
-                <div style = {{ margin : "0 auto" }}>
+                <div style = {{ width : "100px", margin : "0 auto", borderBottom : "0.5px solid #698F7E", 
+                paddingBottom : "1px", textAlign : "center", marginBottom : "25px", color : "#698F7E", 
+                fontSize : " 14px" }}>
                     회원가입
                 </div>
                 
@@ -200,7 +202,7 @@ function RegisterPage(props) {
                 <Input type="password" value={ConfirmPassword} onChange={onConfirmPasswordHandler}/>
                 <ConfirmMessage>{passwordConfirmMessage}</ConfirmMessage>
 
-                <ConfirmButton type="submit" top = "475px" disabled = {!(isName && isEmail && isPassword && isPasswordConfirm)} > 
+                <ConfirmButton type="submit" disabled = {!(isName && isEmail && isPassword && isPasswordConfirm)} > 
                     가입하기
                 </ConfirmButton>
 
