@@ -4,12 +4,14 @@ import styled from 'styled-components'
 const Image = styled.div`
 
     width : 200px;
-    height: 200px;
+    height: 190px;
 
     outline : none;
     overflow : hidden;
    
     margin : 0 auto;
+
+    margin-top: 40px;
 
     display : flex;
     justify-content : center;

@@ -52,8 +52,8 @@ function LoginPage(props) {
 
             <form style={{ display: 'flex', flexDirection: 'column'}} 
             onSubmit={onSubmitHandler}>
-                <div style = {{ margin : "0 auto" }}>
-                    <img src = "img/logo/login.png" style ={{margin : "12px"}}/>
+                <div style = {{ width : "100px", height : "60px" , margin : "0 auto", overFit : "cover" }}>
+                    <img src = "img/logo/flower.png" width = "100%"/>
                 </div>
                 <Input type="email" value={Email} onChange={onEmailHandler} placeholder = "email" />
                 <Input type="password" value={Password} onChange={onPasswordHandler} placeholder = "password" />

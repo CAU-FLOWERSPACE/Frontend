@@ -14,3 +14,5 @@ export {default as PlaceTherapyTitle} from './PlaceTherapyTitle';
 export {default as TherapyEffect} from './TherapyEffect';
 export {default as ToGoButton} from './ToGoButton';
 export {default as ButtonContainer} from './ButtonContainer';
+export {default as UserImage} from './UserImage';
+export {default as InfoMessage} from './InfoMessage';

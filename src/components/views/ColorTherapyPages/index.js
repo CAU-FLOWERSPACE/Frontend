@@ -7,3 +7,4 @@ export {default as Question2} from './Question2';
 export {default as CheckBox} from './CheckBox';
 export {default as RadioButton} from './RadioButton';
 export {default as Img} from './Img';
+export {default as Option1Title} from './Option1Title';

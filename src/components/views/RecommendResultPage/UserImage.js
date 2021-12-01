@@ -1,26 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const ImgBox = styled.div`
-
-    width: 100px;
-    height: 120px;
-
-    object-fit : contain;
-    
-    margin : 0 auto;
+const Img = styled.div`
+    width : 220px;
+    height: 250px;
 
     outline : none;
     overflow : hidden;
+   
+    margin : 0 auto;
+
     display : flex;
     justify-content : center;
     align-items : center;
 
-    
 `
 
-export default function Img({children}) {
+export default function UserImage({children}) {
     return (
-        <ImgBox >{children}</ImgBox>
+        <Img>{children}</Img>
     )
 }

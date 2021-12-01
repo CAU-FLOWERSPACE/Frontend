@@ -5,6 +5,8 @@ const NameContainer = styled.div`
 
     font-size: 13px;
     line-height: 15px;
+    
+    height : 30px;
 
     display : flex;
     margin-top : 10px;

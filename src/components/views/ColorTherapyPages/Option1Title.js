@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const HeadBlock = styled.div`
 
-  margin-top : 20px;
+  margin-top : 70px;
   text-align : center;
   
   color : #828282;
@@ -11,10 +11,9 @@ const HeadBlock = styled.div`
 
 `
 
-export default function Title({children}) {
+export default function Option1Title({children}) {
     return (
-        <HeadBlock>
-            {children}
-        </HeadBlock>
+        <HeadBlock>{children}</HeadBlock>
     )
 }
+

@@ -138,7 +138,7 @@ export default function UploadPage({props}) {
                 }
             </Image> 
 
-            <SelectGuideMessage>'결과보기'를 누르면 추천 결과로 이동합니다.</SelectGuideMessage>
+            <SelectGuideMessage>'결과보기'를 클릭하시면 추천 결과로 이동합니다.</SelectGuideMessage>
 
             <ButtonContainer>
                 <SubmitButton onClick={onGoBack} color = "#AEC4BA">이전으로</SubmitButton>

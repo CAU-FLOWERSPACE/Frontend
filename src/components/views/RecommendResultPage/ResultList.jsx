@@ -7,7 +7,6 @@ display: flex;
 
 width : 375px; //수정
 padding : 20px 32px;
-padding-bottom : 48px;
 overflow-x: auto;
 `
 

@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 const Container = styled.div`
 
-    width : 80px;
-    height: 65px;
+    width : 100px;
+    height: 75px;
 
     outline : none;
     // border : 1px solid red;
@@ -21,6 +21,6 @@ const Container = styled.div`
 
 export default function Logo() {
     return (
-        <Container><img src = "img/logo/logo_v3.png" style={{width : "100%", height : "100%",overFit: "cover"}} /></Container>
+        <Container><img src = "img/logo/logo_v4.png" style={{width : "100%", height : "100%",overFit: "cover"}} /></Container>
     )
 }

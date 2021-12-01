@@ -17,7 +17,7 @@ function Option2Page() {
 
     return (
         <>
-            <Img><img src = "img/disease.jpg" style ={{width : "100%"}}/></Img>
+            <Img><img src = "img/option/4.jpg" style ={{width : "115%"}}/></Img>
             <Title>
                 <p>'{comment}'을 얻고 싶어하는 당신, </p>
                 <p>아래의 보기 중 경험한 적이 있거나</p>
