@@ -13,11 +13,11 @@ const Button = styled.button`
     border-radius: 5px;
     box-sizing: border-box;
 
-    color : #FFFFFF;
-
+    background : ${props => props.color};
+    color : #E8F0EF;
     display : flex;
     margin : 0 auto;
-  
+
     
     //버튼 내 텍스트 가운데로 
     justify-content : center;
@@ -25,7 +25,7 @@ const Button = styled.button`
 
 `
 
-export default function SubmitButton({children, ...rest}) {
+export default function SubmitButton({children, props, ...rest}) {
     return (
         <div style={{margin : "10px"}}>
             <Button {...rest}>{children}</Button>

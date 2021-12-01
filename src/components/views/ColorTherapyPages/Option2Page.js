@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useLocation } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import {Template, Title, QuestionList2, Img} from './';
-
+import {BackButton} from '../Common';
 function Option2Page() {
 
 
@@ -25,6 +25,7 @@ function Option2Page() {
                 <p>하나를 선택해주세요 ! </p>
             </Title>
             <QuestionList2 id = {optionId}/>
+            <BackButton>이전으로</BackButton>
 
         </>
     )

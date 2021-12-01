@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import {Template, Title, QuestionList, Img} from './';
-import {Container} from '../Common';
+import {Container, BackButton} from '../Common';
 
 
 
@@ -18,6 +18,7 @@ function Option1Page() {
             </Title>
             <Img><img src = "img/disease.jpg" style ={{width : "100%"}}/></Img>
             <QuestionList/>
+            <BackButton>이전으로</BackButton>
         </>
     );
 }

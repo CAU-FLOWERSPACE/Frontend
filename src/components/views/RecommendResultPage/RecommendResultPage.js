@@ -26,6 +26,11 @@ function RecommendResultPage() {
 
     }
 
+    const onMoveToMain = (event) =>
+    {
+        history.push('/');
+    }
+
     const onMoveToAR = (event) =>
     {
         dispatch(arSubmit(body))
@@ -53,6 +58,7 @@ function RecommendResultPage() {
                 <ToGoButton onClick = {onMoveToAR}>AR 이동</ToGoButton>
             </ButtonContainer>
             <ResultList result = {results.flowers}/>
+            <ToGoButton onClick = {onMoveToMain}>메인으로</ToGoButton>
         </>
     )
 }

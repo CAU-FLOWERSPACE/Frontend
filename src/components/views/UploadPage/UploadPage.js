@@ -4,6 +4,7 @@ import {BsFillImageFill} from 'react-icons/bs';
 import './Upload.css';
 import { Container } from '../Common';
 import { SelectButton, SubmitButton, Title, SelectGuideMessage, Image } from './';
+import { ButtonContainer} from '../Common';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { useLocation } from 'react-router';
@@ -63,6 +64,11 @@ export default function UploadPage({props}) {
         console.log(`imageURL : ${imageURL}`)
 
        
+    }
+
+    const onGoBack = (event) =>
+    {
+        history.goBack();
     }
 
     const onSubmitHandler = (event) =>
@@ -132,9 +138,13 @@ export default function UploadPage({props}) {
                 }
             </Image> 
 
-            <SelectGuideMessage>아래 버튼을 누르면 추천 결과로 이동합니다.</SelectGuideMessage>
+            <SelectGuideMessage>'결과보기'를 누르면 추천 결과로 이동합니다.</SelectGuideMessage>
 
-            <SubmitButton onClick={onSubmitHandler}>결과보기</SubmitButton>
+            <ButtonContainer>
+                <SubmitButton onClick={onGoBack} color = "#AEC4BA">이전으로</SubmitButton>
+                <SubmitButton onClick={onSubmitHandler}>결과보기</SubmitButton>
+            </ButtonContainer>
+            
         </>
     )
 }
