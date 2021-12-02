@@ -1,0 +1,17 @@
+#area {
+    position: relative; /* absolute는 부모가 relative일 때 부모를 따라간다. */
+    width: 100%;
+    height : 500px;
+    overflow-y : auto;
+    /* padding-bottom: 56.25%; 16:9 비율 */
+}
+
+#ar {
+    position: absolute;
+    width: 100%; /* 부모에 맞게 꽉 채운다. */
+    height: 100%;
+    overflow-y : auto;
+    /* left : 0;
+    right : 0;
+    bottom : 0; */
+}

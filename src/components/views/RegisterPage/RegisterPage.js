@@ -141,7 +141,6 @@ function RegisterPage(props) {
                 if(response.payload.id) //뭉텅이를 풀어서!
                 { 
                     console.log(response.payload.id) //id 출력해보기
-                    alert("회원가입이 완료되었습니다")
                     props.history.push("/") //메인페이지로 가기
                 }
                 else{

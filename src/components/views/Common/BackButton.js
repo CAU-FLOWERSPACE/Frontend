@@ -7,7 +7,7 @@ const Button = styled.button`
     width: 80px;
     height: 25px;
 
-    font-size: 1px;
+    font-size: 12px;
     line-height: 15px;
     background : #E5E5E5;
     border : none;
@@ -17,6 +17,7 @@ const Button = styled.button`
     color : #828282;
     display : flex;
     margin : 0 auto;
+    margin-bottom : 20px;
 
     
     //버튼 내 텍스트 가운데로 

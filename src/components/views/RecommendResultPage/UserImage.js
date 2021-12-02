@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Img = styled.div`
-    width : 220px;
-    height: 250px;
+    width : 180px;
+    height: 200px;
 
     outline : none;
     overflow : hidden;

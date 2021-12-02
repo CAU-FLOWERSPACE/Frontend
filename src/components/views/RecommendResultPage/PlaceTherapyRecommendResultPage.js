@@ -27,6 +27,13 @@ function PlaceTherapyRecommendResultPage() {
 
     }
 
+    const onMoveToGoBack = (event) =>
+    {
+        history.goBack();
+
+    }
+
+
     const onMoveToAR = (event) =>
     {
         dispatch(arSubmit(body))
@@ -53,7 +60,7 @@ function PlaceTherapyRecommendResultPage() {
             </InfoMessage>
 
             <ButtonContainer>
-                <ToGoButton onClick = {onMoveToMain}>이전으로</ToGoButton>
+                <ToGoButton onClick = {onMoveToGoBack}>다시하기</ToGoButton>
                 <ToGoButton onClick = {onMoveToAR}>AR 이동</ToGoButton>
             </ButtonContainer>
 

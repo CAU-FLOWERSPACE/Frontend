@@ -5,13 +5,19 @@ import { useHistory } from 'react-router';
 
 const ListBlock = styled.div`
 
-    margin : 30px;
+    // margin : 30px;
+    // flex-wrap : wrap;
+
+    // display : flex;
+    // justify-content : flex-start;
+    // margin-left : auto;
+    // margin-right : auto;
+
+    margin : 20px;
     flex-wrap : wrap;
 
     display : flex;
-    justify-content : flex-start;
-    margin-left : auto;
-    margin-right : auto;
+    justify-content : center;
   
 `
 

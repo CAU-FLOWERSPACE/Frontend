@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 const Image = styled.div`
 
-    width : 200px;
-    height: 190px;
+    width : 150px;
+    height: 150px;
 
     outline : none;
     overflow : hidden;

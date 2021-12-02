@@ -7,7 +7,7 @@ import {
 export function loginUser(dataToSubmit) { //액션함수 정의
 
 
-    const request = axios.post('http://3.36.217.73:8080/login', dataToSubmit, {withCredentials : true}) //서버에 리퀘스트 날림
+    const request = axios.post('https://capstone.choicloudlab.com/login', dataToSubmit, {withCredentials : true}) //서버에 리퀘스트 날림
         // .then(()=>{console.log("post 완료")})
         .then((response)=> {
             console.log(response.status) //response.status로 바꿔서 request에 200 저장
@@ -21,7 +21,7 @@ export function loginUser(dataToSubmit) { //액션함수 정의
 
 export function registerUser(dataToSubmit) {
 
-    const request = axios.post('http://3.36.217.73:8080/api/join', dataToSubmit) //서버에 리퀘스트 날림
+    const request = axios.post('https://capstone.choicloudlab.com/api/join', dataToSubmit) //서버에 리퀘스트 날림
          .then(response => response.data) //reponse.data를 받아와서 request에 저장
 
     return {  //리퀘스트를 리듀서에 넘겨줌
@@ -46,7 +46,6 @@ export function auth() {
 
     // const request = axios.get('/api/users/auth') //서버에 리퀘스트 날림
     //     .then(response => response.data)
-    
     // return {  //리퀘스트를 리듀서에 넘겨줌
     //     type: AUTH_USER,
     //     payload: request
@@ -61,7 +60,7 @@ export function toggle()
 
 export function colorRecommend(dataToSubmit) //dataToSubmit
 {
-    const request = axios.get(`http://3.36.217.73:8080/api/flower/flowerList/${dataToSubmit}`) 
+    const request = axios.get(`https://capstone.choicloudlab.com/api/flower/flowerList/${dataToSubmit}`) 
     //dataToSubmit은 color 한개
          .then(response => response.data) //reponse.data를 받아와서 request에 저장
 
@@ -73,7 +72,7 @@ export function colorRecommend(dataToSubmit) //dataToSubmit
 
 export function flowerDetail(dataToSubmit)
 {
-    const request = axios.get(`http://3.36.217.73:8080/api/flower/${dataToSubmit}`)
+    const request = axios.get(`https://capstone.choicloudlab.com/api/flower/${dataToSubmit}`)
     .then(response => response.data) //reponse.data를 받아와서 request에 저장
 
     return {  
@@ -84,7 +83,7 @@ export function flowerDetail(dataToSubmit)
 
 export function plantDetail(dataToSubmit)
 {
-    const request = axios.get(`http://3.36.217.73:8080/api/place/plant/${dataToSubmit}`)
+    const request = axios.get(`https://capstone.choicloudlab.com/api/place/plant/${dataToSubmit}`)
     .then(response => response.data)
 
     return {
@@ -95,7 +94,7 @@ export function plantDetail(dataToSubmit)
 
 export function imageColorSubmit(dataToSubmit)
 {
-    const request = axios.post(`http://3.36.217.73:8080/api/place/flower`, dataToSubmit)
+    const request = axios.post(`https://capstone.choicloudlab.com/api/place/flower`, dataToSubmit)
     .then(response => response.data)
     return {
         type : IMAGE_COLOR_SUBMIT,
@@ -105,7 +104,7 @@ export function imageColorSubmit(dataToSubmit)
 
 export function imageTherapySubmit(dataToSubmit)
 {
-    const request = axios.post(`http://3.36.217.73:8080/api/place/plant`, dataToSubmit)
+    const request = axios.post(`https://capstone.choicloudlab.com/api/place/plant`, dataToSubmit)
     .then(response => response.data)
     return {
         type : IMAGE_THERAPY_SUBMIT,
@@ -115,7 +114,7 @@ export function imageTherapySubmit(dataToSubmit)
 
 export function arSubmit(dataToSubmit)
 {
-    const request = axios.post(`http://3.36.217.73:8080/api/ar`, dataToSubmit)
+    const request = axios.post(`https://capstone.choicloudlab.com/api/ar`, dataToSubmit)
      .then(response => response.data)
      
     

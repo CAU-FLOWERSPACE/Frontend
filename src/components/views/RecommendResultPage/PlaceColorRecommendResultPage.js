@@ -26,6 +26,13 @@ function PlaceColorRecommendResultPage() {
         history.push('/');
     }
 
+    const onMoveToGoBack = (event) =>
+    {
+        history.goBack();
+
+    }
+
+
     const onMoveToAR = (event) =>
     {
         dispatch(arSubmit(body))
@@ -49,7 +56,7 @@ function PlaceColorRecommendResultPage() {
             </Title>
             <UserImage><img src = {userImage} width = "100%" height = "100%" overFit = "cover"/></UserImage>
             <ButtonContainer>
-                <ToGoButton onClick = {onMoveToMain}>이전으로</ToGoButton>
+                <ToGoButton onClick = {onMoveToGoBack}>다시하기</ToGoButton>
                 <ToGoButton onClick = {onMoveToAR}>AR 이동</ToGoButton>
             </ButtonContainer>
 

@@ -10,7 +10,7 @@ const Button = styled.div`
     height: 30px;
 
 
-    background: #AEC4BA;
+    background: #698F7E;
     border: none;
     box-sizing: border-box;
     border-radius: 5px;
