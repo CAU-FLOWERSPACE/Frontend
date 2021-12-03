@@ -37,18 +37,18 @@ function MainPage(props) {
             <Logo/>
 
             <MenuBox onClick = {onClickHandler1}> 
-                <RiPlantLine size = "20px" style ={{marginRight : "10px"}} />
+                <RiPlantLine size = "20px" style ={{marginRight : "17px"}} />
                 나와 가장 잘 맞는 꽃 추천받기
             </MenuBox>
 
             <MenuBox onClick = {onClickHandler3}>
                 <RiPlantLine size = "20px" style ={{marginRight : "14px"}} />
-                내 공간을 밝혀줄 꽃 추천받기
+                내 공간을 밝혀주는 꽃 추천받기
             </MenuBox>
 
             <MenuBox onClick = {onClickHandler2}>
-                <RiPlantLine size = "20px" style ={{marginRight : "10px"}} />
-               내 공간 맞춤형 테라피 추천받기
+                <RiPlantLine size = "20px" style ={{marginRight : "9px"}} />
+               내 공간과 딱 맞는 식물 추천받기
             </MenuBox>
             
 
