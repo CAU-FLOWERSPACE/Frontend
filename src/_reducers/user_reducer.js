@@ -1,5 +1,5 @@
 import {
-    LOGIN_USER, REGISTER_USER, AUTH_USER, COLOR_RECOMMEND, FLOWER_DETAIL, PLANT_DETAIL, IMAGE_THERAPY_SUBMIT, IMAGE_COLOR_SUBMIT
+    LOGIN_USER, REGISTER_USER, AUTH_USER, AUTH_LOGIN_SUCCESS, COLOR_RECOMMEND, FLOWER_DETAIL, PLANT_DETAIL, IMAGE_THERAPY_SUBMIT, IMAGE_COLOR_SUBMIT
 } from '../_actions/types';
 
 export default function foo(state = {}, action) { //하나하나 적어야함
@@ -8,6 +8,19 @@ export default function foo(state = {}, action) { //하나하나 적어야함
         case LOGIN_USER:
             return { ...state, loginSuccess: action.payload } //스프레드 연산자는 받은 값을 똑같이 가져오는거!!, 
             //break; //여기가 전역데이터 저장인가?! 
+
+        case AUTH_LOGIN_SUCCESS:
+            return {
+                ...state,
+                login: {
+                    status: 'SUCCESS'
+                },
+                status: {
+                    ...state.status,
+                    isLoggedIn: true //처음 등장
+                    // currentUser: action.username
+                }
+            }
 
         case REGISTER_USER :
             return { ...state, register : action.payload } //스프레드 연산자는 받은 값을 똑같이 가져오는거!! , 서버에게 받은 데이터 뭉텅이는 register변수에 저장 다 되어잇음

@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { CookiesProvider } from 'react-cookie';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux';
@@ -18,6 +20,7 @@ const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)
 
 ReactDOM.render(
 
+  <CookiesProvider>
     <Provider
       store = {createStoreWithMiddleware(Reducer,
       window.__REDUX_DEVTOOLS_EXTENSION__ && 
@@ -26,6 +29,8 @@ ReactDOM.render(
     >
       <App />
     </Provider>
+  </CookiesProvider>
+    
     
     ,
   document.getElementById('root')

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Axios from 'axios'
 import { useDispatch } from 'react-redux';
-import { loginUser } from '../../../_actions/user_action';
+import { loginUser, logoutUser } from '../../../_actions/user_action';
 import styled from 'styled-components';
-import {ConfirmButton, Input, AlignedLink, GoogleButton} from './';
+import {ConfirmButton, Input, AlignedLink, GoogleButton, LogoutBtn} from './';
 import { withRouter } from 'react-router-dom';
 import {Container} from '../Common';
 import axios from 'axios';
@@ -36,9 +36,18 @@ function LoginPage(props) {
         console.log(formData);
 
         dispatch(loginUser(formData))
-        .then(()=>{
-            console.log(document.cookie) // 로그인 서세스 
-            // alert("환영합니다!")
+        .then((response)=>{
+           
+            
+            // let loginData = {
+            //     isLoggedIn: true,
+            //     userEmail : Email
+            // };
+
+            // console.log(loginData)
+            // document.cookie = 'key=' + btoa(JSON.stringify(loginData)); //로그인 데이터를 쿠키에 저장 
+            // // console.log(document.cookie);
+            // console.log(response.headers.get('set-cookie'))
             props.history.push('/')
         })
         
@@ -62,8 +71,7 @@ function LoginPage(props) {
                     확인
                 </ConfirmButton> 
                 <AlignedLink to = "/join">회원가입</AlignedLink>
-
-                {/* <GoogleButton/> */}
+                
 
             </form>
         </div>

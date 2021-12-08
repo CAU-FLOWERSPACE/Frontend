@@ -22,7 +22,7 @@ function BottomNav() {
             <nav className = "wrapper">
                 <div>
                     <Link to = '/' className = "nav-link" onClick={() => setActiveNav(1)}>
-                        <HiOutlineHome className = { activeNav === 1 ? "nav-item active" : "nav-item"} size = "25px"/>
+                        <HiOutlineHome className = { activeNav === 1 ? "nav-item active" : "nav-item"} size = "27px"/>
                     </Link>
                     </div>
                         {/* <div>
@@ -38,7 +38,7 @@ function BottomNav() {
     
                 <div>
                     <Link to = '/login' className = "nav-link" onClick={() => setActiveNav(4)}>
-                        <BsFillPersonFill className = { activeNav === 4 ? "nav-item active" : "nav-item"} size = "23px"/>
+                        <BsFillPersonFill className = { activeNav === 4 ? "nav-item active" : "nav-item"} size = "27px"/>
                     </Link>
                 </div>
                     

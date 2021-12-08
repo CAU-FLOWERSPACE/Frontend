@@ -28,7 +28,7 @@ import PlaceTherapyRecommendResultPage from './components/views/RecommendResultP
 import PlaceColorRecommendResultPage from './components/views/RecommendResultPage/PlaceColorRecommendResultPage';
 import PlantDetailPage from './components/views/DetailInfoPage/PlantDetailPage';
 import ARpage from './components/views/ARPage/ARpage';
-
+import Logout from './components/views/LoginPage/Logout';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -79,6 +79,7 @@ function App() {
                 <Route exact path = "/place_therapy_result" component = {PlaceTherapyRecommendResultPage}/>
                 <Route exact path = "/plant_detail" component = {PlantDetailPage}/>
                 <Route exact path = "/ar" component = {ARpage}/>
+                <Route exact path = "/out" component = {Logout}/>
               </Switch>
               <BottomNav/>
         </Router>
