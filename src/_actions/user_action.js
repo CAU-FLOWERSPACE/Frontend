@@ -10,12 +10,12 @@ export function loginUser(dataToSubmit) { //액션함수 정의
 
     
 
-    const request = axios.post('https://capstone.choicloudlab.com/login', dataToSubmit, {withCredentials : true}) //서버에 리퀘스트 날림
+    const request = axios.post('https://capstone.choicloudlab.com/login', dataToSubmit) //서버에 리퀘스트 날림
         // .then(()=>{console.log("post 완료")})
-        .then((response)=> {
-            console.log(`response : ${response.status}`) //response.status로 바꿔서 request에 200 저장
-            // dispatchEvent(loginSuccess(response.status));
-        })
+       .then(response=> {
+           console.log(`response : ${response.status}`); //response.status로 바꿔서 request에 200 저장
+            
+       })
 
     return {  //리퀘스트를 리듀서에 넘겨줌, 
         type: LOGIN_USER,

@@ -36,7 +36,7 @@ function LoginPage(props) {
         console.log(formData);
 
         dispatch(loginUser(formData))
-        .then((response)=>{
+        .then(response=>{
            
             
             // let loginData = {
